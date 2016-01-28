@@ -4,7 +4,6 @@ import android.content.ComponentName;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.ActivityInfo;
-import android.os.Build;
 import android.os.Bundle;
 import android.preference.PreferenceActivity;
 import android.support.v4.content.IntentCompat;
@@ -13,7 +12,6 @@ import android.util.TypedValue;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.LinearLayout;
 
 public class SettingsActivity extends PreferenceActivity {
     Toolbar toolbar;
@@ -33,35 +31,26 @@ public class SettingsActivity extends PreferenceActivity {
 
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
-            LinearLayout root = (LinearLayout) findViewById(android.R.id.list).getParent().getParent().getParent();
-            toolbar = (Toolbar) LayoutInflater.from(this).inflate(R.layout.app_bar, root, false);
-            root.addView(toolbar, 0);
+        ViewGroup root = (ViewGroup) findViewById(android.R.id.content);
+        View content = root.getChildAt(0);
 
-            toolbar.setTitle(getResources().getString(R.string.settings));
+        root.removeAllViews();
+
+        toolbar = (Toolbar) LayoutInflater.from(this).inflate(R.layout.app_bar, root, false);
+
+        int height;
+        TypedValue tv = new TypedValue();
+        if (getTheme().resolveAttribute(R.attr.actionBarSize, tv, true)) {
+           height = TypedValue.complexToDimensionPixelSize(tv.data, getResources().getDisplayMetrics());
         } else {
-            ViewGroup root = (ViewGroup) findViewById(android.R.id.content);
-            View content = root.getChildAt(0);
-
-            root.removeAllViews();
-
-            toolbar = (Toolbar) LayoutInflater.from(this).inflate(R.layout.app_bar, root, false);
-
-            int height;
-            TypedValue tv = new TypedValue();
-            if (getTheme().resolveAttribute(R.attr.actionBarSize, tv, true)) {
-                height = TypedValue.complexToDimensionPixelSize(tv.data, getResources().getDisplayMetrics());
-            } else {
-                height = toolbar.getHeight();
-            }
-
-            content.setPadding(0, height, 0, 0);
-
-            root.addView(content);
-            root.addView(toolbar);
-            toolbar.setTitle(getResources().getString(R.string.settings));
-
+           height = toolbar.getHeight();
         }
+
+        content.setPadding(0, height, 0, 0);
+
+        root.addView(content);
+        root.addView(toolbar);
+        toolbar.setTitle(getResources().getString(R.string.settings));
 
         com.dirtyunicorns.certified.Preferences.ThemeToolbarNavBar(this, toolbar);
 

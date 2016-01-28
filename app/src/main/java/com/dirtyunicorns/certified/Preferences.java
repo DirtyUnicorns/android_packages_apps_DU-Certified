@@ -4,7 +4,6 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.graphics.Color;
-import android.os.Build;
 import android.preference.PreferenceManager;
 import android.support.v7.widget.Toolbar;
 
@@ -98,24 +97,18 @@ public class Preferences {
 
         toolbar.setBackgroundColor(preferences.Theme());
 
-        if (android.os.Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+        activity.getWindow().setStatusBarColor(preferences.Theme());
+
+        if (preferences.getNavigationTint()) {
+            activity.getWindow().setNavigationBarColor(preferences.NavBarTheme());
+        } else {
+            activity.getWindow().setNavigationBarColor(activity.getResources().getColor(R.color.md_black_1000));
+        }
+
+        if (preferences.StatusBarTint()) {
+            activity.getWindow().setStatusBarColor(tint(preferences.Theme(), 0.8));
+        } else {
             activity.getWindow().setStatusBarColor(preferences.Theme());
-        }
-
-        if (android.os.Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-            if (preferences.getNavigationTint()) {
-                activity.getWindow().setNavigationBarColor(preferences.NavBarTheme());
-            } else {
-                activity.getWindow().setNavigationBarColor(activity.getResources().getColor(R.color.md_black_1000));
-            }
-        }
-
-        if (android.os.Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-            if (preferences.StatusBarTint()) {
-                activity.getWindow().setStatusBarColor(tint(preferences.Theme(), 0.8));
-            } else {
-                activity.getWindow().setStatusBarColor(preferences.Theme());
-            }
         }
     }
 
