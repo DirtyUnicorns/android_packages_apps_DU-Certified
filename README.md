@@ -41,7 +41,7 @@ https://github.com/MrEngineer13/SnackBar
 https://github.com/PaoloRotolo/AppIntro
 
 - Commonly used libraries by Google
-(Cardview, reyclerview, design, support, appcompat)
+(Cardview, recyclerview, design, support, appcompat)
 
 
 # License
