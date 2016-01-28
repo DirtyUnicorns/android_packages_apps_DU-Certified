@@ -1,0 +1,155 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/cardview_light_background">
+
+    <ScrollView
+        android:id="@+id/faq_scroll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="true"
+        android:overScrollMode="ifContentScrolls"
+        android:scrollbars="none"
+        tools:ignore="UselessParent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/faq1"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginLeft="10sp"
+                android:layout_marginRight="10sp"
+                android:layout_marginTop="15sp"
+                android:layout_marginBottom="5dp"
+                android:clickable="true"
+                android:padding="@dimen/cards_padding"
+                card_view:cardBackgroundColor="@color/cardsbg"
+                card_view:cardElevation="@dimen/cards_elevation"
+                android:layout_marginEnd="10sp"
+                android:layout_marginStart="10sp">
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/cards_margin">
+
+                    <LinearLayout
+                        android:id="@+id/faq1_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/cards_text_margin"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/faq1_question_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/faq_one_question"
+                        android:textColor="@color/dark_grey"
+                        android:textSize="18sp"
+                        android:layout_marginLeft="@dimen/cards_text_margin"
+                        android:layout_marginRight="@dimen/cards_text_margin"
+                        android:layout_marginTop="@dimen/cards_text_margin"
+                        android:layout_marginBottom="@dimen/cards_text_margin"
+                        android:layout_margin="@dimen/cards_text_margin"
+                        android:textStyle="bold"
+                        android:layout_marginStart="@dimen/cards_text_margin"
+                        android:layout_marginEnd="@dimen/cards_text_margin" />
+
+                    <TextView
+                        android:id="@+id/faq1_answer_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/faq_one_answer"
+                        android:textColor="@color/paid_free_label"
+                        android:textSize="14sp"
+                        android:layout_marginLeft="@dimen/cards_text_margin"
+                        android:layout_marginRight="@dimen/cards_text_margin"
+                        android:layout_below="@+id/faq1_question_text"
+                        android:layout_alignStart="@+id/faq1_question_text"
+                        android:layout_marginEnd="@dimen/cards_text_margin"
+                        android:layout_marginStart="@dimen/cards_text_margin" />
+
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/faq2"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginLeft="10sp"
+                android:layout_marginRight="10sp"
+                android:layout_marginTop="15sp"
+                android:layout_marginBottom="5dp"
+                android:clickable="true"
+                android:padding="@dimen/cards_padding"
+                card_view:cardBackgroundColor="@color/cardsbg"
+                card_view:cardElevation="@dimen/cards_elevation"
+                android:layout_marginStart="10sp"
+                android:layout_marginEnd="10sp">
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/cards_margin">
+
+                    <LinearLayout
+                        android:id="@+id/faq2_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/cards_text_margin"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/faq2_question_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/faq_two_question"
+                        android:textColor="@color/dark_grey"
+                        android:textSize="18sp"
+                        android:layout_marginLeft="@dimen/cards_text_margin"
+                        android:layout_marginRight="@dimen/cards_text_margin"
+                        android:layout_marginTop="@dimen/cards_text_margin"
+                        android:layout_marginBottom="@dimen/cards_text_margin"
+                        android:layout_margin="@dimen/cards_text_margin"
+                        android:textStyle="bold"
+                        android:layout_marginEnd="@dimen/cards_text_margin"
+                        android:layout_marginStart="@dimen/cards_text_margin" />
+
+                    <TextView
+                        android:id="@+id/faq2_answer_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/faq_two_answer"
+                        android:textColor="@color/paid_free_label"
+                        android:textSize="14sp"
+                        android:autoLink="web"
+                        android:layout_marginLeft="@dimen/cards_text_margin"
+                        android:layout_marginRight="@dimen/cards_text_margin"
+                        android:layout_below="@+id/faq2_question_text"
+                        android:layout_alignStart="@+id/faq2_question_text"
+                        android:layout_marginEnd="@dimen/cards_text_margin"
+                        android:layout_marginStart="@dimen/cards_text_margin" />
+
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

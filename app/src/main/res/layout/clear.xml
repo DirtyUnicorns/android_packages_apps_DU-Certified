@@ -1,0 +1,326 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/cardview_light_background">
+
+    <ScrollView
+        android:id="@+id/jayrod_scroll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="true"
+        android:overScrollMode="ifContentScrolls"
+        android:scrollbars="none"
+        tools:ignore="UselessParent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/bluxs"
+                android:layout_width="fill_parent"
+                android:layout_height="85sp"
+                android:layout_marginLeft="10sp"
+                android:layout_marginRight="10sp"
+                android:layout_marginTop="15sp"
+                android:layout_marginBottom="5dp"
+                android:clickable="true"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:padding="@dimen/cards_padding"
+                card_view:cardBackgroundColor="@color/cardsbg"
+                card_view:cardElevation="@dimen/cards_elevation"
+                android:onClick="launchBluxs"
+                android:layout_marginStart="10sp"
+                android:layout_marginEnd="10sp">
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/cards_margin">
+
+                    <LinearLayout
+                        android:id="@+id/bluxs_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/cards_text_margin"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                    </LinearLayout>
+
+                    <ImageView
+                        android:id="@+id/bluxs_logo"
+                        android:layout_width="100sp"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/bluxs"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentStart="true" />
+
+                    <TextView
+                        android:id="@+id/bluxs_theme_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:text="@string/bluxs_title"
+                        android:textColor="@color/dark_grey"
+                        android:textSize="@dimen/text_big"
+                        android:layout_marginLeft="@dimen/cards_text_margin"
+                        android:layout_marginRight="@dimen/cards_text_margin"
+                        android:layout_marginTop="@dimen/cards_text_margin"
+                        android:layout_marginBottom="@dimen/cards_text_margin"
+                        android:layout_toEndOf="@+id/bluxs_logo"
+                        android:layout_margin="@dimen/cards_text_margin"
+                        android:gravity="center_horizontal|start|fill_vertical"
+                        android:layout_centerHorizontal="true"
+                        android:textStyle="bold"
+                        android:layout_marginEnd="@dimen/cards_text_margin"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginStart="@dimen/cards_text_margin" />
+
+                    <TextView
+                        android:id="@+id/bluxs_about"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:text="@string/cerj"
+                        android:textColor="@color/dark_grey"
+                        android:textSize="12sp"
+                        android:layout_marginLeft="@dimen/cards_text_margin"
+                        android:layout_marginRight="@dimen/cards_text_margin"
+                        android:layout_marginTop="@dimen/cards_text_margin"
+                        android:layout_marginBottom="@dimen/cards_text_margin"
+                        android:layout_toEndOf="@+id/bluxs_logo"
+                        android:layout_margin="@dimen/cards_text_margin"
+                        android:layout_centerVertical="true"
+                        android:gravity="center_horizontal|start|fill_vertical"
+                        android:layout_marginStart="@dimen/cards_text_margin"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginEnd="@dimen/cards_text_margin" />
+
+                    <TextView
+                        android:id="@+id/bluxs_theme_paid"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/listing_paid"
+                        android:textColor="@color/paid_free_label"
+                        android:textSize="12sp"
+                        android:layout_marginLeft="@dimen/cards_text_margin"
+                        android:layout_marginRight="@dimen/cards_text_margin"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignEnd="@+id/bluxs_about"
+                        android:textStyle="bold"
+                        android:layout_marginEnd="@dimen/cards_text_margin"
+                        android:layout_marginStart="@dimen/cards_text_margin" />
+
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/bryanowens_klearkat"
+                android:layout_width="fill_parent"
+                android:layout_height="85sp"
+                android:layout_marginLeft="10sp"
+                android:layout_marginTop="5sp"
+                android:layout_marginRight="10sp"
+                android:layout_marginBottom="5sp"
+                android:clickable="true"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:padding="@dimen/cards_padding"
+                card_view:cardBackgroundColor="@color/cardsbg"
+                card_view:cardElevation="@dimen/cards_elevation"
+                android:onClick="launchKlearKat"
+                android:layout_marginEnd="10sp"
+                android:layout_marginStart="10sp">
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/cards_margin">
+
+                    <LinearLayout
+                        android:id="@+id/bryanowens_klearkat_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/cards_text_margin"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                    </LinearLayout>
+
+                    <ImageView
+                        android:id="@+id/bryanowens_klearkat_logo"
+                        android:layout_width="100sp"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/klearkat"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentStart="true" />
+
+                    <TextView
+                        android:id="@+id/bryanowens_klearkat_theme_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:text="@string/klearkat_title"
+                        android:textColor="@color/dark_grey"
+                        android:textSize="@dimen/text_big"
+                        android:layout_marginLeft="@dimen/cards_text_margin"
+                        android:layout_marginRight="@dimen/cards_text_margin"
+                        android:layout_marginTop="@dimen/cards_text_margin"
+                        android:layout_marginBottom="@dimen/cards_text_margin"
+                        android:layout_toEndOf="@+id/bryanowens_klearkat_logo"
+                        android:layout_margin="@dimen/cards_text_margin"
+                        android:gravity="center_horizontal|start|fill_vertical"
+                        android:layout_centerHorizontal="true"
+                        android:textStyle="bold"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginStart="@dimen/cards_text_margin"
+                        android:layout_marginEnd="@dimen/cards_text_margin" />
+
+                    <TextView
+                        android:id="@+id/bryanowens_klearkat_about"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:text="@string/bryanowens"
+                        android:textColor="@color/dark_grey"
+                        android:textSize="12sp"
+                        android:layout_marginLeft="@dimen/cards_text_margin"
+                        android:layout_marginRight="@dimen/cards_text_margin"
+                        android:layout_marginTop="@dimen/cards_text_margin"
+                        android:layout_marginBottom="@dimen/cards_text_margin"
+                        android:layout_toEndOf="@+id/bryanowens_klearkat_logo"
+                        android:layout_margin="@dimen/cards_text_margin"
+                        android:layout_centerVertical="true"
+                        android:gravity="center_horizontal|start|fill_vertical"
+                        android:layout_marginStart="@dimen/cards_text_margin"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginEnd="@dimen/cards_text_margin" />
+
+                    <TextView
+                        android:id="@+id/bryanowens_klearkat_theme_paid"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/listing_paid"
+                        android:textColor="@color/paid_free_label"
+                        android:textSize="12sp"
+                        android:layout_marginLeft="@dimen/cards_text_margin"
+                        android:layout_marginRight="@dimen/cards_text_margin"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignEnd="@+id/bryanowens_klearkat_about"
+                        android:textStyle="bold"
+                        android:layout_marginEnd="@dimen/cards_text_margin"
+                        android:layout_marginStart="@dimen/cards_text_margin" />
+
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/bryanowens_sprite"
+                android:layout_width="fill_parent"
+                android:layout_height="85sp"
+                android:layout_marginLeft="10sp"
+                android:layout_marginTop="5sp"
+                android:layout_marginRight="10sp"
+                android:layout_marginBottom="5sp"
+                android:clickable="true"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:padding="@dimen/cards_padding"
+                card_view:cardBackgroundColor="@color/cardsbg"
+                card_view:cardElevation="@dimen/cards_elevation"
+                android:onClick="launchSprite"
+                android:layout_marginEnd="10sp"
+                android:layout_marginStart="10sp">
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/cards_margin">
+
+                    <LinearLayout
+                        android:id="@+id/bryanowens_sprite_title"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/cards_text_margin"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                    </LinearLayout>
+
+                    <ImageView
+                        android:id="@+id/bryanowens_sprite_logo"
+                        android:layout_width="100sp"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/sprite"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentStart="true" />
+
+                    <TextView
+                        android:id="@+id/bryanowens_sprite_theme_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:text="@string/sprite_title"
+                        android:textColor="@color/dark_grey"
+                        android:textSize="@dimen/text_big"
+                        android:layout_marginLeft="@dimen/cards_text_margin"
+                        android:layout_marginRight="@dimen/cards_text_margin"
+                        android:layout_marginTop="@dimen/cards_text_margin"
+                        android:layout_marginBottom="@dimen/cards_text_margin"
+                        android:layout_toEndOf="@+id/bryanowens_sprite_logo"
+                        android:layout_margin="@dimen/cards_text_margin"
+                        android:gravity="center_horizontal|start|fill_vertical"
+                        android:layout_centerHorizontal="true"
+                        android:textStyle="bold"
+                        android:layout_marginStart="@dimen/cards_text_margin"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginEnd="@dimen/cards_text_margin" />
+
+                    <TextView
+                        android:id="@+id/bryanowens_sprite_about"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:text="@string/bryanowens"
+                        android:textColor="@color/dark_grey"
+                        android:textSize="12sp"
+                        android:layout_marginLeft="@dimen/cards_text_margin"
+                        android:layout_marginRight="@dimen/cards_text_margin"
+                        android:layout_marginTop="@dimen/cards_text_margin"
+                        android:layout_marginBottom="@dimen/cards_text_margin"
+                        android:layout_toEndOf="@+id/bryanowens_sprite_logo"
+                        android:layout_margin="@dimen/cards_text_margin"
+                        android:layout_centerVertical="true"
+                        android:gravity="center_horizontal|start|fill_vertical"
+                        android:layout_marginStart="@dimen/cards_text_margin"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginEnd="@dimen/cards_text_margin" />
+
+                    <TextView
+                        android:id="@+id/bryanowens_sprite_theme_paid"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/listing_paid"
+                        android:textColor="@color/paid_free_label"
+                        android:textSize="12sp"
+                        android:layout_marginLeft="@dimen/cards_text_margin"
+                        android:layout_marginRight="@dimen/cards_text_margin"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignEnd="@+id/bryanowens_sprite_about"
+                        android:textStyle="bold"
+                        android:layout_marginEnd="@dimen/cards_text_margin"
+                        android:layout_marginStart="@dimen/cards_text_margin" />
+
+                </RelativeLayout>
+
+            </android.support.v7.widget.CardView>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

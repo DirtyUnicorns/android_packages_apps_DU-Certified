@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="dark_grey">#FFFFFF</color>
+    <color name="secondary">#009688</color>
+    <color name="cardsbg">#303030</color>
+    <color name="paid_free_label">#878787</color>
+    <color name="light_bg">#fafafa</color>
+    <color name="sliding_tabs_text_color">#ffffffff</color>
+    <color name="statusbar_color">#9f2722</color>
+    <color name="colorPrimary">#c8322b</color>
+    <color name="colorPrimaryDark">#9f2722</color>
+    <color name="colorAccent">#e8eaf6</color>
+    <color name="colorMainText">#ffffff</color>
+    <color name="colorWindowBg">#FAFAFA</color>
+    <color name="colorText">#000000</color>
+    <color name="colorTextLight">#FFFFFF</color>
+    <color name="navdrawer_background">#2a2a2a</color>
+    <color name="tab_background">@color/colorPrimary</color>
+    <color name="tab_indicator_color">#FFF</color>
+    <color name="white">#FFFFFF</color>
+    <color name="drawer_selected_icon_color">#FFFFFF</color>
+    <color name="drawer_normal_icon_color">#575757</color>
+    <color name="drawer_selected_drawer_text_color">#FFFFFF</color>
+    <color name="drawer_text_color">#a9a9a9</color>
+
+    <!-- Material DEFAULT colors -->
+    <color name="material_drawer_primary">#2196F3</color>
+    <color name="material_drawer_primary_dark">#1976D2</color>
+    <color name="material_drawer_primary_light">#BBDEFB</color>
+    <color name="material_drawer_accent">#FF4081</color>
+
+    <!-- OVERWRITE THESE COLORS FOR A LIGHT THEME -->
+    <!-- MaterialDrawer DEFAULT colors -->
+    <color name="material_drawer_background">#F9F9F9</color>
+    <!-- Material DEFAULT text / items colors -->
+    <color name="material_drawer_primary_text">#DE000000</color>
+    <color name="material_drawer_primary_icon">#8A000000</color>
+    <color name="material_drawer_secondary_text">#8A000000</color>
+    <color name="material_drawer_hint_text">#42000000</color>
+    <color name="material_drawer_divider">#1F000000</color>
+    <!-- Material DEFAULT drawer colors -->
+    <color name="material_drawer_selected_text">#FFFFFF</color>
+    <color name="material_drawer_selected">#c8322b</color>
+    <color name="material_drawer_header_selection_text">#FFF</color>
+
+    <!-- OVERWRITE THESE COLORS FOR A DARK THEME -->
+    <!-- MaterialDrawer DEFAULT DARK colors -->
+    <color name="material_drawer_dark_background">#303030</color>
+    <!-- MaterialDrawer DEFAULT DARK text / items colors -->
+    <color name="material_drawer_dark_primary_text">#DEFFFFFF</color>
+    <color name="material_drawer_dark_primary_icon">#8AFFFFFF</color>
+    <color name="material_drawer_dark_secondary_text">#8AFFFFFF</color>
+    <color name="material_drawer_dark_hint_text">#42FFFFFF</color>
+    <color name="material_drawer_dark_divider">#1FFFFFFF</color>
+    <!-- MaterialDrawer DEFAULT DARK drawer colors -->
+    <color name="material_drawer_dark_selected">#202020</color>
+    <color name="material_drawer_dark_selected_text">@color/material_drawer_primary</color>
+    <color name="material_drawer_dark_header_selection_text">#FFF</color>
+
+    <!-- App Intro slides -->
+    <color name="first_slide">#4a75ec</color>
+    <color name="second_slide">#d33131</color>
+    <color name="third_slide">#343434</color>
+    <color name="last_slide">#7fce17</color>
+
+    <!-- CardView. -->
+    <color name="cardview_light_background">#2a2a2a</color>
+    <color name="cardview_dark_background">#FFFFFF</color>
+    <color name="cardview_shadow_start_color">#37000000</color>
+    <color name="cardview_shadow_end_color">#03000000</color>
+
+
+
+
+
+    <color name="transparent">#00000000</color>
+
+
+</resources>
