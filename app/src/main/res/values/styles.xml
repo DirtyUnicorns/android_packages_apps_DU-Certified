@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources xmlns:tools="http://schemas.android.com/tools">
+<resources>
 
     <style name="AppTheme" parent="MaterialTheme">
         <item name="colorPrimary">@color/primary</item>
+        <item name="drawerArrowStyle">@style/MaterialDrawer.DrawerArrowStyle</item>
     </style>
 
     <style name="AppTheme.NoActionBar">
@@ -27,6 +28,11 @@
         <item name="cardMaxElevation">@dimen/cardview_default_elevation</item>
         <item name="cardUseCompatPadding">false</item>
         <item name="cardPreventCornerOverlap">true</item>
+    </style>
+
+    <style name="MaterialDrawer.DrawerArrowStyle" parent="Widget.AppCompat.DrawerArrowToggle">
+        <item name="spinBars">false</item>
+        <item name="color">@color/hamburger_menu_color</item>
     </style>
 
 </resources>

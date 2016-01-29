@@ -23,6 +23,7 @@
     <color name="drawer_normal_icon_color">#575757</color>
     <color name="drawer_selected_drawer_text_color">#FFFFFF</color>
     <color name="drawer_text_color">#a9a9a9</color>
+    <color name="hamburger_menu_color">#FFFFFF</color>
 
     <!-- Material DEFAULT colors -->
     <color name="material_drawer_primary">#2196F3</color>
