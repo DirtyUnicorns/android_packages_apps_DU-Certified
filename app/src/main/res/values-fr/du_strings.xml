@@ -11,6 +11,8 @@
     <string name="category_icons">Icônes</string>
     <string name="listing_paid">PAYANT</string>
     <string name="listing_free">GRATUIT</string>
+    <string name="googleplus_summary">Rejoignez notre communauté</string>
+    <string name="twitter_summary">Suivez-nous sur Twitter</string>
     <string name="no_connection">Vérifiez votre connexion Internet</string>
     <string name="ok">OK</string>
     <string name="dialog_playstore">PlayStore</string>
