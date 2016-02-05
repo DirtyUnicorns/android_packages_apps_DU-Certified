@@ -1,9 +1,9 @@
 <resources>
 
     <!-- General -->
-    <string name="app_name">DU Certified</string>
+    <string name="app_name" translatable="false">DU Certified</string>
     <string name="app_long_name" translatable="false">DU Certified v</string>
-    <string name="app_dev_name">#StayDirty</string>
+    <string name="app_dev_name" translatable="false">#StayDirty</string>
     <string name="drawer_item_home">Home</string>
     <string name="category_light">Light</string>
     <string name="category_dark">Dark</string>
@@ -12,12 +12,13 @@
     <string name="listing_paid">PAID</string>
     <string name="listing_free">FREE</string>
     <string name="listing_installed">INSTALLED</string>
-    <string name="googleplus_community">https://plus.google.com/u/0/communities/109738128866939227235</string>
-    <string name="googleplus_title">Google +</string>
+    <string name="googleplus_community" translatable="false">https://plus.google.com/u/0/communities/109738128866939227235</string>
+    <string name="googleplus_title" translatable="false">Google +</string>
     <string name="googleplus_summary">Join our community</string>
-    <string name="twitter">https://twitter.com/_DirtyUnicorns_</string>
-    <string name="twitter_title">Twitter</string>
+    <string name="twitter" translatable="false">https://twitter.com/_DirtyUnicorns_</string>
+    <string name="twitter_title" translatable="false">Twitter</string>
     <string name="twitter_summary">Follow us on Twitter</string>
+    <string name="hide_launcher">Hide Launcher</string>
     <string name="no_connection">Check your internet connection</string>
     <string name="ok">OK</string>
     <string name="dialog_playstore">PlayStore</string>
@@ -33,79 +34,86 @@
     <string name="faq_two_answer">\nHead over to https://github.com/DirtyUnicorns/Theme-Resources and download the zip. This zip contains everything a themer needs to theme DU\n</string>
 
     <!-- Themes -->
-    <string name="bsc_title">BSC</string>
-    <string name="bluehydra_title">Blue Hydra</string>
-    <string name="blakkat_title">BlakKat</string>
-    <string name="klearkat_title">KlearKat</string>
-    <string name="sprite_title">Sprite</string>
-    <string name="steamworks_title">Steamworks Ultimate</string>
-    <string name="outray_title">Outray</string>
-    <string name="coalfield_title">Coalfield</string>
-    <string name="outlite_title">Outlite PRO</string>
-    <string name="heiwa_title">Heiwa</string>
-    <string name="phlat_title">Phlat</string>
-    <string name="kaiui_title">kai ui</string>
-    <string name="mono_title">mono II</string>
-    <string name="lunarui_title">LunarUI</string>
-    <string name="materialfaded_blue_title">Material Faded - Blue</string>
-    <string name="materialfaded_gold_title">Material Faded - Gold</string>
-    <string name="materialfaded_green_title">Material Faded - Green</string>
-    <string name="materialfaded_red_title">Material Faded - Red</string>
-    <string name="akzent_title">akZent</string>
-    <string name="darkmtrl_title">DarkMTRL</string>
-    <string name="deepdarkness_title">DEEP DARKNESS</string>
-    <string name="euphoria_dark_title">Euphoria Dark</string>
-    <string name="bluxs_title">Blu XS</string>
-    <string name="flux_title">Flux</string>
-    <string name="livdark_title">Liv Dark</string>
-    <string name="liv_title">Liv</string>
-    <string name="caffene_title">Caffene</string>
+    <string name="bsc_title" translatable="false">BSC</string>
+    <string name="bluehydra_title" translatable="false">Blue Hydra</string>
+    <string name="blakkat_title" translatable="false">BlakKat</string>
+    <string name="klearkat_title" translatable="false">KlearKat</string>
+    <string name="sprite_title" translatable="false">Sprite</string>
+    <string name="steamworks_title" translatable="false">Steamworks Ultimate</string>
+    <string name="outray_title" translatable="false">Outray</string>
+    <string name="coalfield_title" translatable="false">Coalfield</string>
+    <string name="outlite_title" translatable="false">Outlite PRO</string>
+    <string name="heiwa_title" translatable="false">Heiwa</string>
+    <string name="phlat_title" translatable="false">Phlat</string>
+    <string name="kaiui_title" translatable="false">kai ui</string>
+    <string name="mono_title" translatable="false">mono II</string>
+    <string name="lunarui_title" translatable="false">LunarUI</string>
+    <string name="materialfaded_blue_title" translatable="false">Material Faded - Blue</string>
+    <string name="materialfaded_gold_title" translatable="false">Material Faded - Gold</string>
+    <string name="materialfaded_green_title" translatable="false">Material Faded - Green</string>
+    <string name="materialfaded_red_title" translatable="false">Material Faded - Red</string>
+    <string name="akzent_title" translatable="false">akZent</string>
+    <string name="darkmtrl_title" translatable="false">DarkMTRL</string>
+    <string name="deepdarkness_title" translatable="false">DEEP DARKNESS</string>
+    <string name="euphoria_dark_title" translatable="false">Euphoria Dark</string>
+    <string name="bluxs_title" translatable="false">Blu XS</string>
+    <string name="flux_title" translatable="false">Flux</string>
+    <string name="livdark_title" translatable="false">Liv Dark</string>
+    <string name="liv_title" translatable="false">Liv</string>
+    <string name="caffene_title" translatable="false">Caffene</string>
+    <string name="radius_title" translatable="false">Radius</string>
+    <string name="blakazurro_title" translatable="false">Blak Azurro</string>
+    <string name="pitchblack_title" translatable="false">PitchBlack</string>
 
     <!-- Themers Names -->
-    <string name="jayrod">Platyraptor Designs</string>
-    <string name="markbencze">markbencze</string>
-    <string name="bryanowens">DjDarkknight</string>
-    <string name="barrysmith">CyanDorman</string>
-    <string name="andrezimmermann">Kohlewrrk</string>
-    <string name="travishall">Not Just Another Designer</string>
-    <string name="jacek">YAdesign</string>
-    <string name="mikexdnax">Mike xdnax</string>
-    <string name="nicholaschum">chummy development team</string>
-    <string name="patrick">Thyrus</string>
-    <string name="moelle">moelle</string>
-    <string name="blazze11">blazze11</string>
-    <string name="cerj">cerj</string>
-    <string name="giannisgx89">giannisgx89</string>
-    <string name="B16H22">B16H22</string>
+    <string name="jayrod" translatable="false">Platyraptor Designs</string>
+    <string name="markbencze" translatable="false">markbencze</string>
+    <string name="bryanowens" translatable="false">DjDarkknight</string>
+    <string name="barrysmith" translatable="false">CyanDorman</string>
+    <string name="andrezimmermann" translatable="false">Kohlewrrk</string>
+    <string name="travishall" translatable="false">Not Just Another Designer</string>
+    <string name="jacek" translatable="false">YAdesign</string>
+    <string name="mikexdnax" translatable="false">Mike xdnax</string>
+    <string name="nicholaschum" translatable="false">chummy development team</string>
+    <string name="patrick" translatable="false">Thyrus</string>
+    <string name="moelle" translatable="false">moelle</string>
+    <string name="blazze11" translatable="false">blazze11</string>
+    <string name="cerj" translatable="false">cerj</string>
+    <string name="giannisgx89" translatable="false">giannisgx89</string>
+    <string name="B16H22" translatable="false">B16H22</string>
+    <string name="westcrip" translatable="false">Altan KRK (westcrip)</string>
 
     <!-- Playstore Links -->
-    <string name="playstore_bsc">https://play.google.com/store/apps/details?id=com.jayrod.bsc.cm12.theme2</string>
-    <string name="playstore_bluehydra">https://play.google.com/store/apps/details?id=com.markbencze.bluehydratheme</string>
-    <string name="playstore_blakkat">https://play.google.com/store/apps/details?id=com.djdarkknight96.theme.blakkat</string>
-    <string name="playstore_klearkat">https://play.google.com/store/apps/details?id=com.djdarkknight96.theme.klearkat</string>
-    <string name="playstore_sprite">https://play.google.com/store/apps/details?id=com.djdarkknight96.theme.sprite</string>
-    <string name="playstore_steamworks">https://play.google.com/store/apps/details?id=com.cyandorman.theme.steamworks_ultimate</string>
-    <string name="playstore_outray">https://play.google.com/store/apps/details?id=com.kohlewrrk.outray</string>
-    <string name="playstore_outlite">https://play.google.com/store/apps/details?id=com.kohlewrrk.outlitepro</string>
-    <string name="playstore_coalfield">https://play.google.com/store/apps/details?id=com.kohlewrrk.coalfield</string>
-    <string name="playstore_heiwa">https://play.google.com/store/apps/details?id=com.njad.heiwatheme</string>
-    <string name="playstore_phlat">https://play.google.com/store/apps/details?id=com.njad.phlattheme</string>
-    <string name="playstore_kaiui">https://play.google.com/store/apps/details?id=yadesign.kai.ui</string>
-    <string name="playstore_mono">https://play.google.com/store/apps/details?id=yadesign.mono</string>
-    <string name="playstore_lunarui">https://play.google.com/store/apps/details?id=yadesign.lunarui</string>
-    <string name="playstore_materialfaded_blue">https://play.google.com/store/apps/details?id=com.xdnax.materialfaded.blue</string>
-    <string name="playstore_materialfaded_gold">https://play.google.com/store/apps/details?id=com.xdnax.materialfaded.gold</string>
-    <string name="playstore_materialfaded_green">https://play.google.com/store/apps/details?id=com.xdnax.materialfaded.green</string>
-    <string name="playstore_materialfaded_red">https://play.google.com/store/apps/details?id=com.xdnax.materialfaded.red</string>
-    <string name="playstore_akzent">https://play.google.com/store/apps/details?id=com.chummy.jezebel.materialdark.donate</string>
-    <string name="playstore_darkmtrl">https://play.google.com/store/apps/details?id=darkuimtrl.thyrus.releaseCM12</string>
-    <string name="playstore_deepdarkness">https://play.google.com/store/apps/details?id=com.blissroms.moelle.ddoverhauled</string>
-    <string name="playstore_euphoria_dark">https://play.google.com/store/apps/details?id=com.blazze11.euphoria.dark</string>
-    <string name="playstore_bluxs">https://play.google.com/store/apps/details?id=com.cerj.theme.blu.xs</string>
-    <string name="playstore_flux">https://play.google.com/store/apps/details?id=com.flux.theme.flux</string>
-    <string name="playstore_livdark">https://play.google.com/store/apps/details?id=com.livdark.theme.livdark</string>
-    <string name="playstore_liv">https://play.google.com/store/apps/details?id=com.liv.theme.liv</string>
-    <string name="playstore_caffene">https://play.google.com/store/apps/details?id=com.b16h22.caffene</string>
+    <string name="playstore_bsc" translatable="false">https://play.google.com/store/apps/details?id=com.jayrod.bsc.cm12.theme2</string>
+    <string name="playstore_bluehydra" translatable="false">https://play.google.com/store/apps/details?id=com.markbencze.bluehydratheme</string>
+    <string name="playstore_blakkat" translatable="false">https://play.google.com/store/apps/details?id=com.djdarkknight96.theme.blakkat</string>
+    <string name="playstore_klearkat" translatable="false">https://play.google.com/store/apps/details?id=com.djdarkknight96.theme.klearkat</string>
+    <string name="playstore_sprite" translatable="false">https://play.google.com/store/apps/details?id=com.djdarkknight96.theme.sprite</string>
+    <string name="playstore_steamworks" translatable="false">https://play.google.com/store/apps/details?id=com.cyandorman.theme.steamworks_ultimate</string>
+    <string name="playstore_outray" translatable="false">https://play.google.com/store/apps/details?id=com.kohlewrrk.outray</string>
+    <string name="playstore_outlite" translatable="false">https://play.google.com/store/apps/details?id=com.kohlewrrk.outlitepro</string>
+    <string name="playstore_coalfield" translatable="false">https://play.google.com/store/apps/details?id=com.kohlewrrk.coalfield</string>
+    <string name="playstore_heiwa" translatable="false">https://play.google.com/store/apps/details?id=com.njad.heiwatheme</string>
+    <string name="playstore_phlat" translatable="false">https://play.google.com/store/apps/details?id=com.njad.phlattheme</string>
+    <string name="playstore_kaiui" translatable="false">https://play.google.com/store/apps/details?id=yadesign.kai.ui</string>
+    <string name="playstore_mono" translatable="false">https://play.google.com/store/apps/details?id=yadesign.mono</string>
+    <string name="playstore_lunarui" translatable="false">https://play.google.com/store/apps/details?id=yadesign.lunarui</string>
+    <string name="playstore_materialfaded_blue" translatable="false">https://play.google.com/store/apps/details?id=com.xdnax.materialfaded.blue</string>
+    <string name="playstore_materialfaded_gold" translatable="false">https://play.google.com/store/apps/details?id=com.xdnax.materialfaded.gold</string>
+    <string name="playstore_materialfaded_green" translatable="false">https://play.google.com/store/apps/details?id=com.xdnax.materialfaded.green</string>
+    <string name="playstore_materialfaded_red" translatable="false">https://play.google.com/store/apps/details?id=com.xdnax.materialfaded.red</string>
+    <string name="playstore_akzent" translatable="false">https://play.google.com/store/apps/details?id=com.chummy.jezebel.materialdark.donate</string>
+    <string name="playstore_darkmtrl" translatable="false">https://play.google.com/store/apps/details?id=darkuimtrl.thyrus.releaseCM12</string>
+    <string name="playstore_deepdarkness" translatable="false">https://play.google.com/store/apps/details?id=com.blissroms.moelle.ddoverhauled</string>
+    <string name="playstore_euphoria_dark" translatable="false">https://play.google.com/store/apps/details?id=com.blazze11.euphoria.dark</string>
+    <string name="playstore_bluxs" translatable="false">https://play.google.com/store/apps/details?id=com.cerj.theme.blu.xs</string>
+    <string name="playstore_flux" translatable="false">https://play.google.com/store/apps/details?id=com.flux.theme.flux</string>
+    <string name="playstore_livdark" translatable="false">https://play.google.com/store/apps/details?id=com.livdark.theme.livdark</string>
+    <string name="playstore_liv" translatable="false">https://play.google.com/store/apps/details?id=com.liv.theme.liv</string>
+    <string name="playstore_caffene" translatable="false">https://play.google.com/store/apps/details?id=com.b16h22.caffene</string>
+    <string name="playstore_radius" translatable="false">https://play.google.com/store/apps/details?id=com.kohlewrrk.radius</string>
+    <string name="playstore_blakazurro" translatable="false">https://play.google.com/store/apps/details?id=com.cerj.theme.blakazurro</string>
+    <string name="playstore_pitchblack" translatable="false">https://play.google.com/store/apps/details?id=com.resurrectionremix.pitchblack</string>
 
     <!-- App intro -->
     <string name="first_slide_title">Welcome to DU Certified!</string>

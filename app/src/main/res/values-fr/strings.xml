@@ -11,12 +11,15 @@
     <string name="category_icons">Icônes</string>
     <string name="listing_paid">PAYANT</string>
     <string name="listing_free">GRATUIT</string>
+    <string name="listing_installed">INSTALLED</string>
     <string name="googleplus_summary">Rejoignez notre communauté</string>
     <string name="twitter_summary">Suivez-nous sur Twitter</string>
+    <string name="hide_launcher">Hide Launcher</string>
     <string name="no_connection">Vérifiez votre connexion Internet</string>
     <string name="ok">OK</string>
     <string name="dialog_playstore">PlayStore</string>
     <string name="dialog_back">Retour</string>
+    <string name="dialog_apply">Apply</string>
     <string name="settings">Paramètres</string>
     <string name="faq">FAQ</string>
     <string name="press_color_to_apply">Appuyer sur la couleur pour valider</string>

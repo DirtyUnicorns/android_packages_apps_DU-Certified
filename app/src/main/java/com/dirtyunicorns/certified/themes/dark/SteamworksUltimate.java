@@ -14,7 +14,7 @@ public class SteamworksUltimate extends Theme {
         this.screenshot3 = R.drawable.steamworks_screenshot3;
         this.name = R.string.steamworks_title;
         this.playStoreLink = R.string.playstore_steamworks;
-        this.width = 380;
+        this.width = 350;
         this.height = 590;
     }
 

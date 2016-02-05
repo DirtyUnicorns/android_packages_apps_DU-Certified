@@ -1,18 +1,9 @@
 package com.dirtyunicorns.certified.fragments.themesfragments;
 
-import android.os.Bundle;
-import android.support.v4.app.Fragment;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
-
-import com.dirtyunicorns.certified.R;
 import com.dirtyunicorns.certified.fragments.AbstractThemesListFragment;
 import com.dirtyunicorns.certified.themes.Theme;
-import com.dirtyunicorns.certified.themes.clear.BluXs;
-import com.dirtyunicorns.certified.themes.clear.KlearKat;
-import com.dirtyunicorns.certified.themes.clear.Sprite;
 import com.dirtyunicorns.certified.themes.dark.Akzent;
+import com.dirtyunicorns.certified.themes.dark.BlakAzurro;
 import com.dirtyunicorns.certified.themes.dark.Blakkat;
 import com.dirtyunicorns.certified.themes.dark.BlueHydra;
 import com.dirtyunicorns.certified.themes.dark.Bsc;
@@ -31,6 +22,8 @@ import com.dirtyunicorns.certified.themes.dark.MaterialFadedRed;
 import com.dirtyunicorns.certified.themes.dark.Mono;
 import com.dirtyunicorns.certified.themes.dark.Outray;
 import com.dirtyunicorns.certified.themes.dark.Phlat;
+import com.dirtyunicorns.certified.themes.dark.PitchBlack;
+import com.dirtyunicorns.certified.themes.dark.Radius;
 import com.dirtyunicorns.certified.themes.dark.SteamworksUltimate;
 
 import java.util.ArrayList;
@@ -43,6 +36,7 @@ public class DarkThemesFragment extends AbstractThemesListFragment {
         List<Theme> themes = new ArrayList<>();
 
         themes.add(new Akzent());
+        themes.add(new BlakAzurro());
         themes.add(new Blakkat());
         themes.add(new BlueHydra());
         themes.add(new Bsc());
@@ -61,6 +55,8 @@ public class DarkThemesFragment extends AbstractThemesListFragment {
         themes.add(new Mono());
         themes.add(new Outray());
         themes.add(new Phlat());
+        themes.add(new PitchBlack());
+        themes.add(new Radius());
         themes.add(new SteamworksUltimate());
 
         return themes;

@@ -14,7 +14,7 @@ public class BlueHydra extends Theme {
         this.screenshot3 = R.drawable.bluehydra_screenshot3;
         this.name = R.string.bluehydra_title;
         this.playStoreLink = R.string.playstore_bluehydra;
-        this.width = 460;
+        this.width = 375;
         this.height = 590;
     }
 

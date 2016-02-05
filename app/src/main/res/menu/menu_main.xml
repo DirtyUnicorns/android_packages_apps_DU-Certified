@@ -1,0 +1,11 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.dirtyunicorns.certified.MainActivity">
+    <item
+        android:id="@+id/hide_launcher"
+        android:orderInCategory="300"
+        android:title="@string/hide_launcher"
+        android:checkable="true"
+        app:showAsAction="never" />
+</menu>

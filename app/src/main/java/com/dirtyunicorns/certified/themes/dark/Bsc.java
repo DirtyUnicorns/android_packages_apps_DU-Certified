@@ -14,7 +14,7 @@ public class Bsc extends Theme {
         this.screenshot3 = R.drawable.bsc_screenshot3;
         this.name = R.string.bsc_title;
         this.playStoreLink = R.string.playstore_bsc;
-        this.width = 360;
+        this.width = 450;
         this.height = 590;
     }
 
