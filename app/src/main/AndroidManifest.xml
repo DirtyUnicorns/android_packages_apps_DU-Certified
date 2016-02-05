@@ -20,7 +20,7 @@
         android:theme="@style/AppTheme"
         android:supportsRtl="true">
         <activity
-            android:name="com.dirtyunicorns.certified.MainActivity"
+            android:name=".MainActivity"
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar" >
             <intent-filter>
@@ -30,14 +30,10 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.dirtyunicorns.certified.Slides"
+            android:name=".activities.SlidesActivity"
             android:screenOrientation="portrait" />
         <activity
-            android:name="com.dirtyunicorns.certified.SettingsActivity"
-            android:screenOrientation="portrait" />
-        <activity
-            android:name="com.dirtyunicorns.certified.Faqs"
-            android:label="@string/faq"
+            android:name=".activities.SettingsActivity"
             android:screenOrientation="portrait" />
     </application>
 

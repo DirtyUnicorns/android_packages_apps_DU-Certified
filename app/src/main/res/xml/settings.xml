@@ -17,7 +17,7 @@
         android:summaryOff="@string/theme_enable_navbar_tint_summary"
         android:defaultValue="false" />
 
-    <com.dirtyunicorns.certified.ColorPickerPreference
+    <com.dirtyunicorns.certified.colorpicker.ColorPickerPreference
         android:key="NavBarTheme"
         android:title="@string/theme_navbar_title"
         android:summary="@string/theme_navbar_summary"
@@ -25,49 +25,49 @@
         android:dependency="NavigationTint"
         alphaSlider="true"/>
 
-    <com.dirtyunicorns.certified.ColorPickerPreference
+    <com.dirtyunicorns.certified.colorpicker.ColorPickerPreference
         android:key="Theme"
         android:title="@string/theme_toolbar_title"
         android:summary="@string/theme_toolbar_summary"
         android:defaultValue="@color/primary"
         alphaSlider="true"/>
 
-    <com.dirtyunicorns.certified.ColorPickerPreference
+    <com.dirtyunicorns.certified.colorpicker.ColorPickerPreference
         android:key="Drawer"
         android:title="@string/theme_drawer_title"
         android:summary="@string/theme_drawer_summary"
         android:defaultValue="@color/navdrawer_background"
         alphaSlider="true"/>
 
-    <com.dirtyunicorns.certified.ColorPickerPreference
+    <com.dirtyunicorns.certified.colorpicker.ColorPickerPreference
         android:key="DrawerSelector"
         android:title="@string/theme_drawer_selector_title"
         android:summary="@string/theme_drawer_selector_summary"
         android:defaultValue="@color/material_drawer_selected"
         alphaSlider="true"/>
 
-    <com.dirtyunicorns.certified.ColorPickerPreference
+    <com.dirtyunicorns.certified.colorpicker.ColorPickerPreference
         android:key="DrawerText"
         android:title="@string/theme_drawer_text_title"
         android:summary="@string/theme_drawer_text_summary"
         android:defaultValue="@color/drawer_text_color"
         alphaSlider="true"/>
 
-    <com.dirtyunicorns.certified.ColorPickerPreference
+    <com.dirtyunicorns.certified.colorpicker.ColorPickerPreference
         android:key="SelectedDrawerText"
         android:title="@string/theme_drawer_selected_drawer_text_title"
         android:summary="@string/theme_drawer_selected_drawer_text_summary"
         android:defaultValue="@color/drawer_selected_drawer_text_color"
         alphaSlider="true"/>
 
-    <com.dirtyunicorns.certified.ColorPickerPreference
+    <com.dirtyunicorns.certified.colorpicker.ColorPickerPreference
         android:key="NormalIcon"
         android:title="@string/theme_drawer_normal_icon_title"
         android:summary="@string/theme_drawer_normal_icon_summary"
         android:defaultValue="@color/drawer_normal_icon_color"
         alphaSlider="true"/>
 
-    <com.dirtyunicorns.certified.ColorPickerPreference
+    <com.dirtyunicorns.certified.colorpicker.ColorPickerPreference
         android:key="SelectedIcon"
         android:title="@string/theme_drawer_selected_icon_title"
         android:summary="@string/theme_drawer_selected_icon_summary"
