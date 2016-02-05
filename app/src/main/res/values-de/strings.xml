@@ -1,0 +1,69 @@
+<resources>
+
+    <!-- General -->
+    <string name="drawer_item_home">Home</string>
+    <string name="category_light">Hell</string>
+    <string name="category_dark">Dunkel</string>
+    <string name="category_clear">Klar</string>
+    <string name="category_icons">Symbole</string>
+    <string name="listing_paid">Kostenpflichtig</string>
+    <string name="listing_free">Kostenlos</string>
+    <string name="listing_installed">Installiert</string>
+    <string name="googleplus_summary">Tritt unserer Community bei</string>
+    <string name="twitter_summary">Folge uns auf Twitter</string>
+    <string name="hide_launcher">Launcher-Symbol verstecken</string>
+    <string name="no_connection">Überprüfe deine Internetverbindung</string>
+    <string name="ok">OK</string>
+    <string name="dialog_playstore">Play Store</string>
+    <string name="dialog_back">Zurück</string>
+    <string name="dialog_apply">Anwenden</string>
+    <string name="settings">Einstellungen</string>
+    <string name="faq">FAQ\'s</string>
+    <string name="press_color_to_apply">Zum Anwenden klicken</string>
+    <string name="social_header_title">Social Media / Kontaktiere uns</string>
+    <string name="faq_one_question">Wie bekomme ich mein Theme zertifiziert?</string>
+    <string name="faq_one_answer">\nSei dir sicher das dein Theme die folgenden Anforderungen erfüllt\n\n\n- Einstellungen und Dirty Tweaks müssen vollständig gethemed sein\n\n- Schnelleinstellungen müssen ebenfalls vollständig gethemed sein\n\n- Textfarbe und Hintergrundfarbe dürfen nicht identisch sein\n\n- Dein Theme darf keine FCs oder ähnliches verursachen!\n\n\n- Kontaktiere uns in unserer G+ Community wenn dein Theme bereit ist\n</string>
+    <string name="faq_two_question">Wo finde ich die nötigen Ressourcen um mein Theme an DU anzupassen?</string>
+    <string name="faq_two_answer">\nGehe auf https://github.com/DirtyUnicorns/Theme-Resources und lade die zip-Datei herunter. Diese beinhaltet alle nötigen Ressourcen um dein Theme an DU anzupassen.\n</string>
+
+
+
+    <!-- App intro -->
+    <string name="first_slide_title">Willkommen zu DU Certified!</string>
+    <string name="first_slide_description">Eine Kollektion aus handverlesen Themes welche wunderbar mit DU funktionieren!</string>
+    <string name="second_slide_title">Also warum diese App?</string>
+    <string name="second_slide_description">Einige Themes sind naja...\n\n Anstatt uns darüber aufzuregen, freuen wir uns über das was wir haben!</string>
+    <string name="third_slide_title">Warnung!!</string>
+    <string name="third_slide_description">Fall du dein Lieblingstheme hier nicht finden kannst oder selbst ein Themer bist, schau in die FAQ wie du dein Theme zertifiziert bekommst</string>
+    <string name="last_slide_title">Das wars!!</string>
+    <string name="last_slide_description">Genieße es und #StayDirty!!</string>
+    <string name="skip_button">Überspringen</string>
+    <string name="done_button">Fertig</string>
+
+    <!-- Theme engine / Settings -->
+    <string name="reset_data">Daten zurücksetzen</string>
+    <string name="theme_settings">Einstellungen</string>
+    <string name="theme_toolbar_title">Aktionsleiste</string>
+    <string name="theme_toolbar_summary">Ändere die Farbe der Aktionsleiste</string>
+    <string name="theme_navbar_title">Navigationsleiste</string>
+    <string name="theme_navbar_summary">Ändere die Farbe der Navigationsleiste</string>
+    <string name="theme_drawer_title">Drawer</string>
+    <string name="theme_drawer_summary">Ändere die Farbe des Drawers</string>
+    <string name="theme_drawer_selected_icon_title">Ausgewählte Symbol im Drawer</string>
+    <string name="theme_drawer_selected_icon_summary">Ändere die Farbe des ausgewählten Symbols</string>
+    <string name="theme_drawer_normal_icon_title">Normale Symbole im Drawer</string>
+    <string name="theme_drawer_normal_icon_summary">Ändere die Farbe der normalen Symbole im Drawer</string>
+    <string name="theme_drawer_selected_drawer_text_title">Ausgewählter Text im Drawer</string>
+    <string name="theme_drawer_selected_drawer_text_summary">Ändere die Farbe des ausgewählten Texts</string>
+    <string name="theme_drawer_selector_title">Drawerauswahl</string>
+    <string name="theme_drawer_selector_summary">Ändere die Farbe der Drawerauswahl</string>
+    <string name="theme_drawer_text_title">Primärer Text im Drawer</string>
+    <string name="theme_drawer_text_summary">Ändere die Farbe des Texts im Drawer</string>
+    <string name="theme_statusbar_tint_title">Statusleiste färben</string>
+    <string name="theme_enable_statusbar_tint_summary">Aktiviert die Einfärbung der Statusleiste</string>
+    <string name="theme_disable_statusbar_tint_summary">Deaktiviert die Einfärbung der Statusleiste</string>
+    <string name="theme_navbar_tint_title">Navigationsleiste färben</string>
+    <string name="theme_enable_navbar_tint_summary">Aktiviert die Einfärbung der Navigationsleiste</string>
+    <string name="theme_disable_navbar_tint_summary">Deaktiviert die Einfärbung der Navigationsleiste</string>
+
+</resources>
