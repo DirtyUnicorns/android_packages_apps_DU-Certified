@@ -1,23 +1,17 @@
 package com.dirtyunicorns.certified.adapters;
 
-import android.app.AlertDialog;
 import android.content.Context;
-import android.content.DialogInterface;
-import android.content.Intent;
-import android.net.Uri;
-import android.preference.DialogPreference;
+import android.os.Bundle;
+import android.support.v4.app.FragmentActivity;
 import android.support.v7.widget.RecyclerView;
-import android.util.DisplayMetrics;
-import android.util.TypedValue;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.Window;
-import android.view.WindowManager;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.dirtyunicorns.certified.R;
+import com.dirtyunicorns.certified.fragments.ScreenShotFragment;
 import com.dirtyunicorns.certified.themes.Theme;
 
 import java.util.List;
@@ -31,6 +25,7 @@ public class ThemesRecyclerAdapter extends RecyclerView.Adapter<ThemesRecyclerAd
 
     private Context context;
     private List<Theme> themes;
+    Theme theme;
 
     public ThemesRecyclerAdapter(Context context, List<Theme> themes) {
         this.context = context;
@@ -45,7 +40,7 @@ public class ThemesRecyclerAdapter extends RecyclerView.Adapter<ThemesRecyclerAd
 
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
-        Theme theme = themes.get(position);
+        theme = themes.get(position);
 
         holder.title.setText(theme.getName());
         holder.author.setText(theme.getAuthor());
@@ -86,79 +81,20 @@ public class ThemesRecyclerAdapter extends RecyclerView.Adapter<ThemesRecyclerAd
 
         @Override
         public void onClick(View v) {
-            getDialog().show();
-        }
-
-
-        private AlertDialog getDialog() {
-
             final Theme theme = themes.get(getAdapterPosition());
+            Bundle bundle = new Bundle();
+            bundle.putInt("screenshot1", theme.getScreenshot1());
+            bundle.putInt("screenshot2", theme.getScreenshot2());
+            bundle.putInt("screenshot3", theme.getScreenshot3());
+            bundle.putString("package", theme.toPkg(context));
+            bundle.putInt("playstore", theme.getPlayStoreLink());
 
-            AlertDialog.Builder builder = new AlertDialog.Builder(context);
-
-            builder.setNegativeButton(context.getString(R.string.dialog_back), new DialogInterface.OnClickListener() {
-                @Override
-                public void onClick(DialogInterface dialog, int which) {
-                }
-            });
-
-            if (isPackageInstalled(context, theme.toPkg(context))) {
-                builder.setPositiveButton(context.getString(R.string.dialog_apply), new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        Intent intent = new Intent(Intent.ACTION_MAIN);
-                        intent.setClassName("org.cyanogenmod.theme.chooser", "org.cyanogenmod.theme.chooser.ChooserActivity");
-                        intent.putExtra("pkgName", theme.toPkg(context));
-                        context.startActivity(intent);
-                    }
-                });
-
-            } else {
-                builder.setPositiveButton(context.getString(R.string.dialog_playstore), new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        Intent intent = new Intent();
-                        intent.setAction(Intent.ACTION_VIEW);
-                        intent.setData(Uri.parse(context.getString(theme.getPlayStoreLink())));
-                        context.startActivity(intent);
-                    }
-                });
-            }
-
-            final AlertDialog dialog = builder.create();
-
-            LayoutInflater inflater = LayoutInflater.from(context);
-
-            View dialogLayout = inflater.inflate(R.layout.screenshots_layout, null);
-
-            ImageView image1 = (ImageView) dialogLayout.findViewById(R.id.image1);
-            ImageView image2 = (ImageView) dialogLayout.findViewById(R.id.image2);
-            ImageView image3 = (ImageView) dialogLayout.findViewById(R.id.image3);
-
-            image1.setImageResource(theme.getScreenshot1());
-            image2.setImageResource(theme.getScreenshot2());
-            image3.setImageResource(theme.getScreenshot3());
-
-            DisplayMetrics metrics = new DisplayMetrics();
-            WindowManager windowManager = (WindowManager) context
-                    .getSystemService(Context.WINDOW_SERVICE);
-            windowManager.getDefaultDisplay().getMetrics(metrics);
-
-
-            image1.getLayoutParams().height = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_SP, theme.getHeight(), metrics);
-            image2.getLayoutParams().height = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_SP, theme.getHeight(), metrics);
-            image3.getLayoutParams().height = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_SP, theme.getHeight(), metrics);
-
-            image1.getLayoutParams().width = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_SP, theme.getWidth(), metrics);
-            image2.getLayoutParams().width = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_SP, theme.getWidth(), metrics);
-            image3.getLayoutParams().width = (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_SP, theme.getWidth(), metrics);
-
-
-            dialog.setView(dialogLayout);
-            dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
-
-            return dialog;
-
+            ScreenShotFragment screenFrag= new ScreenShotFragment();
+            screenFrag.setArguments(bundle);
+            ((FragmentActivity)context).getSupportFragmentManager().beginTransaction()
+                    .add(R.id.main_content, screenFrag)
+                    .addToBackStack(null)
+                    .commit();
         }
 
     }
