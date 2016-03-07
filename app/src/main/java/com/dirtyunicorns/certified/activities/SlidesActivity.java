@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
+import android.support.v4.content.ContextCompat;
 import android.view.View;
 
 import com.dirtyunicorns.certified.MainActivity;
@@ -19,10 +20,10 @@ public class SlidesActivity extends AppIntro {
     @Override
     public void init(Bundle bundle) {
 
-        addSlide(AppIntroFragment.newInstance(getString(R.string.first_slide_title), getString(R.string.first_slide_description), R.drawable.ic_intro_first, getResources().getColor(R.color.first_slide)));
-        addSlide(AppIntroFragment.newInstance(getString(R.string.second_slide_title), getString(R.string.second_slide_description), R.drawable.ic_intro_second, getResources().getColor(R.color.second_slide)));
-        addSlide(AppIntroFragment.newInstance(getString(R.string.third_slide_title), getString(R.string.third_slide_description), R.drawable.ic_intro_third, getResources().getColor(R.color.third_slide)));
-        addSlide(AppIntroFragment.newInstance(getString(R.string.last_slide_title), getString(R.string.last_slide_description), R.drawable.ic_intro_last, getResources().getColor(R.color.last_slide)));
+        addSlide(AppIntroFragment.newInstance(getString(R.string.first_slide_title), getString(R.string.first_slide_description), R.drawable.ic_intro_first, ContextCompat.getColor(this, R.color.first_slide)));
+        addSlide(AppIntroFragment.newInstance(getString(R.string.second_slide_title), getString(R.string.second_slide_description), R.drawable.ic_intro_second, ContextCompat.getColor(this, R.color.second_slide)));
+        addSlide(AppIntroFragment.newInstance(getString(R.string.third_slide_title), getString(R.string.third_slide_description), R.drawable.ic_intro_third, ContextCompat.getColor(this, R.color.third_slide)));
+        addSlide(AppIntroFragment.newInstance(getString(R.string.last_slide_title), getString(R.string.last_slide_description), R.drawable.ic_intro_last, ContextCompat.getColor(this, R.color.last_slide)));
 
         showDoneButton(true);
         showSkipButton(true);

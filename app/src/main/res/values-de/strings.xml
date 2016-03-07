@@ -5,15 +5,12 @@
     <string name="category_light">Hell</string>
     <string name="category_dark">Dunkel</string>
     <string name="category_clear">Klar</string>
-    <string name="category_icons">Symbole</string>
     <string name="listing_paid">Kostenpflichtig</string>
     <string name="listing_free">Kostenlos</string>
     <string name="listing_installed">Installiert</string>
     <string name="googleplus_summary">Tritt unserer Community bei</string>
     <string name="twitter_summary">Folge uns auf Twitter</string>
     <string name="hide_launcher">Launcher-Symbol verstecken</string>
-    <string name="no_connection">Überprüfe deine Internetverbindung</string>
-    <string name="ok">OK</string>
     <string name="dialog_playstore">Play Store</string>
     <string name="dialog_back">Zurück</string>
     <string name="dialog_apply">Anwenden</string>
@@ -41,8 +38,6 @@
     <string name="done_button">Fertig</string>
 
     <!-- Theme engine / Settings -->
-    <string name="reset_data">Daten zurücksetzen</string>
-    <string name="theme_settings">Einstellungen</string>
     <string name="theme_toolbar_title">Aktionsleiste</string>
     <string name="theme_toolbar_summary">Ändere die Farbe der Aktionsleiste</string>
     <string name="theme_navbar_title">Navigationsleiste</string>

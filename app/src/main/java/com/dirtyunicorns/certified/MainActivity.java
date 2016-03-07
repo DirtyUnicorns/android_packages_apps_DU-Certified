@@ -126,7 +126,9 @@ public class MainActivity extends AppCompatActivity {
                                     twitter.setAction(Intent.ACTION_VIEW);
                                     twitter.setData(Uri.parse(getString(R.string.twitter)));
                                     startActivity(twitter);
-
+                                    break;
+                                default:
+                                    break;
                             }
 
                         }

@@ -5,6 +5,7 @@ import android.content.Context;
 import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.preference.PreferenceManager;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.widget.Toolbar;
 
 import com.dirtyunicorns.certified.R;
@@ -13,7 +14,6 @@ import com.dirtyunicorns.certified.slidingtab.SlidingTabLayout;
 public class Preferences {
 
     private SharedPreferences sharedPreferences;
-    public SharedPreferences.Editor editor;
 
     public static final String Theme = "Theme";
     public static final String NavBarTheme = "NavBarTheme";
@@ -27,11 +27,11 @@ public class Preferences {
     public static final String DrawerText = "DrawerText";
 
     public int Theme() {
-        return sharedPreferences.getInt(Theme, context.getResources().getColor(R.color.primary));
+        return sharedPreferences.getInt(Theme, ContextCompat.getColor(context, R.color.primary));
     }
 
     public int NavBarTheme() {
-        return sharedPreferences.getInt(NavBarTheme, context.getResources().getColor(R.color.primary));
+        return sharedPreferences.getInt(NavBarTheme, ContextCompat.getColor(context, R.color.primary));
     }
 
     public boolean StatusBarTint() {
@@ -43,27 +43,27 @@ public class Preferences {
     }
 
     public int Drawer() {
-        return sharedPreferences.getInt(Drawer, context.getResources().getColor(R.color.navdrawer_background));
+        return sharedPreferences.getInt(Drawer, ContextCompat.getColor(context, R.color.navdrawer_background));
     }
 
     public int SelectedIcon() {
-        return sharedPreferences.getInt(SelectedIcon, context.getResources().getColor(R.color.drawer_selected_icon_color));
+        return sharedPreferences.getInt(SelectedIcon, ContextCompat.getColor(context, R.color.drawer_selected_icon_color));
     }
 
     public int NormalIcon() {
-        return sharedPreferences.getInt(NormalIcon, context.getResources().getColor(R.color.drawer_normal_icon_color));
+        return sharedPreferences.getInt(NormalIcon, ContextCompat.getColor(context, R.color.drawer_normal_icon_color));
     }
 
     public int SelectedDrawerText() {
-        return sharedPreferences.getInt(SelectedDrawerText, context.getResources().getColor(R.color.drawer_selected_drawer_text_color));
+        return sharedPreferences.getInt(SelectedDrawerText, ContextCompat.getColor(context, R.color.drawer_selected_drawer_text_color));
     }
 
     public int DrawerSelector() {
-        return sharedPreferences.getInt(DrawerSelector, context.getResources().getColor(R.color.material_drawer_selected));
+        return sharedPreferences.getInt(DrawerSelector, ContextCompat.getColor(context, R.color.material_drawer_selected));
     }
 
     public int DrawerText() {
-        return sharedPreferences.getInt(DrawerText, context.getResources().getColor(R.color.drawer_text_color));
+        return sharedPreferences.getInt(DrawerText, ContextCompat.getColor(context, R.color.drawer_text_color));
     }
 
     private Context context;
@@ -71,24 +71,23 @@ public class Preferences {
     public Preferences(Context context) {
         this.context = context;
         this.sharedPreferences = PreferenceManager.getDefaultSharedPreferences(context);
-        this.editor = sharedPreferences.edit();
     }
 
     public static void resetPrefs(Activity context) {
 
         SharedPreferences.Editor editor = PreferenceManager.getDefaultSharedPreferences(context).edit();
 
-        editor.putInt(Theme, context.getResources().getColor(R.color.primary))
-                .putInt(NavBarTheme, context.getResources().getColor(R.color.primary))
+        editor.putInt(Theme, ContextCompat.getColor(context, R.color.primary))
+                .putInt(NavBarTheme, ContextCompat.getColor(context, R.color.primary))
                 .putBoolean(NavigationTint, false)
                 .putBoolean(StatusBarTint, true)
-                .putInt(Drawer, context.getResources().getColor(R.color.navdrawer_background))
-                .putInt(SelectedIcon, context.getResources().getColor(R.color.drawer_selected_icon_color))
-                .putInt(NormalIcon, context.getResources().getColor(R.color.drawer_normal_icon_color))
-                .putInt(SelectedDrawerText, context.getResources().getColor(R.color.drawer_selected_drawer_text_color))
-                .putInt(DrawerSelector, context.getResources().getColor(R.color.material_drawer_selected))
-                .putInt(DrawerText, context.getResources().getColor(R.color.drawer_text_color))
-                .commit();
+                .putInt(Drawer, ContextCompat.getColor(context, R.color.navdrawer_background))
+                .putInt(SelectedIcon, ContextCompat.getColor(context, R.color.drawer_selected_icon_color))
+                .putInt(NormalIcon, ContextCompat.getColor(context, R.color.drawer_normal_icon_color))
+                .putInt(SelectedDrawerText, ContextCompat.getColor(context, R.color.drawer_selected_drawer_text_color))
+                .putInt(DrawerSelector, ContextCompat.getColor(context, R.color.material_drawer_selected))
+                .putInt(DrawerText, ContextCompat.getColor(context, R.color.drawer_text_color))
+                .apply();
 
     }
 
@@ -105,7 +104,7 @@ public class Preferences {
         if (preferences.getNavigationTint()) {
             activity.getWindow().setNavigationBarColor(preferences.NavBarTheme());
         } else {
-            activity.getWindow().setNavigationBarColor(activity.getResources().getColor(R.color.md_black_1000));
+            activity.getWindow().setNavigationBarColor(ContextCompat.getColor(activity, R.color.md_black_1000));
         }
 
         if (preferences.StatusBarTint()) {

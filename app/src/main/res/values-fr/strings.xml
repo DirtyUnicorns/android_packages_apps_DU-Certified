@@ -8,15 +8,12 @@
     <string name="category_light">Clair</string>
     <string name="category_dark">Foncé</string>
     <string name="category_clear">Transparent</string>
-    <string name="category_icons">Icônes</string>
     <string name="listing_paid">PAYANT</string>
     <string name="listing_free">GRATUIT</string>
     <string name="listing_installed">INSTALLÉ</string>
     <string name="googleplus_summary">Rejoignez notre communauté</string>
     <string name="twitter_summary">Suivez-nous sur Twitter</string>
     <string name="hide_launcher">Cacher sur le lanceur d\'application</string>
-    <string name="no_connection">Vérifiez votre connexion Internet</string>
-    <string name="ok">OK</string>
     <string name="dialog_playstore">PlayStore</string>
     <string name="dialog_back">Retour</string>
     <string name="dialog_apply">Appliquer</string>
@@ -42,8 +39,6 @@
     <string name="done_button">OK</string>
 
     <!-- Theme engine / Settings -->
-    <string name="reset_data">Réinitialiser</string>
-    <string name="theme_settings">Paramètres du thème</string>
     <string name="theme_toolbar_title">Barre d\'outils</string>
     <string name="theme_toolbar_summary">Modifier la couleur de la barre d\'outils</string>
     <string name="theme_navbar_title">Barre de navigation</string>

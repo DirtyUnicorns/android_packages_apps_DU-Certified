@@ -8,7 +8,6 @@
     <string name="category_light">Light</string>
     <string name="category_dark">Dark</string>
     <string name="category_clear">Clear</string>
-    <string name="category_icons">Icons</string>
     <string name="listing_paid">PAID</string>
     <string name="listing_free">FREE</string>
     <string name="listing_installed">INSTALLED</string>
@@ -19,8 +18,6 @@
     <string name="twitter_title" translatable="false">Twitter</string>
     <string name="twitter_summary">Follow us on Twitter</string>
     <string name="hide_launcher">Hide Launcher</string>
-    <string name="no_connection">Check your internet connection</string>
-    <string name="ok">OK</string>
     <string name="dialog_playstore">PlayStore</string>
     <string name="dialog_back">Back</string>
     <string name="dialog_apply">Apply</string>
@@ -131,8 +128,6 @@
     <string name="done_button">DONE</string>
 
     <!-- Theme engine / Settings -->
-    <string name="reset_data">Reset Data</string>
-    <string name="theme_settings">Theme Settings</string>
     <string name="theme_toolbar_title">Toolbar</string>
     <string name="theme_toolbar_summary">Change color of the toolbar</string>
     <string name="theme_navbar_title">NavBar</string>

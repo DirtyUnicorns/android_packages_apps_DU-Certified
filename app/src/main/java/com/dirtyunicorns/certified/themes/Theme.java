@@ -2,8 +2,6 @@ package com.dirtyunicorns.certified.themes;
 
 import android.content.Context;
 
-import org.apache.commons.lang3.StringUtils;
-
 import static org.apache.commons.lang3.StringUtils.substringAfter;
 
 public abstract class Theme {

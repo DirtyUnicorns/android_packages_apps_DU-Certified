@@ -25,7 +25,7 @@ public class ColorPickerDialog extends Dialog implements ColorPickerView.OnColor
 	private boolean mHexValueEnabled = false;
 	private ColorStateList mHexDefaultTextColor;
 	private OnColorChangedListener mListener;
-	public interface OnColorChangedListener { public void onColorChanged(int color); }
+	public interface OnColorChangedListener { void onColorChanged(int color); }
 	public ColorPickerDialog(Context context, int initialColor) {
 		super(context);
 		init(initialColor);

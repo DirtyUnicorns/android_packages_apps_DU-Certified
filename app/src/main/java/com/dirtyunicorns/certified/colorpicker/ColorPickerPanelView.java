@@ -10,7 +10,6 @@ import android.view.View;
 public class ColorPickerPanelView extends View {
 	private final static float	BORDER_WIDTH_PX = 1;
 	private float mDensity = 1f;
-	private int 		mBorderColor = 0xff6E6E6E;
 	private int 		mColor = 0xff000000;
 	private Paint		mBorderPaint;
 	private Paint		mColorPaint;
@@ -31,10 +30,9 @@ public class ColorPickerPanelView extends View {
 	@Override
 	protected void onDraw(Canvas canvas) {
 		final RectF	rect = mColorRect;
-		if(BORDER_WIDTH_PX > 0){
-			mBorderPaint.setColor(mBorderColor);
-			canvas.drawRect(mDrawingRect, mBorderPaint);
-		}
+		int mBorderColor = 0xff6E6E6E;
+		mBorderPaint.setColor(mBorderColor);
+		canvas.drawRect(mDrawingRect, mBorderPaint);
 		if(mAlphaPattern != null){ mAlphaPattern.draw(canvas); }
 		mColorPaint.setColor(mColor);
 		canvas.drawRect(rect, mColorPaint);
@@ -64,10 +62,10 @@ public class ColorPickerPanelView extends View {
 		mColorRect = new RectF(left,top, right, bottom);
 		mAlphaPattern = new AlphaPatternDrawable((int)(5 * mDensity));
 		mAlphaPattern.setBounds(
-			Math.round(mColorRect.left),
-			Math.round(mColorRect.top),
-			Math.round(mColorRect.right),
-			Math.round(mColorRect.bottom)
+				Math.round(mColorRect.left),
+				Math.round(mColorRect.top),
+				Math.round(mColorRect.right),
+				Math.round(mColorRect.bottom)
 		);
 	}
 	public void setColor(int color){
@@ -75,9 +73,4 @@ public class ColorPickerPanelView extends View {
 		invalidate();
 	}
 	public int getColor(){ return mColor; }
-	public void setBorderColor(int color){
-		mBorderColor = color;
-		invalidate();
-	}
-	public int getBorderColor(){ return mBorderColor; }
 }

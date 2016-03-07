@@ -2,6 +2,7 @@ package com.dirtyunicorns.certified.fragments;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v4.content.ContextCompat;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.view.LayoutInflater;
@@ -31,13 +32,13 @@ public class ThemesTabsFragment extends Fragment {
 
         ButterKnife.bind(this, view);
 
-        PagerAdapter pagerAdapter = new ThemesPagerAdapter(getFragmentManager());
+        PagerAdapter pagerAdapter = new ThemesPagerAdapter(getActivity(), getFragmentManager());
 
         mViewPager.setOffscreenPageLimit(10);
         mViewPager.setAdapter(pagerAdapter);
 
         mSlidingTabLayout.setCustomTabView(R.layout.toolbar_tab, R.id.toolbar_tab_txtCaption);
-        mSlidingTabLayout.setSelectedIndicatorColors(getResources().getColor(R.color.tab_indicator_color));
+        mSlidingTabLayout.setSelectedIndicatorColors(ContextCompat.getColor(getActivity(), R.color.tab_indicator_color));
         mSlidingTabLayout.setViewPager(mViewPager);
 
         themePager(getContext(), mSlidingTabLayout);

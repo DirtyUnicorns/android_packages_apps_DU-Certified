@@ -4,8 +4,8 @@ import android.content.Context;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
+import android.support.v4.content.ContextCompat;
 import android.util.AttributeSet;
-import android.util.TypedValue;
 import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -43,11 +43,9 @@ class SlidingTabStrip extends LinearLayout {
         super(context, attrs);
         setWillNotDraw(false);
 
-        final float density = getResources().getDisplayMetrics().density;
+        float density = getResources().getDisplayMetrics().density;
 
-        TypedValue outValue = new TypedValue();
-
-        mTextPrimaryColor = context.getResources().getColor(com.dirtyunicorns.certified.R.color.sliding_tabs_text_color);
+        mTextPrimaryColor = ContextCompat.getColor(context, com.dirtyunicorns.certified.R.color.sliding_tabs_text_color);
 
         mTextPrimaryColorDisabled = setColorAlpha(mTextPrimaryColor,
                 DISABLED_TAB_TEXT_COLOR_ALPHA);
@@ -62,11 +60,8 @@ class SlidingTabStrip extends LinearLayout {
         mSelectedIndicatorPaint = new Paint();
 
         mDividerHeight = DEFAULT_DIVIDER_HEIGHT;
-
-        if (DEFAULT_DIVIDER_THICKNESS_DIPS != 0) {
-            mDividerPaint = new Paint();
-            mDividerPaint.setStrokeWidth((int) (DEFAULT_DIVIDER_THICKNESS_DIPS * density));
-        }
+        mDividerPaint = new Paint();
+        mDividerPaint.setStrokeWidth((int) (DEFAULT_DIVIDER_THICKNESS_DIPS * density));
     }
 
     int getTextColor() {

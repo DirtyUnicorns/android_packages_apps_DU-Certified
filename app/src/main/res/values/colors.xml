@@ -2,23 +2,14 @@
 <resources>
 
     <color name="dark_grey">#FFFFFF</color>
-    <color name="secondary">#009688</color>
     <color name="cardsbg">#303030</color>
     <color name="paid_free_label">#878787</color>
-    <color name="light_bg">#fafafa</color>
     <color name="sliding_tabs_text_color">#ffffffff</color>
-    <color name="statusbar_color">#9f2722</color>
     <color name="colorPrimary">#c8322b</color>
-    <color name="colorPrimaryDark">#9f2722</color>
     <color name="colorAccent">#e8eaf6</color>
-    <color name="colorMainText">#ffffff</color>
-    <color name="colorWindowBg">#FAFAFA</color>
-    <color name="colorText">#000000</color>
-    <color name="colorTextLight">#FFFFFF</color>
     <color name="navdrawer_background">#2a2a2a</color>
     <color name="tab_background">@color/colorPrimary</color>
     <color name="tab_indicator_color">#FFF</color>
-    <color name="white">#FFFFFF</color>
     <color name="drawer_selected_icon_color">#FFFFFF</color>
     <color name="drawer_normal_icon_color">#575757</color>
     <color name="drawer_selected_drawer_text_color">#FFFFFF</color>
@@ -70,8 +61,5 @@
     <color name="cardview_dark_background">#FFFFFF</color>
     <color name="cardview_shadow_start_color">#37000000</color>
     <color name="cardview_shadow_end_color">#03000000</color>
-
-    <color name="transparent">#00000000</color>
-
 
 </resources>

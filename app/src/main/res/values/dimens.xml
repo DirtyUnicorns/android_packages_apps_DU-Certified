@@ -4,24 +4,11 @@
     <dimen name="cards_padding">16dp</dimen>
     <dimen name="cards_elevation">3dp</dimen>
     <dimen name="cards_margin">4dp</dimen>
-    <dimen name="finalcard_margin">10dp</dimen>
     <dimen name="cards_text_margin">5dp</dimen>
-    <dimen name="mini_margin">2dp</dimen>
-    <dimen name="card_corner_radius">4dp</dimen>
     <dimen name="text_big">20sp</dimen>
-    <dimen name="text_med">18sp</dimen>
-    <dimen name="text_small">16sp</dimen>
-    <dimen name="text_ultrasmall">14sp</dimen>
-    <dimen name="no_width">0dp</dimen>
     <dimen name="cardview_default_radius">2dp</dimen>
     <dimen name="cardview_default_elevation">2dp</dimen>
     <dimen name="cardview_compat_inset_shadow">1dp</dimen>
-    <dimen name="abs__action_bar_title_text_size">18.0dip</dimen>
-    <dimen name="abs__action_bar_subtitle_text_size">14.0dip</dimen>
-
-
-    <dimen name="list_item_height_mini">40dp</dimen>
-    <dimen name="list_margin">20dp</dimen>
 
 
 
