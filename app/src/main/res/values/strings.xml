@@ -64,6 +64,7 @@
     <string name="radius_title" translatable="false">Radius</string>
     <string name="blakazurro_title" translatable="false">Blak Azurro</string>
     <string name="pitchblack_title" translatable="false">PitchBlack</string>
+    <string name="spring_title" translatable="false">Spring</string>
 
     <!-- Themers Names -->
     <string name="jayrod" translatable="false">Platyraptor Designs</string>
@@ -82,6 +83,7 @@
     <string name="giannisgx89" translatable="false">giannisgx89</string>
     <string name="B16H22" translatable="false">B16H22</string>
     <string name="westcrip" translatable="false">Altan KRK (westcrip)</string>
+    <string name="nitish" translatable="false">Nitish Saxena</string>
 
     <!-- Playstore Links -->
     <string name="playstore_bsc" translatable="false">https://play.google.com/store/apps/details?id=com.jayrod.bsc.cm12.theme2</string>
@@ -114,6 +116,7 @@
     <string name="playstore_radius" translatable="false">https://play.google.com/store/apps/details?id=com.kohlewrrk.radius</string>
     <string name="playstore_blakazurro" translatable="false">https://play.google.com/store/apps/details?id=com.cerj.theme.blakazurro</string>
     <string name="playstore_pitchblack" translatable="false">https://play.google.com/store/apps/details?id=com.resurrectionremix.pitchblack</string>
+    <string name="playstore_spring" translatable="false">https://play.google.com/store/apps/details?id=com.toxicthunder.spring</string>
 
     <!-- App intro -->
     <string name="first_slide_title">Welcome to DU Certified!</string>

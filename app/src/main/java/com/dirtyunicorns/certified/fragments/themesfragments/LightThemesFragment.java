@@ -6,6 +6,7 @@ import com.dirtyunicorns.certified.themes.light.Coalfield;
 import com.dirtyunicorns.certified.themes.light.Heiva;
 import com.dirtyunicorns.certified.themes.light.Liv;
 import com.dirtyunicorns.certified.themes.light.OutlitePro;
+import com.dirtyunicorns.certified.themes.light.Spring;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -20,6 +21,7 @@ public class LightThemesFragment extends AbstractThemesListFragment {
         themes.add(new Heiva());
         themes.add(new Liv());
         themes.add(new OutlitePro());
+        themes.add(new Spring());
 
         return themes;
     }
