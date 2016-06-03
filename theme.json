@@ -1,0 +1,53 @@
+[
+
+{"theme_name":"AWESOME THEME NAME",
+
+"theme_author":"JOHN DOE",
+
+"theme_summary":"ONE OF THE MOST AWESOME THEMES YOU WILL EVER SEE IN YOUR LIFE",
+
+"paid": "true",
+
+"themeready": "false",
+
+"uri":{
+
+"card_thumbnail":"IMAGE LINK GOES HERE",
+
+"collapsing_toolbar_thumbnail":"IMAGE LINK GOES HERE",
+
+"screenshot1":"IMAGE LINK GOES HERE",
+
+"screenshot2":"IMAGE LINK GOES HERE",
+
+"screenshot3":"IMAGE LINK GOES HERE",
+
+"playstore":"PLAY STORE LINK TO YOUR THEME",
+
+"contact":"YOUR G+ PROFILE GOES HERE"}}
+
+]
+
+
+
+
+
+theme_name -  The name of your theme without the CM13/DU10 [BEST THEME EVER] before or after it. Simple, name like BlakKat or Sprite
+
+theme_author - What shows up in the playstore, not your real name. Let's try to keep this legit
+
+theme_summary - Give us a summary of your theme. A short summary, what you put in the playstore minus all the instructions and buzz words
+
+paid - If your theme is paid, leave it as true. If is not, set it to false
+
+themeready - Does your theme perform better with a user flashes theme ready gapps? If so, change false to true and if not, leave it as it is.
+
+card_thumbnail - Please make sure the image url you provide is at least 300x246. This is the image you first see on the card.
+
+collapsing_toolbar_thumbnail - Please make sure the image url you provide is at least 1200x986. This is the image you see on top when you click on the card
+
+screenshot1, 2 and 3 - Please make sure the image url you provide is EXACTLY 506x899. If you forget everything else, please do this. Screenshots that look more like posters and banners don't fit well within the app and causes a lot of layout issues. 
+
+playstore - This is simple, the url to the playstore for your theme. Don't use short url's, give us the long url please
+
+contact - This can either be your G+ profile where people can follow you for updates or the G+ community where you're handling questions.
