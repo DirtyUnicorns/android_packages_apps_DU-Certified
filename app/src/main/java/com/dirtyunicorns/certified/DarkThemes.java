@@ -30,6 +30,7 @@ import org.json.JSONObject;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.concurrent.TimeUnit;
 
 import okhttp3.OkHttpClient;
 import okhttp3.Response;
@@ -188,7 +189,9 @@ public class DarkThemes extends AppCompatActivity implements ClickUtils.OnItemCl
                     boolean isConnected = isConnected(DarkThemes.this);
                     if (isConnected) {
                         super.onPreExecute();
-                        Preferences.pbar.setVisibility(View.GONE);
+                        if (mSwipeRefreshLayout != null)
+                            mSwipeRefreshLayout.setRefreshing(false);
+                        Preferences.pbar.setVisibility(View.VISIBLE);
                     } else {
                         showNotConnectedDialog();
                         Preferences.pbar.setVisibility(View.GONE);
@@ -197,7 +200,11 @@ public class DarkThemes extends AppCompatActivity implements ClickUtils.OnItemCl
 
                 @Override
                 protected String doInBackground(String... params) {
-                    OkHttpClient client = new OkHttpClient();
+                    OkHttpClient client = new OkHttpClient.Builder()
+                            .connectTimeout(10, TimeUnit.SECONDS)
+                            .writeTimeout(10, TimeUnit.SECONDS)
+                            .readTimeout(30, TimeUnit.SECONDS)
+                            .build();
                     boolean isConnected = isConnected(DarkThemes.this);
                     String URL = "https://raw.githubusercontent.com/DirtyUnicorns/android_packages_apps_DU-Certified/README/jsons/darkthemes.json";
 
@@ -229,7 +236,6 @@ public class DarkThemes extends AppCompatActivity implements ClickUtils.OnItemCl
 
                 @Override
                 protected void onPostExecute(final String data) {
-                    mSwipeRefreshLayout.setRefreshing(false);
                     ConnectivityManager connManager2 = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
                     NetworkInfo mWifi = connManager2.getNetworkInfo(ConnectivityManager.TYPE_WIFI);
                     boolean isConnected = isConnected(DarkThemes.this);
@@ -237,12 +243,14 @@ public class DarkThemes extends AppCompatActivity implements ClickUtils.OnItemCl
                         if (!mWifi.isConnected()) {
                             try {
                                 setJson(data);
+                                Preferences.pbar.setVisibility(View.GONE);
                             } catch (JSONException e) {
                                 e.printStackTrace();
                             }
                         } else {
                             try {
                                 setJson(data);
+                                Preferences.pbar.setVisibility(View.GONE);
                             } catch (JSONException e) {
                                 e.printStackTrace();
                             }
