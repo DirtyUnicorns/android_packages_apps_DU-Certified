@@ -224,7 +224,7 @@ public class LightThemes extends AppCompatActivity implements OnItemClickListene
         protected String doInBackground(String... params) {
             OkHttpClient client = new OkHttpClient();
             boolean isConnected = isConnected(LightThemes.this);
-            String URL = "http://download.dirtyunicorns.com/files/misc/.alex/lightthemes.json";
+            String URL = "https://raw.githubusercontent.com/DirtyUnicorns/android_packages_apps_DU-Certified/README/jsons/lightthemes.json";
 
             if (isConnected) {
                 okhttp3.Request request = new okhttp3.Request.Builder()

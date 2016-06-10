@@ -199,7 +199,7 @@ public class DarkThemes extends AppCompatActivity implements ClickUtils.OnItemCl
                 protected String doInBackground(String... params) {
                     OkHttpClient client = new OkHttpClient();
                     boolean isConnected = isConnected(DarkThemes.this);
-                    String URL = "http://download.dirtyunicorns.com/files/misc/.alex/darkthemes.json";
+                    String URL = "https://raw.githubusercontent.com/DirtyUnicorns/android_packages_apps_DU-Certified/README/jsons/darkthemes.json";
 
                     if (isConnected) {
                         okhttp3.Request request = new okhttp3.Request.Builder()
