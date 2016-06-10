@@ -214,12 +214,8 @@ public class LightThemes extends AppCompatActivity implements OnItemClickListene
             boolean isConnected = isConnected(LightThemes.this);
             if (isConnected) {
                 super.onPreExecute();
-                if (mSwipeRefreshLayout != null)
-                    mSwipeRefreshLayout.setRefreshing(false);
-                Preferences.pbar.setVisibility(View.VISIBLE);
             } else {
                 showNotConnectedDialog();
-                Preferences.pbar.setVisibility(View.GONE);
             }
         }
 
@@ -261,6 +257,8 @@ public class LightThemes extends AppCompatActivity implements OnItemClickListene
 
         @Override
         protected void onPostExecute(final String data) {
+            mSwipeRefreshLayout.setRefreshing(false);
+            Preferences.pbar.setVisibility(View.VISIBLE);
             ConnectivityManager connManager2 = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
             NetworkInfo mWifi = connManager2.getNetworkInfo(ConnectivityManager.TYPE_WIFI);
             boolean isConnected = isConnected(LightThemes.this);

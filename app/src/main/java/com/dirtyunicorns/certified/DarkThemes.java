@@ -189,12 +189,8 @@ public class DarkThemes extends AppCompatActivity implements ClickUtils.OnItemCl
                     boolean isConnected = isConnected(DarkThemes.this);
                     if (isConnected) {
                         super.onPreExecute();
-                        if (mSwipeRefreshLayout != null)
-                            mSwipeRefreshLayout.setRefreshing(false);
-                        Preferences.pbar.setVisibility(View.VISIBLE);
                     } else {
                         showNotConnectedDialog();
-                        Preferences.pbar.setVisibility(View.GONE);
                     }
                 }
 
@@ -236,6 +232,8 @@ public class DarkThemes extends AppCompatActivity implements ClickUtils.OnItemCl
 
                 @Override
                 protected void onPostExecute(final String data) {
+                    mSwipeRefreshLayout.setRefreshing(false);
+                    Preferences.pbar.setVisibility(View.VISIBLE);
                     ConnectivityManager connManager2 = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
                     NetworkInfo mWifi = connManager2.getNetworkInfo(ConnectivityManager.TYPE_WIFI);
                     boolean isConnected = isConnected(DarkThemes.this);
