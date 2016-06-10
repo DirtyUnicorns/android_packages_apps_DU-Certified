@@ -1,77 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
-<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <SwitchPreference
-        android:key="StatusBarTint"
-        android:title="@string/theme_statusbar_tint_title"
-        android:summaryOn="@string/theme_disable_statusbar_tint_summary"
-        android:summaryOff="@string/theme_enable_statusbar_tint_summary"
-        android:defaultValue="true" />
+    <com.dirtyunicorns.certified.Cache
+        android:title="@string/clear_cache_title"
+        android:summary="@string/clear_cache_summary"/>
 
-    <SwitchPreference
-        android:key="NavigationTint"
-        android:title="@string/theme_navbar_tint_title"
-        android:summaryOn="@string/theme_disable_navbar_tint_summary"
-        android:summaryOff="@string/theme_enable_navbar_tint_summary"
-        android:defaultValue="false" />
+    <Preference
+        android:key="VersionName"
+        android:title="@string/build_info"
+        android:selectable="false" />
 
-    <com.dirtyunicorns.certified.colorpicker.ColorPickerPreference
-        android:key="NavBarTheme"
-        android:title="@string/theme_navbar_title"
-        android:summary="@string/theme_navbar_summary"
-        android:defaultValue="@color/primary"
-        android:dependency="NavigationTint"
-        alphaSlider="true"/>
+    <PreferenceCategory
+        android:title="@string/theme_options">
 
-    <com.dirtyunicorns.certified.colorpicker.ColorPickerPreference
-        android:key="Theme"
-        android:title="@string/theme_toolbar_title"
-        android:summary="@string/theme_toolbar_summary"
-        android:defaultValue="@color/primary"
-        alphaSlider="true"/>
+        <CheckBoxPreference
+            android:key="NavigationTint"
+            android:title="@string/pref_navbar_tint_title"
+            android:summaryOn="@string/disable_navbar_tint_summary"
+            android:summaryOff="@string/enable_navbar_tint_summary"
+            android:defaultValue="false" />
 
-    <com.dirtyunicorns.certified.colorpicker.ColorPickerPreference
-        android:key="Drawer"
-        android:title="@string/theme_drawer_title"
-        android:summary="@string/theme_drawer_summary"
-        android:defaultValue="@color/navdrawer_background"
-        alphaSlider="true"/>
+        <CheckBoxPreference
+            android:key="StatusBarTint"
+            android:title="@string/pref_statusbar_tint_title"
+            android:summaryOn="@string/disable_statusbar_tint_summary"
+            android:summaryOff="@string/enable_statusbar_tint_summary"
+            android:defaultValue="true" />
 
-    <com.dirtyunicorns.certified.colorpicker.ColorPickerPreference
-        android:key="DrawerSelector"
-        android:title="@string/theme_drawer_selector_title"
-        android:summary="@string/theme_drawer_selector_summary"
-        android:defaultValue="@color/material_drawer_selected"
-        alphaSlider="true"/>
-
-    <com.dirtyunicorns.certified.colorpicker.ColorPickerPreference
-        android:key="DrawerText"
-        android:title="@string/theme_drawer_text_title"
-        android:summary="@string/theme_drawer_text_summary"
-        android:defaultValue="@color/drawer_text_color"
-        alphaSlider="true"/>
-
-    <com.dirtyunicorns.certified.colorpicker.ColorPickerPreference
-        android:key="SelectedDrawerText"
-        android:title="@string/theme_drawer_selected_drawer_text_title"
-        android:summary="@string/theme_drawer_selected_drawer_text_summary"
-        android:defaultValue="@color/drawer_selected_drawer_text_color"
-        alphaSlider="true"/>
-
-    <com.dirtyunicorns.certified.colorpicker.ColorPickerPreference
-        android:key="NormalIcon"
-        android:title="@string/theme_drawer_normal_icon_title"
-        android:summary="@string/theme_drawer_normal_icon_summary"
-        android:defaultValue="@color/drawer_normal_icon_color"
-        alphaSlider="true"/>
-
-    <com.dirtyunicorns.certified.colorpicker.ColorPickerPreference
-        android:key="SelectedIcon"
-        android:title="@string/theme_drawer_selected_icon_title"
-        android:summary="@string/theme_drawer_selected_icon_summary"
-        android:defaultValue="@color/drawer_selected_icon_color"
-        alphaSlider="true"/>
+    </PreferenceCategory>
 
 </PreferenceScreen>

@@ -15,47 +15,19 @@ http://gerrit.dirtyunicorns.com
 If you have a hard time pushing to our gerrit, please read this
 https://github.com/DirtyUnicorns/android_manifest#submitting-patches
 
-If you still have a hard time, please contact Alex Cruz in the G+ community
-https://plus.google.com/u/0/communities/109738128866939227235
-
-
-# Playstore
-
-DU Certified is available in the playstore to update across all devices without having to update the actual ROM.
-
-<a href="https://play.google.com/store/apps/details?id=com.dirtyunicorns.certified">
-  <img alt="Get it on Google Play"
-       src="http://i.imgur.com/R2JDuMN.png" />
-</a>
-
-
-# Libraries used this app
-
-- Material Drawer by @mikepenz
-https://github.com/mikepenz/MaterialDrawer
-
-- SnackBar by @MrEngineer13
-https://github.com/MrEngineer13/SnackBar
-
-- AppIntro by @PaoloRotolo
-https://github.com/PaoloRotolo/AppIntro
-
-- Commonly used libraries by Google
-(Cardview, recyclerview, design, support, appcompat)
-
 
 # License
 
-    Copyright (C) 2016 The Dirty Unicorns Project
+Copyright (C) 2016 The Dirty Unicorns Project
 
-    Licensed under the Apache License, Version 2.0 (the "License");
-    you may not use this file except in compliance with the License.
-    You may obtain a copy of the License at
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
 
-       http://www.apache.org/licenses/LICENSE-2.0
+   http://www.apache.org/licenses/LICENSE-2.0
 
-    Unless required by applicable law or agreed to in writing, software
-    distributed under the License is distributed on an "AS IS" BASIS,
-    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-    See the License for the specific language governing permissions and
-    limitations under the License.
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.

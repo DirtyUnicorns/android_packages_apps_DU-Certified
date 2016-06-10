@@ -1,154 +1,54 @@
 <resources>
 
-    <!-- General -->
-    <string name="app_name" translatable="false">DU Certified</string>
-    <string name="app_long_name" translatable="false">DU Certified v</string>
-    <string name="app_dev_name" translatable="false">#StayDirty</string>
-    <string name="drawer_item_home">Home</string>
-    <string name="category_light">Light</string>
-    <string name="category_dark">Dark</string>
-    <string name="category_clear">Clear</string>
-    <string name="listing_paid">PAID</string>
-    <string name="listing_free">FREE</string>
-    <string name="listing_installed">INSTALLED</string>
-    <string name="googleplus_community" translatable="false">https://plus.google.com/u/0/communities/109738128866939227235</string>
-    <string name="googleplus_title" translatable="false">Google +</string>
-    <string name="googleplus_summary">Join our community</string>
-    <string name="twitter" translatable="false">https://twitter.com/_DirtyUnicorns_</string>
-    <string name="twitter_title" translatable="false">Twitter</string>
-    <string name="twitter_summary">Follow us on Twitter</string>
-    <string name="hide_launcher">Hide Launcher</string>
-    <string name="dialog_playstore">PlayStore</string>
-    <string name="dialog_back">Back</string>
-    <string name="dialog_apply">Apply</string>
+    <string name="app_name">DU Certified</string>
+    <string name="submit_recipes">Get Certified</string>
+    <string name="light_themes">Light themes</string>
+    <string name="dark_themes">Dark themes</string>
+    <string name="about_app">About the app</string>
+    <string name="libraries">Libraries</string>
     <string name="settings">Settings</string>
-    <string name="faq">FAQ\'s</string>
-    <string name="press_color_to_apply">Click to apply</string>
-    <string name="social_header_title">Social / Contact Us</string>
-    <string name="faq_one_question">How do I get my theme certified?</string>
-    <string name="faq_one_answer">\nSimply make sure your theme meets the following requirements\n\n\n- Settings must be fully themed to include Dirty Tweaks\n\n- Quick Settings must be fully themed\n\n- No same color text on same color background\n\n- Your theme must not cause any FCs or screen tearing\n\n\n- Contact us at our G+ community when ready\n</string>
-    <string name="faq_two_question">Where can I find the resources to theme DU?</string>
-    <string name="faq_two_answer">\nHead over to https://github.com/DirtyUnicorns/Theme-Resources and download the zip. This zip contains everything a themer needs to theme DU\n</string>
+    <string name="contact_alex">Contact Alex</string>
+    <string name="playstore_button">Play Store</string>
+    <string name="contact_button">Designer</string>
 
-    <!-- Themes -->
-    <string name="bsc_title" translatable="false">BSC</string>
-    <string name="bluehydra_title" translatable="false">Blue Hydra</string>
-    <string name="blakkat_title" translatable="false">BlakKat</string>
-    <string name="klearkat_title" translatable="false">KlearKat</string>
-    <string name="sprite_title" translatable="false">Sprite</string>
-    <string name="steamworks_title" translatable="false">Steamworks Ultimate</string>
-    <string name="outray_title" translatable="false">Outray</string>
-    <string name="coalfield_title" translatable="false">Coalfield</string>
-    <string name="outlite_title" translatable="false">Outlite PRO</string>
-    <string name="heiwa_title" translatable="false">Heiwa</string>
-    <string name="phlat_title" translatable="false">Phlat</string>
-    <string name="kaiui_title" translatable="false">kai ui</string>
-    <string name="mono_title" translatable="false">mono II</string>
-    <string name="lunarui_title" translatable="false">LunarUI</string>
-    <string name="materialfaded_blue_title" translatable="false">Material Faded - Blue</string>
-    <string name="materialfaded_gold_title" translatable="false">Material Faded - Gold</string>
-    <string name="materialfaded_green_title" translatable="false">Material Faded - Green</string>
-    <string name="materialfaded_red_title" translatable="false">Material Faded - Red</string>
-    <string name="akzent_title" translatable="false">akZent</string>
-    <string name="darkmtrl_title" translatable="false">DarkMTRL</string>
-    <string name="deepdarkness_title" translatable="false">DEEP DARKNESS</string>
-    <string name="euphoria_dark_title" translatable="false">Euphoria Dark</string>
-    <string name="bluxs_title" translatable="false">Blu XS</string>
-    <string name="flux_title" translatable="false">Flux</string>
-    <string name="livdark_title" translatable="false">Liv Dark</string>
-    <string name="liv_title" translatable="false">Liv</string>
-    <string name="caffene_title" translatable="false">Caffene</string>
-    <string name="radius_title" translatable="false">Radius</string>
-    <string name="blakazurro_title" translatable="false">Blak Azurro</string>
-    <string name="pitchblack_title" translatable="false">PitchBlack</string>
-    <string name="spring_title" translatable="false">Spring</string>
+    <!-- Dialog strings -->
+    <string name="no_conn_content">Please make sure you have an active internet connection.</string>
+    <string name="ok">Ok</string>
+    <string name="warning_title">WARNING</string>
+    <string name="warning_message"><b>It seems like you\'re using cellular data</b>.\n\nThis app depends on a data connection to load resources and in turn, provide quicker updates.\n\nIt\'s highly recommended that you use WiFi due to a slower connection on cellular which may cause a bad experience and lead to you leaving a bad rating.</string>
+    <string name="alright">ALRIGHT</string>
+    <string name="load_anyways">LOAD ANYWAYS</string>
+    <string name="do_show_again">Do not show again</string>
+    <string name="not_checked">NOT checked</string>
+    <string name="checked">checked</string>
+    <string name="skipMessage">skipMessage</string>
+    <string name="choose_email_app">Choose Email App..</string>
+    <string name="no_email_app_found_title">No Email App Found</string>
+    <string name="no_email_app_found_message">A viable email app was not found on your device. Please install one and resend your request.</string>
+    <string name="download_gmail">Download Gmail</string>
+    <string name="email_about_du_certified">Email about DU Certified</string>
+    <string name="gmail_link"><![CDATA[https://play.google.com/store/apps/details?id=com.google.android.gm&hl=en]]></string>
 
-    <!-- Themers Names -->
-    <string name="jayrod" translatable="false">Platyraptor Designs</string>
-    <string name="markbencze" translatable="false">markbencze</string>
-    <string name="bryanowens" translatable="false">DjDarkknight</string>
-    <string name="barrysmith" translatable="false">CyanDorman</string>
-    <string name="andrezimmermann" translatable="false">Kohlewrrk</string>
-    <string name="travishall" translatable="false">Not Just Another Designer</string>
-    <string name="jacek" translatable="false">YAdesign</string>
-    <string name="mikexdnax" translatable="false">Mike xdnax</string>
-    <string name="nicholaschum" translatable="false">chummy development team</string>
-    <string name="patrick" translatable="false">Thyrus</string>
-    <string name="moelle" translatable="false">moelle</string>
-    <string name="blazze11" translatable="false">blazze11</string>
-    <string name="cerj" translatable="false">cerj</string>
-    <string name="giannisgx89" translatable="false">giannisgx89</string>
-    <string name="B16H22" translatable="false">B16H22</string>
-    <string name="westcrip" translatable="false">Altan KRK (westcrip)</string>
-    <string name="nitish" translatable="false">Nitish Saxena</string>
+    <!-- Settings strings -->
+    <string name="build_info">Build information</string>
+    <string name="clear_cache_title">Clear Cache</string>
+    <string name="clear_cache_summary">Cache Size - %s</string>
+    <string name="theme_options">Theme options</string>
+    <string name="pref_navbar_tint_title">Navigation bar tint</string>
+    <string name="enable_navbar_tint_summary">Enable navigation bar tint</string>
+    <string name="disable_navbar_tint_summary">Disable navigation bar tint</string>
+    <string name="pref_statusbar_tint_title">Status bar shadow</string>
+    <string name="enable_statusbar_tint_summary">Enable status bar shadow</string>
+    <string name="disable_statusbar_tint_summary">Disable status bar shadow</string>
 
-    <!-- Playstore Links -->
-    <string name="playstore_bsc" translatable="false">https://play.google.com/store/apps/details?id=com.jayrod.bsc.cm12.theme2</string>
-    <string name="playstore_bluehydra" translatable="false">https://play.google.com/store/apps/details?id=com.markbencze.bluehydratheme</string>
-    <string name="playstore_blakkat" translatable="false">https://play.google.com/store/apps/details?id=com.djdarkknight96.theme.blakkat</string>
-    <string name="playstore_klearkat" translatable="false">https://play.google.com/store/apps/details?id=com.djdarkknight96.theme.klearkat</string>
-    <string name="playstore_sprite" translatable="false">https://play.google.com/store/apps/details?id=com.djdarkknight96.theme.sprite</string>
-    <string name="playstore_steamworks" translatable="false">https://play.google.com/store/apps/details?id=com.cyandorman.theme.steamworks_ultimate</string>
-    <string name="playstore_outray" translatable="false">https://play.google.com/store/apps/details?id=com.kohlewrrk.outray</string>
-    <string name="playstore_outlite" translatable="false">https://play.google.com/store/apps/details?id=com.kohlewrrk.outlitepro</string>
-    <string name="playstore_coalfield" translatable="false">https://play.google.com/store/apps/details?id=com.kohlewrrk.coalfield</string>
-    <string name="playstore_heiwa" translatable="false">https://play.google.com/store/apps/details?id=com.njad.heiwatheme</string>
-    <string name="playstore_phlat" translatable="false">https://play.google.com/store/apps/details?id=com.njad.phlattheme</string>
-    <string name="playstore_kaiui" translatable="false">https://play.google.com/store/apps/details?id=yadesign.kai.ui</string>
-    <string name="playstore_mono" translatable="false">https://play.google.com/store/apps/details?id=yadesign.mono</string>
-    <string name="playstore_lunarui" translatable="false">https://play.google.com/store/apps/details?id=yadesign.lunarui</string>
-    <string name="playstore_materialfaded_blue" translatable="false">https://play.google.com/store/apps/details?id=com.xdnax.materialfaded.blue</string>
-    <string name="playstore_materialfaded_gold" translatable="false">https://play.google.com/store/apps/details?id=com.xdnax.materialfaded.gold</string>
-    <string name="playstore_materialfaded_green" translatable="false">https://play.google.com/store/apps/details?id=com.xdnax.materialfaded.green</string>
-    <string name="playstore_materialfaded_red" translatable="false">https://play.google.com/store/apps/details?id=com.xdnax.materialfaded.red</string>
-    <string name="playstore_akzent" translatable="false">https://play.google.com/store/apps/details?id=com.chummy.jezebel.materialdark.donate</string>
-    <string name="playstore_darkmtrl" translatable="false">https://play.google.com/store/apps/details?id=darkuimtrl.thyrus.releaseCM12</string>
-    <string name="playstore_deepdarkness" translatable="false">https://play.google.com/store/apps/details?id=com.blissroms.moelle.ddoverhauled</string>
-    <string name="playstore_euphoria_dark" translatable="false">https://play.google.com/store/apps/details?id=com.blazze11.euphoria.dark</string>
-    <string name="playstore_bluxs" translatable="false">https://play.google.com/store/apps/details?id=com.cerj.theme.blu.xs</string>
-    <string name="playstore_flux" translatable="false">https://play.google.com/store/apps/details?id=com.flux.theme.flux</string>
-    <string name="playstore_livdark" translatable="false">https://play.google.com/store/apps/details?id=com.livdark.theme.livdark</string>
-    <string name="playstore_liv" translatable="false">https://play.google.com/store/apps/details?id=com.liv.theme.liv</string>
-    <string name="playstore_caffene" translatable="false">https://play.google.com/store/apps/details?id=com.b16h22.caffene</string>
-    <string name="playstore_radius" translatable="false">https://play.google.com/store/apps/details?id=com.kohlewrrk.radius</string>
-    <string name="playstore_blakazurro" translatable="false">https://play.google.com/store/apps/details?id=com.cerj.theme.blakazurro</string>
-    <string name="playstore_pitchblack" translatable="false">https://play.google.com/store/apps/details?id=com.resurrectionremix.pitchblack</string>
-    <string name="playstore_spring" translatable="false">https://play.google.com/store/apps/details?id=com.toxicthunder.spring</string>
-
-    <!-- App intro -->
-    <string name="first_slide_title">Welcome to DU Certified!</string>
-    <string name="first_slide_description">A collection of hand picked themes that go great with DU!</string>
+    <!-- App intro strings -->
+    <string name="first_slide_title">Welcome to DU Certified</string>
+    <string name="first_slide_description">A collection of hand picked themes that guarantee a good user experience</string>
     <string name="second_slide_title">So why this app?</string>
-    <string name="second_slide_description">Some themes are janky.\n\n Instead of complaining, we\'ve decided to celebrate what we have!</string>
-    <string name="third_slide_title">WARNING!!</string>
-    <string name="third_slide_description">If you don\'t see your favorite theme on here or you\'re a themer and want your work showcased, check out our FAQ section</string>
-    <string name="last_slide_title">That\'s it!!</string>
-    <string name="last_slide_description">Enjoy and #StayDirty!!</string>
-    <string name="skip_button">SKIP</string>
-    <string name="done_button">DONE</string>
+    <string name="second_slide_description">Some themes are janky and instead of complaining or chasing themers to get things done, we\'ve decided to celebrate what we have!</string>
+    <string name="third_slide_title">How do I get my theme certified?</string>
+    <string name="third_slide_description">Contact us via our G+ community, get your theme evaluated and then submit the necessary json data for your theme.</string>
+    <string name="last_slide_title">That\'s it!</string>
+    <string name="last_slide_description">Enjoy the app, make sure to check for themes often and always <b>#StayDirty</b></string>
 
-    <!-- Theme engine / Settings -->
-    <string name="theme_toolbar_title">Toolbar</string>
-    <string name="theme_toolbar_summary">Change color of the toolbar</string>
-    <string name="theme_navbar_title">NavBar</string>
-    <string name="theme_navbar_summary">Change color of the navigation bar</string>
-    <string name="theme_drawer_title">Drawer</string>
-    <string name="theme_drawer_summary">Change background color of the nav drawer</string>
-    <string name="theme_drawer_selected_icon_title">Drawer Selected Icon</string>
-    <string name="theme_drawer_selected_icon_summary">Change selected drawer icon color</string>
-    <string name="theme_drawer_normal_icon_title">Drawer Normal Icon</string>
-    <string name="theme_drawer_normal_icon_summary">Change normal drawer icon color</string>
-    <string name="theme_drawer_selected_drawer_text_title">Drawer selected text</string>
-    <string name="theme_drawer_selected_drawer_text_summary">Change selected drawer text color</string>
-    <string name="theme_drawer_selector_title">Drawer selector</string>
-    <string name="theme_drawer_selector_summary">Change drawer selector color</string>
-    <string name="theme_drawer_text_title">Drawer primary text color</string>
-    <string name="theme_drawer_text_summary">Change primary drawer text color</string>
-    <string name="theme_statusbar_tint_title">Status Bar Tint</string>
-    <string name="theme_enable_statusbar_tint_summary">Enable Status Bar Tint</string>
-    <string name="theme_disable_statusbar_tint_summary">Disable Status Bar Tint</string>
-    <string name="theme_navbar_tint_title">NavBar Tint</string>
-    <string name="theme_enable_navbar_tint_summary">Enable Navigation Bar Tint</string>
-    <string name="theme_disable_navbar_tint_summary">Disable Navigation Bar Tint</string>
-
-</resources>
+</resources>              
