@@ -27,7 +27,7 @@
     <string name="no_email_app_found_message">A viable email app was not found on your device. Please install one and resend your request.</string>
     <string name="download_gmail">Download Gmail</string>
     <string name="email_about_du_certified">Email about DU Certified</string>
-    <string name="gmail_link"><![CDATA[https://play.google.com/store/apps/details?id=com.google.android.gm&hl=en]]></string>
+    <string name="gmail_link" translatable="false"><![CDATA[https://play.google.com/store/apps/details?id=com.google.android.gm&hl=en]]></string>
 
     <!-- Settings strings -->
     <string name="build_info">Build information</string>
@@ -51,4 +51,4 @@
     <string name="last_slide_title">That\'s it!</string>
     <string name="last_slide_description">Enjoy the app, make sure to check for themes often and always <b>#StayDirty</b></string>
 
-</resources>              
+</resources>
