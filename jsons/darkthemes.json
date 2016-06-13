@@ -370,5 +370,34 @@
 
 "playstore":"https://play.google.com/store/apps/details?id=com.cerj.theme.berzerker",
 
-"contact":"https://plus.google.com/u/0/103851530070253240495"}}
+"contact":"https://plus.google.com/u/0/103851530070253240495"}},
+
+
+
+{
+"theme_name":"Glow",
+
+"theme_author":"BlinqDroid",
+
+"theme_summary":"A theme with non flat glowing blue icons and cool backgrounds",
+
+"paid": "true",
+
+"themeready": "false",
+
+"uri":{
+
+"card_thumbnail":"http://i1301.photobucket.com/albums/ag113/wasimk32/card_thumbnail_zpshrnmsnb9.png",
+
+"collapsing_toolbar_thumbnail":"http://i1301.photobucket.com/albums/ag113/wasimk32/collapsing_toolbar_thumbnail_zps6avi9hd2.png",
+
+"screenshot1":"http://i1301.photobucket.com/albums/ag113/wasimk32/screenshot1_zpsxa5hefbu.png",
+
+"screenshot2":"http://i1301.photobucket.com/albums/ag113/wasimk32/screenshot2_zpsu7kakwer.png",
+
+"screenshot3":"http://i1301.photobucket.com/albums/ag113/wasimk32/screenshot3_zpsuiqbf1hx.png",
+
+"playstore":"https://play.google.com/store/apps/details?id=com.blinq.theme.glow",
+
+"contact":"https://plus.google.com/u/0/104825060730954687216/posts"}}
 ]
