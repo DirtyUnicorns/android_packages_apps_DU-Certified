@@ -428,5 +428,35 @@
 
 "playstore":"https://play.google.com/store/apps/details?id=com.blinq.theme.glow.green",
 
-"contact":"https://plus.google.com/u/0/104825060730954687216/posts"}}
+"contact":"https://plus.google.com/u/0/104825060730954687216/posts"}},
+
+
+
+{
+"theme_name":"ThaJoker: SupernovaReborn",
+
+"theme_author":"Train88",
+
+"theme_summary":"This is a spacey green and purple accented theme with many apps inverted so the green, purple, and glowing accents
+really pop",
+
+"paid": "false",
+
+"themeready": "true",
+
+"uri":{
+
+"card_thumbnail":"https://raw.githubusercontent.com/Train88/DU_Cert_stuff/master/card_thumbnail.png",
+
+"collapsing_toolbar_thumbnail":"https://raw.githubusercontent.com/Train88/DU_Cert_stuff/master/collapsing_toolbar_thumbnail.png",
+
+"screenshot1":"https://raw.githubusercontent.com/Train88/DU_Cert_stuff/master/screenshot1.png",
+
+"screenshot2":"https://raw.githubusercontent.com/Train88/DU_Cert_stuff/master/screenshot2.png",
+
+"screenshot3":"https://raw.githubusercontent.com/Train88/DU_Cert_stuff/master/screenshot3.png",
+
+"playstore":"https://play.google.com/store/apps/details?id=com.train88.Kevin3328.SupernovaReborn2",
+
+"contact":"https://plus.google.com/+AndrewTraynham/posts"}}
 ]
