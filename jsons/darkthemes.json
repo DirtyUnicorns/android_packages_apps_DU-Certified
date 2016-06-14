@@ -399,5 +399,34 @@
 
 "playstore":"https://play.google.com/store/apps/details?id=com.blinq.theme.glow",
 
+"contact":"https://plus.google.com/u/0/104825060730954687216/posts"}},
+
+
+
+{
+"theme_name":"Glow Green",
+
+"theme_author":"BlinqDroid",
+
+"theme_summary":"A theme with non flat, glowing green icons and cool backgrounds",
+
+"paid": "true",
+
+"themeready": "false",
+
+"uri":{
+
+"card_thumbnail":"http://i1301.photobucket.com/albums/ag113/wasimk32/card_thumbnail_zpst6kuptt6.png",
+
+"collapsing_toolbar_thumbnail":"http://i1301.photobucket.com/albums/ag113/wasimk32/collapsing_toolbar_thumbnail_zpsy3cqhfk1.png",
+
+"screenshot1":"http://i1301.photobucket.com/albums/ag113/wasimk32/screenshot1_zpsvc4y3fc1.png",
+
+"screenshot2":"http://i1301.photobucket.com/albums/ag113/wasimk32/screenshot2_zpsowcvkxgb.png",
+
+"screenshot3":"http://i1301.photobucket.com/albums/ag113/wasimk32/screenshot3_zpsawjqd9rs.png",
+
+"playstore":"https://play.google.com/store/apps/details?id=com.blinq.theme.glow.green",
+
 "contact":"https://plus.google.com/u/0/104825060730954687216/posts"}}
 ]
