@@ -1,0 +1,35 @@
+{
+  "project_info": {
+    "project_number": "850855364726",
+    "project_id": "du-certified"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:850855364726:android:a639f6689c1aab0a",
+        "android_client_info": {
+          "package_name": "com.dirtyunicorns.certified"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBKzkkdBn-xb87SAVR7wMAVdFcBMqQPj2Y"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 1
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

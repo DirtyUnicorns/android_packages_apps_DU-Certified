@@ -45,4 +45,8 @@ dependencies {
     }
     compile 'com.afollestad.material-dialogs:core:0.8.5.9'
     compile 'za.co.riggaroo:materialhelptutorial:1.+'
+    compile 'com.google.firebase:firebase-core:9.0.2'
+    compile 'com.google.firebase:firebase-messaging:9.0.2'
 }
+
+apply plugin: 'com.google.gms.google-services'
