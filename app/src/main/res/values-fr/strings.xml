@@ -1,0 +1,55 @@
+<resources>
+
+    <string name="app_name">DU Certified</string>
+    <string name="submit_recipes">Être certifié</string>
+    <string name="light_themes">Thèmes clairs</string>
+    <string name="dark_themes">Thèmes foncés</string>
+    <string name="about_app">A propos de l\'application</string>
+    <string name="libraries">Bibliothèques</string>
+    <string name="settings">Paramètres</string>
+    <string name="contact_alex">Contacter Alex</string>
+    <string name="playstore_button">Play Store</string>
+    <string name="contact_button">Concepteur</string>
+
+    <!-- Dialog strings -->
+    <string name="no_conn_content">Veuillez vous assurer d\'avoir une connexion Internet active</string>
+    <string name="ok">OK</string>
+    <string name="warning_title">AVERTISSEMENT</string>
+    <string name="warning_message"><b>Vous semblez utiliser une connexion Internet mobile</b>.\n\nCette application a besoin d\'une connexion Internet pour charger ses données, et fournir des mises à jour plus rapidement.\n\nIl est fortement recommandé d\'utilisez une connexion Internet Wi-Fi, la connexion Internet mobile étant plus lente, ce qui peut entraîner une expérience médiocre, et vous inciter à laisser une mauvaise évaluation.</string>
+    <string name="alright">D\'ACCORD</string>
+    <string name="load_anyways">CHARGER DE TOUTE FAÇON</string>
+    <string name="do_show_again">Ne plus afficher</string>
+    <string name="not_checked">Non vérifié</string>
+    <string name="checked">vérifié</string>
+    <string name="skipMessage">passer le message</string>
+    <string name="choose_email_app">Choisissez l\'application de courriel...</string>
+    <string name="no_email_app_found_title">Pas d\'application de courriel</string>
+    <string name="no_email_app_found_message">Aucune application de courriel détectée sur votre appareil. Veuillez en installer une et recommencer votre demande.</string>
+    <string name="download_gmail">Télécharger Gmail</string>
+    <string name="email_about_du_certified">Courriel au sujet de DU Certified</string>
+
+    <!-- Settings strings -->
+    <string name="build_info">Informations sur la compilation</string>
+    <string name="clear_cache_title">Supprimer le cache</string>
+    <string name="clear_cache_summary">Taille du cache : %s</string>
+    <string name="theme_options">Options du thème</string>
+    <string name="pref_navbar_tint_title">Barre de navigation teintée</string>
+    <string name="enable_navbar_tint_summary">Activer la barre de navigation teintée</string>
+    <string name="disable_navbar_tint_summary">Désactiver la barre de navigation teintée</string>
+    <string name="pref_statusbar_tint_title">Ombre de la barre d\'état</string>
+    <string name="enable_statusbar_tint_summary">Activer l\'ombre de la barre d\'état</string>
+    <string name="disable_statusbar_tint_summary">Désactiver l\'ombre de la barre d\'état</string>
+
+    <!-- App intro strings -->
+    <string name="first_slide_title">Bienvenue dans DU Certified</string>
+    <string name="first_slide_description">Une collection de thèmes vérifiés qui garantissent une expérience utilisateur de qualité</string>
+    <string name="second_slide_title">Pourquoi cette application ?</string>
+    <string name="second_slide_description">Certains thèmes sont médiocres, et plutôt que de se plaindre, ou de courir après les concepteurs de thèmes pour que les choses soient bien faites, nous avons décidé de glorifier ceux que nous avons !</string>
+    <string name="third_slide_title">Comment faire pour que mon thème soit certifié ?</string>
+    <string name="third_slide_description">Contactez-nous sur notre communauté de Google+, faites évaluer votre thème, puis soumettez-nous le fichier json nécessaire.</string>
+    <string name="last_slide_title">C\'est tout !</string>
+    <string name="last_slide_description">Profitez bien de l\'application, vérifiez fréquemment les thèmes disponibles, et comme toujours : <b>#StayDirty</b></string>
+    <string name="tutorial_done">OK</string>
+    <string name="tutorial_skip">PASSER</string>
+
+</resources>
