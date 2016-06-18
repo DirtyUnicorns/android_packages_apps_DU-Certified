@@ -59,5 +59,8 @@
     <string name="paid_theme_false">Gratuit</string>
     <string name="themeready_gapps">Compatible Thème GApps</string>
     <string name="themeready">Thème</string>
+    <string name="theme_share_first_part">Regardez ce que j\'ai trouvé sur l\'application #DUCertified, ce magnifique thème appelé </string>
+    <string name="theme_share_second_part">Si vous l\'installez et l\'aimez, n\'oubliez pas de l\'évaluer !</string>
+    <string name="theme_share_stay_dirty">#StayDirty</string>
 
 </resources>
