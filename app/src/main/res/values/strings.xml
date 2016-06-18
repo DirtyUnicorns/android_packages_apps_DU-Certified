@@ -52,4 +52,12 @@
     <string name="last_slide_title">That\'s it!</string>
     <string name="last_slide_description">Enjoy the app, make sure to check for themes often and always <b>#StayDirty</b></string>
 
+    <!-- ThemeInfo.java -->
+    <string name="paid_theme_true">Paid</string>
+    <string name="paid_theme_false">Free</string>
+    <string name="themeready_gapps">Theme Ready Gapps</string>
+    <string name="themeready">Theme</string>
+    <string name="theme_share_first_part">Hey check out this awesome theme I found using the #DUCertified app, called </string>
+    <string name="theme_share_second_part">If you go ahead and install, don\'t forget to leave a review!</string>
+    <string name="theme_share_stay_dirty">#StayDirty</string>
 </resources>

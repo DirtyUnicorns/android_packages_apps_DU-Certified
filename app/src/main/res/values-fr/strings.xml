@@ -49,7 +49,15 @@
     <string name="third_slide_description">Contactez-nous sur notre communauté de Google+, faites évaluer votre thème, puis soumettez-nous le fichier json nécessaire.</string>
     <string name="last_slide_title">C\'est tout !</string>
     <string name="last_slide_description">Profitez bien de l\'application, vérifiez fréquemment les thèmes disponibles, et comme toujours : <b>#StayDirty</b></string>
+
+    <!-- App intro strings -->
     <string name="tutorial_done">OK</string>
     <string name="tutorial_skip">PASSER</string>
+
+    <!-- ThemeInfo.java -->
+    <string name="paid_theme_true">Payant</string>
+    <string name="paid_theme_false">Gratuit</string>
+    <string name="themeready_gapps">Compatible Thème GApps</string>
+    <string name="themeready">Thème</string>
 
 </resources>

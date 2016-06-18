@@ -73,15 +73,15 @@ public class ThemeInfo extends AppCompatActivity {
         themeready.setText(intent.getStringExtra("themeready"));
 
         if (paid.getText().toString().equals("true")) {
-            paid.setText("Paid");
+            paid.setText(R.string.paid_theme_true);
         }
 
         if (paid.getText().toString().equals("false")) {
-            paid.setText("Free");
+            paid.setText(R.string.paid_theme_false);
         }
 
         if (themeready.getText().toString().equals("true")) {
-            themeready.setText("Theme Ready Gapps");
+            themeready.setText(R.string.themeready_gapps);
         }
 
         if (themeready.getText().toString().equals("false")) {
@@ -89,7 +89,7 @@ public class ThemeInfo extends AppCompatActivity {
         }
 
         if (themeready.getText().toString().equals("")) {
-            themeready.setText("Theme");
+            themeready.setText(R.string.themeready);
         }
 
         assert collapsingToolbarLayout != null;
@@ -123,8 +123,8 @@ public class ThemeInfo extends AppCompatActivity {
                 Intent sendIntent = new Intent();
                 sendIntent.setAction(Intent.ACTION_SEND);
                 sendIntent.putExtra(Intent.EXTRA_TEXT,
-                        "Hey check out this awesome theme I found using the #DUCertified app, called "
-                                + intent.getStringExtra("theme_name")+ "!" + "\n\n" + intent.getStringExtra("playstoreUri") + "\n\n" +"If you go ahead and install, don't forget to leave a review!" + "\n\n" + "#StayDirty");
+                        getString(string.theme_share_first_part)
+                                + intent.getStringExtra("theme_name") + "!" + "\n\n" + intent.getStringExtra("playstoreUri") + "\n\n" + getString(string.theme_share_second_part) + "\n\n" + getString(string.theme_share_stay_dirty));
                 sendIntent.setType("text/plain");
                 startActivity(sendIntent);
                 return true;
