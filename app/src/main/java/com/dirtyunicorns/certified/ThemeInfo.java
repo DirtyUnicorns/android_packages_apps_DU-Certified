@@ -97,7 +97,7 @@ public class ThemeInfo extends AppCompatActivity {
         collapsingToolbarLayout.setExpandedTitleTextAppearance(style.expanded_toolbar_text);
         collapsingToolbarLayout.setCollapsedTitleTextAppearance(style.collapsed_toolbar_text);
 
-        final Drawable upArrow = getResources().getDrawable(drawable.abc_ic_ab_back_mtrl_am_alpha);
+        final Drawable upArrow = getResources().getDrawable(drawable.abc_ic_ab_back_material);
         assert upArrow != null;
         upArrow.setColorFilter(getResources().getColor(color.arrow_color), PorterDuff.Mode.SRC_ATOP);
         getSupportActionBar().setHomeAsUpIndicator(upArrow);
@@ -123,7 +123,7 @@ public class ThemeInfo extends AppCompatActivity {
                 Intent sendIntent = new Intent();
                 sendIntent.setAction(Intent.ACTION_SEND);
                 sendIntent.putExtra(Intent.EXTRA_TEXT,
-                        getString(string.theme_share_first_part)
+                        getString(string.theme_share_first_part) + " "
                                 + intent.getStringExtra("theme_name") + "!" + "\n\n" + intent.getStringExtra("playstoreUri") + "\n\n" + getString(string.theme_share_second_part) + "\n\n" + getString(string.theme_share_stay_dirty));
                 sendIntent.setType("text/plain");
                 startActivity(sendIntent);
