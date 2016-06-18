@@ -52,6 +52,10 @@
     <string name="last_slide_title">That\'s it!</string>
     <string name="last_slide_description">Enjoy the app, make sure to check for themes often and always <b>#StayDirty</b></string>
 
+    <!-- App intro strings -->
+    <string name="tutorial_done">DONE</string>
+    <string name="tutorial_skip">SKIP</string>
+
     <!-- ThemeInfo.java -->
     <string name="paid_theme_true">Paid</string>
     <string name="paid_theme_false">Free</string>

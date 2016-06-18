@@ -19,7 +19,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.ProgressBar;
 
-import com.afollestad.materialdialogs.MaterialDialog;
+import com.github.javiersantos.bottomdialogs.BottomDialog;
 import com.github.mrengineer13.snackbar.SnackBar;
 import com.mikepenz.materialdrawer.Drawer;
 import com.mikepenz.materialdrawer.DrawerBuilder;
@@ -331,29 +331,26 @@ public class DarkThemes extends AppCompatActivity implements ClickUtils.OnItemCl
         try {
             startActivity(Intent.createChooser(emailIntent, getString(R.string.choose_email_app)));
         } catch (android.content.ActivityNotFoundException ex) {
-            new MaterialDialog.Builder(this)
-                    .title(getString(R.string.no_email_app_found_title))
-                    .content(getString(R.string.no_email_app_found_message))
-                    .neutralText(getString(R.string.ok))
-                    .neutralColor(getResources().getColor(R.color.colorPrimary))
-                    .positiveText(getString(R.string.download_gmail))
-                    .positiveColor(getResources().getColor(R.color.colorPrimary))
-                    .callback(new MaterialDialog.ButtonCallback() {
+            new BottomDialog.Builder(this)
+                    .setTitle(getString(R.string.no_email_app_found_title))
+                    .setContent(getString(R.string.no_email_app_found_message))
+                    .setPositiveText(getString(R.string.download_gmail))
+                    .setNegativeText(getString(R.string.ok))
+                    .setCancelable(false)
+                    .onPositive(new BottomDialog.ButtonCallback() {
                         @Override
-                        public void onPositive(MaterialDialog dialog) {
-                            super.onPositive(dialog);
+                        public void onClick(BottomDialog dialog) {
                             Intent i = new Intent(Intent.ACTION_VIEW);
                             i.setData(android.net.Uri.parse(getResources().getString(R.string.gmail_link)));
                             startActivity(i);
                         }
-
+                    })
+                    .onNegative(new BottomDialog.ButtonCallback() {
                         @Override
-                        public void onNeutral(MaterialDialog dialog) {
-                            super.onNeutral(dialog);
+                        public void onClick(BottomDialog dialog) {
                             dialog.dismiss();
                         }
-                    })
-                    .show();
+                    }).show();
         }
     }
 

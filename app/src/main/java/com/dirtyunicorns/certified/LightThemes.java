@@ -25,8 +25,8 @@ import android.view.View;
 import android.widget.CheckBox;
 import android.widget.ProgressBar;
 
-import com.afollestad.materialdialogs.MaterialDialog;
 import com.dirtyunicorns.certified.ClickUtils.OnItemClickListener;
+import com.github.javiersantos.bottomdialogs.BottomDialog;
 import com.github.mrengineer13.snackbar.SnackBar;
 import com.mikepenz.materialdrawer.Drawer;
 import com.mikepenz.materialdrawer.DrawerBuilder;
@@ -274,44 +274,49 @@ public class LightThemes extends AppCompatActivity implements OnItemClickListene
                     } catch (JSONException e) {
                         e.printStackTrace();
                     }
-                    final AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(context);
-                    LayoutInflater adbInflater = LayoutInflater.from(getApplicationContext());
-                    View eulaLayout = adbInflater.inflate(R.layout.checkbox, null);
-                    dontShowAgain = (CheckBox) eulaLayout.findViewById(R.id.skip);
-                    alertDialogBuilder.setView(eulaLayout);
-                    alertDialogBuilder.setIcon(R.drawable.warning);
-                    alertDialogBuilder.setTitle(R.string.warning_title);
-                    alertDialogBuilder.setMessage(R.string.warning_message)
-                            .setCancelable(false)
-                            .setPositiveButton(R.string.alright, new DialogInterface.OnClickListener() {
-                                public void onClick(DialogInterface dialog, int id) {
-                                    String checkBoxResult = getString(R.string.not_checked);
-                                    if (dontShowAgain.isChecked())
-                                        checkBoxResult = getString(R.string.checked);
-                                    SharedPreferences settings = getSharedPreferences(PREFS, 0);
-                                    SharedPreferences.Editor editor = settings.edit();
-                                    editor.putString(getString(R.string.skipMessage), checkBoxResult);
-                                    editor.apply();
-                                    finish();
-                                }
-                            })
-                            .setNegativeButton(R.string.load_anyways, new DialogInterface.OnClickListener() {
-                                public void onClick(DialogInterface dialog, int id) {
-                                    String checkBoxResult = getString(R.string.not_checked);
-                                    if (dontShowAgain.isChecked())
-                                        checkBoxResult = getString(R.string.checked);
-                                    SharedPreferences settings = getSharedPreferences(PREFS, 0);
-                                    SharedPreferences.Editor editor = settings.edit();
-                                    editor.putString(getString(R.string.skipMessage), checkBoxResult);
-                                    editor.apply();
-                                    dialog.cancel();
-                                }
-                            });
-                    AlertDialog alertDialog = alertDialogBuilder.create();
+
+                    LayoutInflater inflater = (LayoutInflater) getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+                    View customView = inflater.inflate(R.layout.custom_view, null);
+                    dontShowAgain = (CheckBox) customView.findViewById(R.id.skip);
+
                     SharedPreferences settings = getSharedPreferences(PREFS, 0);
                     String skipMessage = settings.getString(getString(R.string.skipMessage), getString(R.string.not_checked));
-                    if (!skipMessage.equals(getString(R.string.checked)))
-                        alertDialog.show();
+                    if (!skipMessage.equals(getString(R.string.checked))) {
+                        new BottomDialog.Builder(context)
+                                .setCustomView(customView)
+                                .setIcon(R.drawable.warning)
+                                .setTitle(getString(R.string.warning_title))
+                                .setContent(getString(R.string.warning_message))
+                                .setPositiveText(getString(R.string.load_anyways))
+                                .setNegativeText(getString(R.string.alright))
+                                .setCancelable(false)
+                                .onPositive(new BottomDialog.ButtonCallback() {
+                                    @Override
+                                    public void onClick(BottomDialog dialog) {
+                                        String checkBoxResult = getString(R.string.not_checked);
+                                        if (dontShowAgain.isChecked())
+                                            checkBoxResult = getString(R.string.checked);
+                                        SharedPreferences settings = getSharedPreferences(PREFS, 0);
+                                        SharedPreferences.Editor editor = settings.edit();
+                                        editor.putString(getString(R.string.skipMessage), checkBoxResult);
+                                        editor.apply();
+                                        dialog.dismiss();
+                                    }
+                                })
+                                .onNegative(new BottomDialog.ButtonCallback() {
+                                    @Override
+                                    public void onClick(BottomDialog dialog) {
+                                        String checkBoxResult = getString(R.string.not_checked);
+                                        if (dontShowAgain.isChecked())
+                                            checkBoxResult = getString(R.string.checked);
+                                        SharedPreferences settings = getSharedPreferences(PREFS, 0);
+                                        SharedPreferences.Editor editor = settings.edit();
+                                        editor.putString(getString(R.string.skipMessage), checkBoxResult);
+                                        editor.apply();
+                                        finish();
+                                    }
+                                }).show();
+                    }
                 } else {
                     try {
                         setJson(data);
@@ -388,29 +393,26 @@ public class LightThemes extends AppCompatActivity implements OnItemClickListene
         try {
             startActivity(Intent.createChooser(emailIntent, getString(R.string.choose_email_app)));
         } catch (android.content.ActivityNotFoundException ex) {
-            new MaterialDialog.Builder(this)
-                    .title(getString(R.string.no_email_app_found_title))
-                    .content(getString(R.string.no_email_app_found_message))
-                    .neutralText(getString(R.string.ok))
-                    .neutralColor(getResources().getColor(R.color.colorPrimary))
-                    .positiveText(getString(R.string.download_gmail))
-                    .positiveColor(getResources().getColor(R.color.colorPrimary))
-                    .callback(new MaterialDialog.ButtonCallback() {
+            new BottomDialog.Builder(context)
+                    .setTitle(getString(R.string.no_email_app_found_title))
+                    .setContent(getString(R.string.no_email_app_found_message))
+                    .setPositiveText(getString(R.string.download_gmail))
+                    .setNegativeText(getString(R.string.ok))
+                    .setCancelable(false)
+                    .onPositive(new BottomDialog.ButtonCallback() {
                         @Override
-                        public void onPositive(MaterialDialog dialog) {
-                            super.onPositive(dialog);
+                        public void onClick(BottomDialog dialog) {
                             Intent i = new Intent(Intent.ACTION_VIEW);
                             i.setData(android.net.Uri.parse(getResources().getString(R.string.gmail_link)));
                             startActivity(i);
                         }
-
+                    })
+                    .onNegative(new BottomDialog.ButtonCallback() {
                         @Override
-                        public void onNeutral(MaterialDialog dialog) {
-                            super.onNeutral(dialog);
+                        public void onClick(BottomDialog dialog) {
                             dialog.dismiss();
                         }
-                    })
-                    .show();
+                    }).show();
         }
     }
 
