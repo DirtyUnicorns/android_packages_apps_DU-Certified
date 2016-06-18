@@ -1,11 +1,11 @@
-<?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".LightThemes">
     <item
-        app:showAsAction="always"
-        android:id="@+id/share"
-        android:title="share"
-        android:icon="@drawable/share"
-        android:actionProviderClass="android.widget.ShareActionProvider" >
-    </item>
+        android:id="@+id/hide_app_icon"
+        android:orderInCategory="300"
+        android:title="@string/hide_app_icon"
+        android:checkable="true"
+        app:showAsAction="never" />
 </menu>

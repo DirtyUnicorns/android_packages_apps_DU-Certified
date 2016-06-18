@@ -1,10 +1,12 @@
 package com.dirtyunicorns.certified;
 
 import android.app.AlertDialog;
+import android.content.ComponentName;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.SharedPreferences;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.graphics.Color;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
@@ -17,6 +19,8 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.CheckBox;
 import android.widget.ProgressBar;
@@ -359,7 +363,7 @@ public class LightThemes extends AppCompatActivity implements OnItemClickListene
         super.onSaveInstanceState(outState);
     }
 
-    private static int tint(int color, double factor) {
+    public static int tint(int color, double factor) {
         int a = Color.alpha(color);
         int r = Color.red(color);
         int g = Color.green(color);
@@ -370,13 +374,7 @@ public class LightThemes extends AppCompatActivity implements OnItemClickListene
 
     @Override
     public void onBackPressed() {
-        if (result != null && result.isDrawerOpen()) {
-            result.closeDrawer();
-        } else if (result != null) {
-            result.setSelection(1);
-        } else {
-            super.onBackPressed();
-        }
+        finish();
     }
 
     public void ContactMe() {
@@ -430,5 +428,41 @@ public class LightThemes extends AppCompatActivity implements OnItemClickListene
         ConnectivityManager cm = (ConnectivityManager) context.getSystemService(Context.CONNECTIVITY_SERVICE);
         NetworkInfo activeNetwork = cm.getActiveNetworkInfo();
         return activeNetwork != null && activeNetwork.isConnectedOrConnecting();
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.main, menu);
+        menu.findItem(R.id.hide_app_icon).setChecked(!isLauncherIconEnabled());
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.hide_app_icon:
+                boolean checked = item.isChecked();
+                item.setChecked(!checked);
+                setLauncherIconEnabled(checked);
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
+    }
+
+    public void setLauncherIconEnabled(boolean enabled) {
+        int newState;
+        PackageManager pm = getPackageManager();
+        if (enabled) {
+            newState = PackageManager.COMPONENT_ENABLED_STATE_ENABLED;
+        } else {
+            newState = PackageManager.COMPONENT_ENABLED_STATE_DISABLED;
+        }
+        pm.setComponentEnabledSetting(new ComponentName(this, com.dirtyunicorns.certified.LauncherActivity.class), newState, PackageManager.DONT_KILL_APP);
+    }
+
+    public boolean isLauncherIconEnabled() {
+        PackageManager pm = getPackageManager();
+        return (pm.getComponentEnabledSetting(new ComponentName(this, com.dirtyunicorns.certified.LauncherActivity.class)) != PackageManager.COMPONENT_ENABLED_STATE_DISABLED);
     }
 }

@@ -10,6 +10,7 @@
     <string name="contact_alex">Contact Alex</string>
     <string name="playstore_button">Play Store</string>
     <string name="contact_button">Designer</string>
+    <string name="hide_app_icon">Hide app</string>
 
     <!-- Dialog strings -->
     <string name="no_conn_content">Please make sure you have an active internet connection.</string>

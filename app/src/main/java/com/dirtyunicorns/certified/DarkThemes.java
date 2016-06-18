@@ -1,7 +1,9 @@
 package com.dirtyunicorns.certified;
 
+import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.graphics.Color;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
@@ -12,6 +14,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.ProgressBar;
 
@@ -152,203 +156,203 @@ public class DarkThemes extends AppCompatActivity implements ClickUtils.OnItemCl
         mSwipeRefreshLayout.setOnRefreshListener(new SwipeRefreshLayout.OnRefreshListener() {
             @Override
             public void onRefresh() {
-                    mSwipeRefreshLayout.postDelayed(new Runnable() {
-                         @Override
-                         public void run() {
-                              List.clear();
-                              new BackgroundTask().execute();
-                              }
-                         }, 2000);
+                mSwipeRefreshLayout.postDelayed(new Runnable() {
+                    @Override
+                    public void run() {
+                        List.clear();
+                        new BackgroundTask().execute();
                     }
-                });
+                }, 2000);
             }
+        });
+    }
 
-            @Override
-            public void onItemClicked(RecyclerView recyclerView, int position, View v) {
-                item = List.get(position);
+    @Override
+    public void onItemClicked(RecyclerView recyclerView, int position, View v) {
+        item = List.get(position);
 
-                Intent intent = new Intent(this, ThemeInfo.class);
-                intent.putExtra("collapsing_toolbar_thumbnail", item.uri.getCollapsing_toolbar_thumbnail());
-                intent.putExtra("screenshot1Uri", item.uri.getScreenshot1());
-                intent.putExtra("screenshot2Uri", item.uri.getScreenshot2());
-                intent.putExtra("screenshot3Uri", item.uri.getScreenshot3());
-                intent.putExtra("theme_name", item.theme_name);
-                intent.putExtra("theme_author", item.theme_author);
-                intent.putExtra("theme_summary", item.theme_summary);
-                intent.putExtra("playstoreUri", item.uri.getPlaystore());
-                intent.putExtra("contactUri", item.uri.getContact());
-                intent.putExtra("paid", item.paid);
-                intent.putExtra("themeready", item.themeready);
-                startActivity(intent);
+        Intent intent = new Intent(this, ThemeInfo.class);
+        intent.putExtra("collapsing_toolbar_thumbnail", item.uri.getCollapsing_toolbar_thumbnail());
+        intent.putExtra("screenshot1Uri", item.uri.getScreenshot1());
+        intent.putExtra("screenshot2Uri", item.uri.getScreenshot2());
+        intent.putExtra("screenshot3Uri", item.uri.getScreenshot3());
+        intent.putExtra("theme_name", item.theme_name);
+        intent.putExtra("theme_author", item.theme_author);
+        intent.putExtra("theme_summary", item.theme_summary);
+        intent.putExtra("playstoreUri", item.uri.getPlaystore());
+        intent.putExtra("contactUri", item.uri.getContact());
+        intent.putExtra("paid", item.paid);
+        intent.putExtra("themeready", item.themeready);
+        startActivity(intent);
+    }
+
+    private class BackgroundTask extends AsyncTask<String, String, String> {
+
+        @Override
+        protected void onPreExecute() {
+            boolean isConnected = isConnected(DarkThemes.this);
+            if (isConnected) {
+                super.onPreExecute();
+            } else {
+                showNotConnectedDialog();
             }
+        }
 
-            private class BackgroundTask extends AsyncTask<String, String, String> {
+        @Override
+        protected String doInBackground(String... params) {
+            OkHttpClient client = new OkHttpClient.Builder()
+                    .connectTimeout(10, TimeUnit.SECONDS)
+                    .writeTimeout(10, TimeUnit.SECONDS)
+                    .readTimeout(30, TimeUnit.SECONDS)
+                    .build();
+            boolean isConnected = isConnected(DarkThemes.this);
+            String URL = "https://raw.githubusercontent.com/DirtyUnicorns/android_packages_apps_DU-Certified/README/jsons/darkthemes.json";
 
-                @Override
-                protected void onPreExecute() {
-                    boolean isConnected = isConnected(DarkThemes.this);
-                    if (isConnected) {
-                        super.onPreExecute();
-                    } else {
-                        showNotConnectedDialog();
-                    }
+            if (isConnected) {
+                okhttp3.Request request = new okhttp3.Request.Builder()
+                        .url(URL)
+                        .build();
+
+                Response response = null;
+                try {
+                    response = client.newCall(request).execute();
+
+                } catch (IOException e) {
+                    e.printStackTrace();
                 }
-
-                @Override
-                protected String doInBackground(String... params) {
-                    OkHttpClient client = new OkHttpClient.Builder()
-                            .connectTimeout(10, TimeUnit.SECONDS)
-                            .writeTimeout(10, TimeUnit.SECONDS)
-                            .readTimeout(30, TimeUnit.SECONDS)
-                            .build();
-                    boolean isConnected = isConnected(DarkThemes.this);
-                    String URL = "https://raw.githubusercontent.com/DirtyUnicorns/android_packages_apps_DU-Certified/README/jsons/darkthemes.json";
-
-                    if (isConnected) {
-                        okhttp3.Request request = new okhttp3.Request.Builder()
-                                .url(URL)
-                                .build();
-
-                        Response response = null;
-                        try {
-                            response = client.newCall(request).execute();
-
-                        } catch (IOException e) {
-                            e.printStackTrace();
-                        }
-
-                        try {
-                            if (response != null) {
-                                return response.body().string();
-                            }
-                        } catch (IOException e) {
-                            e.printStackTrace();
-                        }
-                    } else {
-                        showNotConnectedDialog();
-                    }
-                    return URL;
-                }
-
-                @Override
-                protected void onPostExecute(final String data) {
-                    mSwipeRefreshLayout.setRefreshing(false);
-                    Preferences.pbar.setVisibility(View.VISIBLE);
-                    ConnectivityManager connManager2 = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
-                    NetworkInfo mWifi = connManager2.getNetworkInfo(ConnectivityManager.TYPE_WIFI);
-                    boolean isConnected = isConnected(DarkThemes.this);
-                    if (isConnected) {
-                        if (!mWifi.isConnected()) {
-                            try {
-                                setJson(data);
-                                Preferences.pbar.setVisibility(View.GONE);
-                            } catch (JSONException e) {
-                                e.printStackTrace();
-                            }
-                        } else {
-                            try {
-                                setJson(data);
-                                Preferences.pbar.setVisibility(View.GONE);
-                            } catch (JSONException e) {
-                                e.printStackTrace();
-                            }
-                        }
-                    } else {
-                        showNotConnectedDialog();
-                    }
-                }
-
-                private void setJson(String data) throws JSONException {
-                    JSONObject jsonObject;
-                    JSONArray jsonArray = new JSONArray(data);
-                    for (int i = 0; i < jsonArray.length(); i++) {
-                        jsonObject = jsonArray.getJSONObject(i);
-
-                        item = new Item(jsonObject.getString("theme_name"),
-                                jsonObject.getString("theme_author"),
-                                jsonObject.getString("theme_summary"),
-                                jsonObject.getString("paid"),
-                                jsonObject.getString("themeready"));
-
-                        item.uri.setCard_thumbnail(jsonObject.getJSONObject("uri").getString("card_thumbnail"));
-                        item.uri.setCollapsing_toolbar_thumbnail(jsonObject.getJSONObject("uri").getString("collapsing_toolbar_thumbnail"));
-                        item.uri.setScreenshot1(jsonObject.getJSONObject("uri").getString("screenshot1"));
-                        item.uri.setScreenshot2(jsonObject.getJSONObject("uri").getString("screenshot2"));
-                        item.uri.setScreenshot3(jsonObject.getJSONObject("uri").getString("screenshot3"));
-                        item.uri.setPlaystore(jsonObject.getJSONObject("uri").getString("playstore"));
-                        item.uri.setContact(jsonObject.getJSONObject("uri").getString("contact"));
-
-                        List.add(item);
-                    }
-
-                    runOnUiThread(new Runnable() {
-                        @Override
-                        public void run() {
-                            adapter.notifyDataSetChanged();
-                        }
-                    });
-                    Preferences.pbar.setVisibility(View.GONE);
-                }
-            }
-
-            @Override
-            protected void onSaveInstanceState(Bundle outState) {
-                super.onSaveInstanceState(outState);
-            }
-
-            private static int tint(int color, double factor) {
-                int a = Color.alpha(color);
-                int r = Color.red(color);
-                int g = Color.green(color);
-                int b = Color.blue(color);
-
-                return Color.argb(a, Math.max((int) (r * factor), 0), Math.max((int) (g * factor), 0), Math.max((int) (b * factor), 0));
-            }
-
-            @Override
-            public void onBackPressed() {
-                if (result != null && result.isDrawerOpen()) {
-                    result.closeDrawer();
-                } else if (result != null) {
-                    result.setSelection(1);
-                } else {
-                    super.onBackPressed();
-                }
-            }
-
-            public void ContactMe() {
-                String[] TO = {"mazdarider23@gmail.com"};
-                Intent emailIntent = new Intent(Intent.ACTION_SEND);
-                emailIntent.setData(android.net.Uri.parse("mailto:"));
-                emailIntent.setType("text/plain");
-                emailIntent.putExtra(Intent.EXTRA_EMAIL, TO);
-                emailIntent.putExtra(Intent.EXTRA_SUBJECT, getString(R.string.email_about_du_certified));
 
                 try {
-                    startActivity(Intent.createChooser(emailIntent, getString(R.string.choose_email_app)));
-                } catch (android.content.ActivityNotFoundException ex) {
-                    new MaterialDialog.Builder(this)
-                            .title(getString(R.string.no_email_app_found_title))
-                            .content(getString(R.string.no_email_app_found_message))
-                            .neutralText(getString(R.string.ok))
-                            .neutralColor(getResources().getColor(R.color.colorPrimary))
-                            .positiveText(getString(R.string.download_gmail))
-                            .positiveColor(getResources().getColor(R.color.colorPrimary))
-                            .callback(new MaterialDialog.ButtonCallback() {
-                                @Override
-                                public void onPositive(MaterialDialog dialog) {
-                                    super.onPositive(dialog);
-                                    Intent i = new Intent(Intent.ACTION_VIEW);
-                                    i.setData(android.net.Uri.parse(getResources().getString(R.string.gmail_link)));
-                                    startActivity(i);
-                                }
+                    if (response != null) {
+                        return response.body().string();
+                    }
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            } else {
+                showNotConnectedDialog();
+            }
+            return URL;
+        }
 
-                                @Override
-                                public void onNeutral(MaterialDialog dialog) {
-                                    super.onNeutral(dialog);
-                                    dialog.dismiss();
-                                }
-                            })
+        @Override
+        protected void onPostExecute(final String data) {
+            mSwipeRefreshLayout.setRefreshing(false);
+            Preferences.pbar.setVisibility(View.VISIBLE);
+            ConnectivityManager connManager2 = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
+            NetworkInfo mWifi = connManager2.getNetworkInfo(ConnectivityManager.TYPE_WIFI);
+            boolean isConnected = isConnected(DarkThemes.this);
+            if (isConnected) {
+                if (!mWifi.isConnected()) {
+                    try {
+                        setJson(data);
+                        Preferences.pbar.setVisibility(View.GONE);
+                    } catch (JSONException e) {
+                        e.printStackTrace();
+                    }
+                } else {
+                    try {
+                        setJson(data);
+                        Preferences.pbar.setVisibility(View.GONE);
+                    } catch (JSONException e) {
+                        e.printStackTrace();
+                    }
+                }
+            } else {
+                showNotConnectedDialog();
+            }
+        }
+
+        private void setJson(String data) throws JSONException {
+            JSONObject jsonObject;
+            JSONArray jsonArray = new JSONArray(data);
+            for (int i = 0; i < jsonArray.length(); i++) {
+                jsonObject = jsonArray.getJSONObject(i);
+
+                item = new Item(jsonObject.getString("theme_name"),
+                        jsonObject.getString("theme_author"),
+                        jsonObject.getString("theme_summary"),
+                        jsonObject.getString("paid"),
+                        jsonObject.getString("themeready"));
+
+                item.uri.setCard_thumbnail(jsonObject.getJSONObject("uri").getString("card_thumbnail"));
+                item.uri.setCollapsing_toolbar_thumbnail(jsonObject.getJSONObject("uri").getString("collapsing_toolbar_thumbnail"));
+                item.uri.setScreenshot1(jsonObject.getJSONObject("uri").getString("screenshot1"));
+                item.uri.setScreenshot2(jsonObject.getJSONObject("uri").getString("screenshot2"));
+                item.uri.setScreenshot3(jsonObject.getJSONObject("uri").getString("screenshot3"));
+                item.uri.setPlaystore(jsonObject.getJSONObject("uri").getString("playstore"));
+                item.uri.setContact(jsonObject.getJSONObject("uri").getString("contact"));
+
+                List.add(item);
+            }
+
+            runOnUiThread(new Runnable() {
+                @Override
+                public void run() {
+                    adapter.notifyDataSetChanged();
+                }
+            });
+            Preferences.pbar.setVisibility(View.GONE);
+        }
+    }
+
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+    }
+
+    private static int tint(int color, double factor) {
+        int a = Color.alpha(color);
+        int r = Color.red(color);
+        int g = Color.green(color);
+        int b = Color.blue(color);
+
+        return Color.argb(a, Math.max((int) (r * factor), 0), Math.max((int) (g * factor), 0), Math.max((int) (b * factor), 0));
+    }
+
+    @Override
+    public void onBackPressed() {
+        if (result != null && result.isDrawerOpen()) {
+            result.closeDrawer();
+        } else if (result != null) {
+            result.setSelection(1);
+        } else {
+            super.onBackPressed();
+        }
+    }
+
+    public void ContactMe() {
+        String[] TO = {"mazdarider23@gmail.com"};
+        Intent emailIntent = new Intent(Intent.ACTION_SEND);
+        emailIntent.setData(android.net.Uri.parse("mailto:"));
+        emailIntent.setType("text/plain");
+        emailIntent.putExtra(Intent.EXTRA_EMAIL, TO);
+        emailIntent.putExtra(Intent.EXTRA_SUBJECT, getString(R.string.email_about_du_certified));
+
+        try {
+            startActivity(Intent.createChooser(emailIntent, getString(R.string.choose_email_app)));
+        } catch (android.content.ActivityNotFoundException ex) {
+            new MaterialDialog.Builder(this)
+                    .title(getString(R.string.no_email_app_found_title))
+                    .content(getString(R.string.no_email_app_found_message))
+                    .neutralText(getString(R.string.ok))
+                    .neutralColor(getResources().getColor(R.color.colorPrimary))
+                    .positiveText(getString(R.string.download_gmail))
+                    .positiveColor(getResources().getColor(R.color.colorPrimary))
+                    .callback(new MaterialDialog.ButtonCallback() {
+                        @Override
+                        public void onPositive(MaterialDialog dialog) {
+                            super.onPositive(dialog);
+                            Intent i = new Intent(Intent.ACTION_VIEW);
+                            i.setData(android.net.Uri.parse(getResources().getString(R.string.gmail_link)));
+                            startActivity(i);
+                        }
+
+                        @Override
+                        public void onNeutral(MaterialDialog dialog) {
+                            super.onNeutral(dialog);
+                            dialog.dismiss();
+                        }
+                    })
                     .show();
         }
     }
@@ -367,5 +371,41 @@ public class DarkThemes extends AppCompatActivity implements ClickUtils.OnItemCl
         ConnectivityManager cm = (ConnectivityManager) context.getSystemService(Context.CONNECTIVITY_SERVICE);
         NetworkInfo activeNetwork = cm.getActiveNetworkInfo();
         return activeNetwork != null && activeNetwork.isConnectedOrConnecting();
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.main, menu);
+        menu.findItem(R.id.hide_app_icon).setChecked(!isLauncherIconEnabled());
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.hide_app_icon:
+                boolean checked = item.isChecked();
+                item.setChecked(!checked);
+                setLauncherIconEnabled(checked);
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
+    }
+
+    public void setLauncherIconEnabled(boolean enabled) {
+        int newState;
+        PackageManager pm = getPackageManager();
+        if (enabled) {
+            newState = PackageManager.COMPONENT_ENABLED_STATE_ENABLED;
+        } else {
+            newState = PackageManager.COMPONENT_ENABLED_STATE_DISABLED;
+        }
+        pm.setComponentEnabledSetting(new ComponentName(this, com.dirtyunicorns.certified.LauncherActivity.class), newState, PackageManager.DONT_KILL_APP);
+    }
+
+    public boolean isLauncherIconEnabled() {
+        PackageManager pm = getPackageManager();
+        return (pm.getComponentEnabledSetting(new ComponentName(this, com.dirtyunicorns.certified.LauncherActivity.class)) != PackageManager.COMPONENT_ENABLED_STATE_DISABLED);
     }
 }
