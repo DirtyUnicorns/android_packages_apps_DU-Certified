@@ -97,7 +97,7 @@ public class ThemeInfo extends AppCompatActivity {
         collapsingToolbarLayout.setExpandedTitleTextAppearance(style.expanded_toolbar_text);
         collapsingToolbarLayout.setCollapsedTitleTextAppearance(style.collapsed_toolbar_text);
 
-        final Drawable upArrow = getResources().getDrawable(drawable.abc_ic_ab_back_material);
+        final Drawable upArrow = getResources().getDrawable(drawable.abc_ic_ab_back_mtrl_am_alpha);
         assert upArrow != null;
         upArrow.setColorFilter(getResources().getColor(color.arrow_color), PorterDuff.Mode.SRC_ATOP);
         getSupportActionBar().setHomeAsUpIndicator(upArrow);

@@ -1,9 +1,7 @@
 package com.dirtyunicorns.certified;
 
-import android.app.AlertDialog;
 import android.content.ComponentName;
 import android.content.Context;
-import android.content.DialogInterface;
 import android.content.SharedPreferences;
 import android.content.Intent;
 import android.content.pm.PackageManager;
@@ -276,7 +274,7 @@ public class LightThemes extends AppCompatActivity implements OnItemClickListene
                     }
 
                     LayoutInflater inflater = (LayoutInflater) getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-                    View customView = inflater.inflate(R.layout.custom_view, null);
+                    View customView = inflater.inflate(R.layout.do_not_show_again, null);
                     dontShowAgain = (CheckBox) customView.findViewById(R.id.skip);
 
                     SharedPreferences settings = getSharedPreferences(PREFS, 0);

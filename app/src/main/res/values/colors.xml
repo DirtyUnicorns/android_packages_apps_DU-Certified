@@ -43,4 +43,15 @@
     <color name="theme_info_contact_button_background">#222222</color>
     <color name="theme_info_contact_button_text">#ffffff</color>
 
+    <!-- Bottom dialog -->
+    <color name="bottom_dialog_background_color">#FFFFFF</color>
+    <color name="bottom_dialog_title_text_color">#000000</color>
+    <color name="bottom_dialog_message_text_color">#000000</color>
+    <color name="bottom_dialog_right_button_fill_color">#313131</color>
+    <color name="bottom_dialog_right_button_text_color">#FFFFFF</color>
+    <color name="bottom_dialog_left_button_text_color">@color/colorAccent</color>
+    <color name="bottom_dialog_icon_tint">#000000</color>
+    <color name="bottom_dialog_checkbox_text_color">#000000</color>
+    <color name="bottom_dialog_checkbox_button_tint_color">@color/colorAccent</color>
+
 </resources>
