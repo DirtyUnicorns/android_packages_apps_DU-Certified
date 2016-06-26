@@ -18,6 +18,14 @@ android {
         maven { url "https://jitpack.io" }
         maven { url 'https://maven.fabric.io/public' }
     }
+    packagingOptions {
+        exclude 'META-INF/ASL2.0'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/NOTICE.txt'
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/MANIFEST.MF'
+    }
     buildTypes {
         release {
             minifyEnabled false
@@ -48,6 +56,7 @@ dependencies {
     compile 'za.co.riggaroo:materialhelptutorial:1.2.0'
     compile 'com.google.firebase:firebase-messaging:9.0.2'
     compile 'com.github.javiersantos:BottomDialogs:1.1'
+    compile 'org.apache.commons:commons-lang3:3.4'
 }
 
 apply plugin: 'com.google.gms.google-services'
