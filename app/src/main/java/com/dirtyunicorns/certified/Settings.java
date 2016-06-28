@@ -14,6 +14,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.LinearLayout;
 
+import com.dirtyunicorns.certified.activities.LightThemes;
+
 @SuppressWarnings("deprecation")
 public class Settings extends PreferenceActivity {
 
@@ -29,7 +31,7 @@ public class Settings extends PreferenceActivity {
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
 
         Preference versionName1 = findPreference("VersionName");
-        String versionName = getVersionName(context);
+        String versionName = Preferences.getVersionName(context);
         versionName1.setSummary(" v" + versionName);
     }
 
@@ -76,18 +78,6 @@ public class Settings extends PreferenceActivity {
     public void onBackPressed() {
         super.onBackPressed();
         finishActivity();
-    }
-
-
-    public static String getVersionName(Context context) {
-        String res = "0.0.0";
-        try {
-            res = context.getPackageManager().getPackageInfo(context.getPackageName(), 0).versionName;
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
-
-        return res;
     }
 
     public void finishActivity() {

@@ -3,6 +3,7 @@ package com.dirtyunicorns.certified;
 import android.content.Intent;
 import android.os.Bundle;
 
+import com.dirtyunicorns.certified.activities.LightThemes;
 import com.mikepenz.aboutlibraries.Libs;
 import com.mikepenz.aboutlibraries.LibsBuilder;
 import com.mikepenz.aboutlibraries.ui.LibsActivity;

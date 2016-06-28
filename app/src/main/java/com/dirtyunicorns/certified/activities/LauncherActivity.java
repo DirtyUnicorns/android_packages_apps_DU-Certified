@@ -1,4 +1,4 @@
-package com.dirtyunicorns.certified;
+package com.dirtyunicorns.certified.activities;
 
 /**
  * Created by mazda on 6/17/16.
@@ -12,7 +12,7 @@ public class LauncherActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        Intent launch = new Intent(this, com.dirtyunicorns.certified.LightThemes.class);
+        Intent launch = new Intent(this, LightThemes.class);
         startActivity(launch);
         finish();
     }

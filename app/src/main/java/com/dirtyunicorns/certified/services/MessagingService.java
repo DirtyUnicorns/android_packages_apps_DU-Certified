@@ -10,7 +10,7 @@ import android.net.Uri;
 import android.support.v4.app.NotificationCompat;
 import android.util.Log;
 
-import com.dirtyunicorns.certified.LightThemes;
+import com.dirtyunicorns.certified.activities.LightThemes;
 import com.dirtyunicorns.certified.R;
 import com.google.firebase.messaging.FirebaseMessagingService;
 import com.google.firebase.messaging.RemoteMessage;

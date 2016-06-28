@@ -40,7 +40,6 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
         ImageView iv = holder.uri;
         Picasso.with(context).load(item.uri.getCard_thumbnail()).into(iv);
 
-
         TextView theme_name = holder.theme_name;
         theme_name.setText(item.theme_name);
 
@@ -66,6 +65,7 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
         public ViewHolder(View itemView) {
             super(itemView);
             uri = (ImageView) itemView.findViewById(R.id.image);
+
             theme_name = (TextView) itemView.findViewById(R.id.theme_name);
             theme_author = (TextView) itemView.findViewById(R.id.theme_author);
             theme_summary = (TextView) itemView.findViewById(R.id.theme_summary);

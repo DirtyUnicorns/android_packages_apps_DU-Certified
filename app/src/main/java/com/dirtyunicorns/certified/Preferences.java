@@ -5,21 +5,21 @@ import android.content.Context;
 import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.preference.PreferenceManager;
+import android.support.v4.content.ContextCompat;
 import android.widget.ProgressBar;
 
 import java.util.ArrayList;
 
 import za.co.riggaroo.materialhelptutorial.TutorialItem;
 
-@SuppressWarnings("deprecation")
 public class Preferences extends Activity {
 
     private SharedPreferences sharedPreferences;
-    private Context context;
+    public static Context context;
 
     public static final String FIRST_RUN = "first_run";
 
-    ProgressBar pbar;
+    public ProgressBar pbar;
 
     public static final String Theme = "Theme";
     public static final String NavBarTheme = "NavBarTheme";
@@ -27,11 +27,11 @@ public class Preferences extends Activity {
     public static final String NavigationTint = "NavigationTint";
 
     public int Theme() {
-        return sharedPreferences.getInt(Theme, context.getResources().getColor(R.color.primary));
+        return sharedPreferences.getInt(Theme, ContextCompat.getColor(context, R.color.primary));
     }
 
     public int NavBarTheme() {
-        return sharedPreferences.getInt(NavBarTheme, context.getResources().getColor(R.color.primary));
+        return sharedPreferences.getInt(NavBarTheme, ContextCompat.getColor(context, R.color.primary));
     }
 
     public Boolean getNavigationTint() {
@@ -43,7 +43,7 @@ public class Preferences extends Activity {
     }
 
     public Preferences(Context context) {
-        this.context = context;
+        Preferences.context = context;
         this.sharedPreferences = PreferenceManager.getDefaultSharedPreferences(context);
     }
 
@@ -56,7 +56,7 @@ public class Preferences extends Activity {
         if (preferences.getNavigationTint()) {
             activity.getWindow().setNavigationBarColor(preferences.NavBarTheme());
         } else {
-            activity.getWindow().setNavigationBarColor(activity.getResources().getColor(R.color.navigation_drawer_color));
+            activity.getWindow().setNavigationBarColor(ContextCompat.getColor(context, (R.color.navigation_drawer_color)));
         }
 
         if (preferences.StatusBarTint()) {
@@ -95,5 +95,16 @@ public class Preferences extends Activity {
         tutorialItems.add(tutorialItem4);
 
         return tutorialItems;
+    }
+
+    public static String getVersionName(Context context) {
+        String res = "0.0.0";
+        try {
+            res = context.getPackageManager().getPackageInfo(context.getPackageName(), 0).versionName;
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        return res;
     }
 }

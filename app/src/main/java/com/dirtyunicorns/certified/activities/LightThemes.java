@@ -1,7 +1,8 @@
-package com.dirtyunicorns.certified;
+package com.dirtyunicorns.certified.activities;
 
 import android.content.ComponentName;
 import android.content.Context;
+import android.content.SharedPreferences;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.Color;
@@ -9,16 +10,29 @@ import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
+import android.support.annotation.NonNull;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
+import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.CheckBox;
 import android.widget.ProgressBar;
 
+import com.dirtyunicorns.certified.Adapter;
+import com.dirtyunicorns.certified.ClickUtils;
+import com.dirtyunicorns.certified.ClickUtils.OnItemClickListener;
+import com.dirtyunicorns.certified.Item;
+import com.dirtyunicorns.certified.Libraries;
+import com.dirtyunicorns.certified.Preferences;
+import com.dirtyunicorns.certified.R;
+import com.dirtyunicorns.certified.Settings;
+import com.dirtyunicorns.certified.ThemeInfo;
 import com.github.javiersantos.bottomdialogs.BottomDialog;
 import com.github.mrengineer13.snackbar.SnackBar;
 import com.mikepenz.materialdrawer.Drawer;
@@ -38,26 +52,39 @@ import java.util.concurrent.TimeUnit;
 
 import okhttp3.OkHttpClient;
 import okhttp3.Response;
+import za.co.riggaroo.materialhelptutorial.tutorial.MaterialTutorialActivity;
 
-@SuppressWarnings("deprecation")
-public class DarkThemes extends AppCompatActivity implements ClickUtils.OnItemClickListener {
+public class LightThemes extends AppCompatActivity implements OnItemClickListener {
 
     static SwipeRefreshLayout mSwipeRefreshLayout;
 
-    private Drawer result = null;
+    private static final int REQUEST_CODE = 1234;
 
-    Preferences Preferences;
+    com.dirtyunicorns.certified.Preferences Preferences;
+
+    final Context context = this;
 
     ArrayList<Item> List = new ArrayList<>();
     Adapter adapter;
     Item item;
 
+    private static final String PREFS = "LightThemes";
+    private CheckBox dontShowAgain;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         this.Preferences = new Preferences(getApplicationContext());
-
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        SharedPreferences prefs1 = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
+        if (prefs1.getBoolean(com.dirtyunicorns.certified.Preferences.FIRST_RUN, true)) {
+            SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(getApplicationContext());
+            prefs.edit().putBoolean(com.dirtyunicorns.certified.Preferences.FIRST_RUN, false).apply();
+            Intent intent = new Intent(LightThemes.this, MaterialTutorialActivity.class);
+            intent.putParcelableArrayListExtra(MaterialTutorialActivity.MATERIAL_TUTORIAL_ARG_TUTORIAL_ITEMS, Preferences.getTutorialItems());
+            startActivityForResult(intent, REQUEST_CODE);
+        }
 
         Preferences.pbar = (ProgressBar) findViewById(R.id.progressBar2);
         RecyclerView Items = (RecyclerView) findViewById(R.id.recycler1);
@@ -88,7 +115,7 @@ public class DarkThemes extends AppCompatActivity implements ClickUtils.OnItemCl
         if (toolbar != null) result = new DrawerBuilder()
                 .withActivity(this)
                 .withToolbar(toolbar)
-                .withSelectedItemByPosition(2)
+                .withSelectedItemByPosition(1)
                 .withHeader(R.layout.header)
                 .withStatusBarColor(Preferences.StatusBarTint() ? tint(Preferences.Theme(), 0.8) : Preferences.Theme())
                 .addDrawerItems(
@@ -103,26 +130,26 @@ public class DarkThemes extends AppCompatActivity implements ClickUtils.OnItemCl
                 )
                 .withOnDrawerItemClickListener(new Drawer.OnDrawerItemClickListener() {
                     public boolean onItemClick(View view, int position, IDrawerItem drawerItem) {
-                        boolean isConnected = isConnected(DarkThemes.this);
+                        boolean isConnected = isConnected(LightThemes.this);
 
                         if (drawerItem != null) {
                             if (drawerItem.getIdentifier() == 1) {
                                 if (isConnected) {
-                                    Intent MainIntent = new Intent(DarkThemes.this, LightThemes.class);
+                                    Intent MainIntent = new Intent(LightThemes.this, LightThemes.class);
                                     startActivityForResult(MainIntent, 0);
                                 } else {
                                     showNotConnectedDialog();
                                 }
                                 return true;
                             } else if (drawerItem.getIdentifier() == 2) {
-                                Intent requestAlt = new Intent(DarkThemes.this, DarkThemes.class);
+                                Intent requestAlt = new Intent(LightThemes.this, DarkThemes.class);
                                 startActivity(requestAlt);
                                 return true;
                             } else if (drawerItem.getIdentifier() == 3) {
-                                Intent MainIntent = new Intent(DarkThemes.this, Libraries.class);
+                                Intent MainIntent = new Intent(LightThemes.this, Libraries.class);
                                 startActivityForResult(MainIntent, 0);
                             } else if (drawerItem.getIdentifier() == 4) {
-                                Intent SettingsIntent = new Intent(DarkThemes.this, Settings.class);
+                                Intent SettingsIntent = new Intent(LightThemes.this, Settings.class);
                                 startActivityForResult(SettingsIntent, 0);
                                 return true;
                             } else if (drawerItem.getIdentifier() == 5) {
@@ -176,21 +203,27 @@ public class DarkThemes extends AppCompatActivity implements ClickUtils.OnItemCl
         intent.putExtra("screenshot1Uri", item.uri.getScreenshot1());
         intent.putExtra("screenshot2Uri", item.uri.getScreenshot2());
         intent.putExtra("screenshot3Uri", item.uri.getScreenshot3());
+        intent.putExtra("screenshot4Uri", item.uri.getScreenshot4());
+        intent.putExtra("screenshot5Uri", item.uri.getScreenshot5());
+        intent.putExtra("screenshot6Uri", item.uri.getScreenshot6());
         intent.putExtra("theme_name", item.theme_name);
         intent.putExtra("theme_author", item.theme_author);
         intent.putExtra("theme_summary", item.theme_summary);
         intent.putExtra("playstoreUri", item.uri.getPlaystore());
         intent.putExtra("contactUri", item.uri.getContact());
+        intent.putExtra("contactBackgroundUri", item.uri.getContactBackground());
+        intent.putExtra("contactImageUri", item.uri.getContactImage());
         intent.putExtra("paid", item.paid);
         intent.putExtra("themeready", item.themeready);
         startActivity(intent);
     }
 
+    @SuppressWarnings("deprecation")
     private class BackgroundTask extends AsyncTask<String, String, String> {
 
         @Override
         protected void onPreExecute() {
-            boolean isConnected = isConnected(DarkThemes.this);
+            boolean isConnected = isConnected(LightThemes.this);
             if (isConnected) {
                 super.onPreExecute();
             } else {
@@ -205,8 +238,8 @@ public class DarkThemes extends AppCompatActivity implements ClickUtils.OnItemCl
                     .writeTimeout(10, TimeUnit.SECONDS)
                     .readTimeout(30, TimeUnit.SECONDS)
                     .build();
-            boolean isConnected = isConnected(DarkThemes.this);
-            String URL = "https://raw.githubusercontent.com/DirtyUnicorns/android_packages_apps_DU-Certified/README/jsons/darkthemes.json";
+            boolean isConnected = isConnected(LightThemes.this);
+            String URL = "https://raw.githubusercontent.com/Mazda--/android_packages_apps_DU-Certified/README/jsons/lightthemes.json";
 
             if (isConnected) {
                 okhttp3.Request request = new okhttp3.Request.Builder()
@@ -231,7 +264,7 @@ public class DarkThemes extends AppCompatActivity implements ClickUtils.OnItemCl
             } else {
                 showNotConnectedDialog();
             }
-            return URL;
+                return URL;
         }
 
         @Override
@@ -240,7 +273,7 @@ public class DarkThemes extends AppCompatActivity implements ClickUtils.OnItemCl
             Preferences.pbar.setVisibility(View.VISIBLE);
             ConnectivityManager connManager2 = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
             NetworkInfo mWifi = connManager2.getNetworkInfo(ConnectivityManager.TYPE_WIFI);
-            boolean isConnected = isConnected(DarkThemes.this);
+            boolean isConnected = isConnected(LightThemes.this);
             if (isConnected) {
                 if (!mWifi.isConnected()) {
                     try {
@@ -248,6 +281,49 @@ public class DarkThemes extends AppCompatActivity implements ClickUtils.OnItemCl
                         Preferences.pbar.setVisibility(View.GONE);
                     } catch (JSONException e) {
                         e.printStackTrace();
+                    }
+
+                    LayoutInflater inflater = (LayoutInflater) getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+                    View customView = inflater.inflate(R.layout.do_not_show_again, null);
+                    dontShowAgain = (CheckBox) customView.findViewById(R.id.skip);
+
+                    SharedPreferences settings = getSharedPreferences(PREFS, 0);
+                    String skipMessage = settings.getString(getString(R.string.skipMessage), getString(R.string.not_checked));
+                    if (!skipMessage.equals(getString(R.string.checked))) {
+                        new BottomDialog.Builder(context)
+                                .setCustomView(customView)
+                                .setIcon(R.drawable.warning)
+                                .setTitle(getString(R.string.warning_title))
+                                .setContent(getString(R.string.warning_message))
+                                .setPositiveText(getString(R.string.load_anyways))
+                                .setNegativeText(getString(R.string.alright))
+                                .setCancelable(false)
+                                .onPositive(new BottomDialog.ButtonCallback() {
+                                    @Override
+                                    public void onClick(@NonNull BottomDialog dialog) {
+                                        String checkBoxResult = getString(R.string.not_checked);
+                                        if (dontShowAgain.isChecked())
+                                            checkBoxResult = getString(R.string.checked);
+                                        SharedPreferences settings = getSharedPreferences(PREFS, 0);
+                                        SharedPreferences.Editor editor = settings.edit();
+                                        editor.putString(getString(R.string.skipMessage), checkBoxResult);
+                                        editor.apply();
+                                        dialog.dismiss();
+                                    }
+                                })
+                                .onNegative(new BottomDialog.ButtonCallback() {
+                                    @Override
+                                    public void onClick(@NonNull BottomDialog dialog) {
+                                        String checkBoxResult = getString(R.string.not_checked);
+                                        if (dontShowAgain.isChecked())
+                                            checkBoxResult = getString(R.string.checked);
+                                        SharedPreferences settings = getSharedPreferences(PREFS, 0);
+                                        SharedPreferences.Editor editor = settings.edit();
+                                        editor.putString(getString(R.string.skipMessage), checkBoxResult);
+                                        editor.apply();
+                                        finish();
+                                    }
+                                }).show();
                     }
                 } else {
                     try {
@@ -269,18 +345,23 @@ public class DarkThemes extends AppCompatActivity implements ClickUtils.OnItemCl
                 jsonObject = jsonArray.getJSONObject(i);
 
                 item = new Item(jsonObject.getString("theme_name"),
-                        jsonObject.getString("theme_author"),
-                        jsonObject.getString("theme_summary"),
-                        jsonObject.getString("paid"),
-                        jsonObject.getString("themeready"));
+                                jsonObject.getString("theme_author"),
+                                jsonObject.getString("theme_summary"),
+                                jsonObject.getString("paid"),
+                                jsonObject.getString("themeready"));
 
                 item.uri.setCard_thumbnail(jsonObject.getJSONObject("uri").getString("card_thumbnail"));
                 item.uri.setCollapsing_toolbar_thumbnail(jsonObject.getJSONObject("uri").getString("collapsing_toolbar_thumbnail"));
                 item.uri.setScreenshot1(jsonObject.getJSONObject("uri").getString("screenshot1"));
                 item.uri.setScreenshot2(jsonObject.getJSONObject("uri").getString("screenshot2"));
                 item.uri.setScreenshot3(jsonObject.getJSONObject("uri").getString("screenshot3"));
+                item.uri.setScreenshot4(jsonObject.getJSONObject("uri").getString("screenshot4"));
+                item.uri.setScreenshot5(jsonObject.getJSONObject("uri").getString("screenshot5"));
+                item.uri.setScreenshot6(jsonObject.getJSONObject("uri").getString("screenshot6"));
                 item.uri.setPlaystore(jsonObject.getJSONObject("uri").getString("playstore"));
                 item.uri.setContact(jsonObject.getJSONObject("uri").getString("contact"));
+                item.uri.setContactBackground(jsonObject.getJSONObject("uri").getString("contact_background"));
+                item.uri.setContactImage(jsonObject.getJSONObject("uri").getString("contact_image"));
 
                 List.add(item);
             }
@@ -300,7 +381,7 @@ public class DarkThemes extends AppCompatActivity implements ClickUtils.OnItemCl
         super.onSaveInstanceState(outState);
     }
 
-    private static int tint(int color, double factor) {
+    public static int tint(int color, double factor) {
         int a = Color.alpha(color);
         int r = Color.red(color);
         int g = Color.green(color);
@@ -311,13 +392,7 @@ public class DarkThemes extends AppCompatActivity implements ClickUtils.OnItemCl
 
     @Override
     public void onBackPressed() {
-        if (result != null && result.isDrawerOpen()) {
-            result.closeDrawer();
-        } else if (result != null) {
-            result.setSelection(1);
-        } else {
-            super.onBackPressed();
-        }
+        finish();
     }
 
     public void ContactMe() {
@@ -331,7 +406,7 @@ public class DarkThemes extends AppCompatActivity implements ClickUtils.OnItemCl
         try {
             startActivity(Intent.createChooser(emailIntent, getString(R.string.choose_email_app)));
         } catch (android.content.ActivityNotFoundException ex) {
-            new BottomDialog.Builder(this)
+            new BottomDialog.Builder(context)
                     .setTitle(getString(R.string.no_email_app_found_title))
                     .setContent(getString(R.string.no_email_app_found_message))
                     .setPositiveText(getString(R.string.download_gmail))
@@ -339,7 +414,7 @@ public class DarkThemes extends AppCompatActivity implements ClickUtils.OnItemCl
                     .setCancelable(false)
                     .onPositive(new BottomDialog.ButtonCallback() {
                         @Override
-                        public void onClick(BottomDialog dialog) {
+                        public void onClick(@NonNull BottomDialog dialog) {
                             Intent i = new Intent(Intent.ACTION_VIEW);
                             i.setData(android.net.Uri.parse(getResources().getString(R.string.gmail_link)));
                             startActivity(i);
@@ -347,7 +422,7 @@ public class DarkThemes extends AppCompatActivity implements ClickUtils.OnItemCl
                     })
                     .onNegative(new BottomDialog.ButtonCallback() {
                         @Override
-                        public void onClick(BottomDialog dialog) {
+                        public void onClick(@NonNull BottomDialog dialog) {
                             dialog.dismiss();
                         }
                     }).show();
@@ -398,11 +473,11 @@ public class DarkThemes extends AppCompatActivity implements ClickUtils.OnItemCl
         } else {
             newState = PackageManager.COMPONENT_ENABLED_STATE_DISABLED;
         }
-        pm.setComponentEnabledSetting(new ComponentName(this, com.dirtyunicorns.certified.LauncherActivity.class), newState, PackageManager.DONT_KILL_APP);
+        pm.setComponentEnabledSetting(new ComponentName(this, LauncherActivity.class), newState, PackageManager.DONT_KILL_APP);
     }
 
     public boolean isLauncherIconEnabled() {
         PackageManager pm = getPackageManager();
-        return (pm.getComponentEnabledSetting(new ComponentName(this, com.dirtyunicorns.certified.LauncherActivity.class)) != PackageManager.COMPONENT_ENABLED_STATE_DISABLED);
+        return (pm.getComponentEnabledSetting(new ComponentName(this, LauncherActivity.class)) != PackageManager.COMPONENT_ENABLED_STATE_DISABLED);
     }
 }

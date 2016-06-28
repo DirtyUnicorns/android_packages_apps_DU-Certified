@@ -2,12 +2,12 @@ package com.dirtyunicorns.certified;
 
 public class Item {
 
-    String theme_name;
-    String theme_author;
-    String theme_summary;
-    String paid;
-    String themeready;
-    Uri uri;
+    public String theme_name;
+    public String theme_author;
+    public String theme_summary;
+    public String paid;
+    public String themeready;
+    public Uri uri;
 
     public Item(String theme_name, String theme_author, String theme_summary, String paid, String themeready) {
 
