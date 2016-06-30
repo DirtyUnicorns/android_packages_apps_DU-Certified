@@ -85,6 +85,36 @@
 
 
 {
+"theme_name":"DarkMTRL",
+
+"theme_author":"Thyrus",
+
+"theme_summary":"DarkMTRL CM12 is a dark theme developed for the Theme Engine from CyanogenMod CM12. It is based on the original concept by the author when Android 5.0 was launched, featuring inverted dark components and blue grey accents and highlights.",
+
+"paid": "true",
+
+"themeready": "true",
+
+"uri":{
+
+"card_thumbnail":"http://i.imgur.com/UC927PC.png",
+
+"collapsing_toolbar_thumbnail":"http://i.imgur.com/UC927PC.png",
+
+"screenshot1":"https://lh5.ggpht.com/HqVmjQWhaYOM7NmwPR521Oldy2FRprFUSIBTw0EsXOKpbM6SDcRaBT3N7A2KGjclYrL4=h900-rw",
+
+"screenshot2":"https://lh5.ggpht.com/FdFHGNc5o8oVKCEkX1XbbwoosVHwzo2tgmAuLstoyX9Cd33qyKiZXFkKWcoF_Pu_XJ8=h900-rw",
+
+"screenshot3":"https://lh4.ggpht.com/pxojDt-xMyOpCT724DiInKvjgkkJ-TXnCtq9lYB2tg8NlpXFogER45L8NoKkTQZwDae9=h900-rw",
+
+"playstore":"https://play.google.com/store/apps/details?id=darkuimtrl.thyrus.releaseCM12",
+
+"contact":"https://plus.google.com/u/0/+PatrickLoth"}},
+
+
+
+
+{
 "theme_name":"Outray",
 
 "theme_author":"Kohlewrrk",
@@ -139,35 +169,6 @@
 "playstore":"https://play.google.com/store/apps/details?id=com.chummy.jezebel.materialdark.donate",
 
 "contact":"https://plus.google.com/u/0/+NicholasChumCDT"}},
-
-
-
-{
-"theme_name":"DarkMTRL",
-
-"theme_author":"Thyrus",
-
-"theme_summary":"DarkMTRL CM12 is a dark theme developed for the Theme Engine from CyanogenMod CM12. It is based on the original concept by the author when Android 5.0 was launched, featuring inverted dark components and blue grey accents and highlights.",
-
-"paid": "true",
-
-"themeready": "true",
-
-"uri":{
-
-"card_thumbnail":"http://i.imgur.com/UC927PC.png",
-
-"collapsing_toolbar_thumbnail":"http://i.imgur.com/UC927PC.png",
-
-"screenshot1":"https://lh5.ggpht.com/HqVmjQWhaYOM7NmwPR521Oldy2FRprFUSIBTw0EsXOKpbM6SDcRaBT3N7A2KGjclYrL4=h900-rw",
-
-"screenshot2":"https://lh5.ggpht.com/FdFHGNc5o8oVKCEkX1XbbwoosVHwzo2tgmAuLstoyX9Cd33qyKiZXFkKWcoF_Pu_XJ8=h900-rw",
-
-"screenshot3":"https://lh4.ggpht.com/pxojDt-xMyOpCT724DiInKvjgkkJ-TXnCtq9lYB2tg8NlpXFogER45L8NoKkTQZwDae9=h900-rw",
-
-"playstore":"https://play.google.com/store/apps/details?id=darkuimtrl.thyrus.releaseCM12",
-
-"contact":"https://plus.google.com/u/0/+PatrickLoth"}},
 
 
 
