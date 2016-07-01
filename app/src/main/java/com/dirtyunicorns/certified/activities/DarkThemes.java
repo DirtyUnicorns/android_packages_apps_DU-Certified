@@ -219,7 +219,7 @@ public class DarkThemes extends AppCompatActivity implements ClickUtils.OnItemCl
                     .readTimeout(30, TimeUnit.SECONDS)
                     .build();
             boolean isConnected = isConnected(DarkThemes.this);
-            String URL = "https://raw.githubusercontent.com/Mazda--/android_packages_apps_DU-Certified/README/jsons/darkthemes.json";
+            String URL = "https://raw.githubusercontent.com/DirtyUnicorns/android_packages_apps_DU-Certified/README/jsons/darkthemes.json";
 
             if (isConnected) {
                 okhttp3.Request request = new okhttp3.Request.Builder()

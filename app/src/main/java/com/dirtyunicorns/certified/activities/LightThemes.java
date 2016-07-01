@@ -239,7 +239,7 @@ public class LightThemes extends AppCompatActivity implements OnItemClickListene
                     .readTimeout(30, TimeUnit.SECONDS)
                     .build();
             boolean isConnected = isConnected(LightThemes.this);
-            String URL = "https://raw.githubusercontent.com/Mazda--/android_packages_apps_DU-Certified/README/jsons/lightthemes.json";
+            String URL = "https://raw.githubusercontent.com/DirtyUnicorns/android_packages_apps_DU-Certified/README/jsons/lightthemes.json";
 
             if (isConnected) {
                 okhttp3.Request request = new okhttp3.Request.Builder()
