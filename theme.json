@@ -12,22 +12,31 @@
 
 "uri":{
 
-"card_thumbnail":"IMAGE LINK GOES HERE",
+"card_thumbnail":"PLAY STORE-LIKE FEATURE IMAGE",
 
-"collapsing_toolbar_thumbnail":"IMAGE LINK GOES HERE",
+"collapsing_toolbar_thumbnail":"PLAYSTORE-LIKE FEATURE IMAGE",
 
-"screenshot1":"IMAGE LINK GOES HERE",
+"screenshot1":"DIRECT PLAYSTORE IMAGE LINK",
 
-"screenshot2":"IMAGE LINK GOES HERE",
+"screenshot2":"DIRECT PLAYSTORE IMAGE LINK",
 
-"screenshot3":"IMAGE LINK GOES HERE",
+"screenshot3":"DIRECT PLAYSTORE IMAGE LINK",
 
-"playstore":"PLAY STORE LINK TO YOUR THEME",
+"screenshot4":"DIRECT PLAYSTORE IMAGE LINK",
 
-"contact":"YOUR G+ PROFILE GOES HERE"}}
+"screenshot5":"DIRECT PLAYSTORE IMAGE LINK",
+
+"screenshot6":"DIRECT PLAYSTORE IMAGE LINK",
+
+"playstore":"PLAY STORE LINK",
+
+"contact":"GOOGLE PLUS PROFILE",
+
+"contact_background":"GOOGLE PLUS PROFILE BACKGROUND",
+  
+"contact_image":"GOOLGE PLUS PROFILE AVATAR"}}
 
 ]
-
 
 
 
@@ -42,12 +51,16 @@ paid - If your theme is paid, leave it as true. If is not, set it to false
 
 themeready - Does your theme perform better with a user flashes theme ready gapps? If so, change false to true and if not, leave it as it is.
 
-card_thumbnail - Please make sure the image url you provide is at least 300x246. This is the image you first see on the card.
+card_thumbnail - This image is the image you see on the card on display. This needs to be like a playstore like feature banner.
 
-collapsing_toolbar_thumbnail - Please make sure the image url you provide is at least 1200x986. This is the image you see on top when you click on the card
+collapsing_toolbar_thumbnail - This image is the image you see when you click on the card in the collapsing toolbar. This needs to be also like a playstore like feature banner. It should be different but not required.
 
-screenshot1, 2 and 3 - Please make sure the image url you provide is EXACTLY 506x899. If you forget everything else, please do this. Screenshots that look more like posters and banners don't fit well within the app and causes a lot of layout issues. 
+screenshot 1, 2, 3, 4, 5 and 6 - Please provide the direct links to the playstore. Just right click on the plystore screenshots and provide the links.
 
 playstore - This is simple, the url to the playstore for your theme. Don't use short url's, give us the long url please
 
 contact - This can either be your G+ profile where people can follow you for updates or the G+ community where you're handling questions.
+
+contact_background - This should be your Google plus profile background, direct link
+  
+contact_image - This should be your Google plus profile avatar, direct link
