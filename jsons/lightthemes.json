@@ -1,5 +1,44 @@
 [
 {
+"theme_name":"CiaoUI",
+ 
+"theme_author":"Ciao Studio",
+ 
+"theme_summary":"Theme that follows Material Design's guidelines, featuring exclusive circular icons and colors very attractive.",
+ 
+"paid": "true",
+ 
+"themeready": "false",
+ 
+"uri":{
+ 
+"card_thumbnail":"https://lh3.googleusercontent.com/isdUrCpo5Y7hzshnGFOoL32R67VziBgGXgXJv0lYZyKQz8FCWLdeLn4LoKX3mojjl1kI9Y8Q7NIOru_bOI6z2XKnZ-AXt7ZTQewVzjUIxlHT1IFsY12pXEGEAdfcj4hXKC19iFKLycriAXO5TL4ak3TPRN69YZGvFoDZy3XnT2tfqfIf-8bKggJr8oEuxk_WQqKgaJY1izJJMbQg4xoEUODOJuHS-GjL4Upb5GomCH8o_IugwLb4uAli0t8ZW6pEHn8taC2P7eh8naSyUpGQrB933493-YThD_s9r_sQvny46wpqfGsVIdyd-8QNfJNQH-hSu0BskwkzcHNtRVwmKlmTWjI5b9Ws84mq3lAwMC0kLVWdY2d7OwuTuaSGjrc4TsXKSKtd43nTRedvCvc8LmMVR5Q2XRmz450IYdd70qhMEJ9tbA0rPijNwo4auI4AuLwffnZ0dWmZGvQ9Ca3iPBnX_ukoc_4vDysPnJxRGPWutxXLF79ooAvjaSb8Q0ENADiFoR0Zmtic9jEGbsCFGS_9S3ooNqK26EkPPhzEvdL4YAT04vzXKl7gq8xLwom7LXLoB2fHIr_4Hge02r2Yv3yijSS47puo=w449-h368-no",
+ 
+"collapsing_toolbar_thumbnail":"https://lh3.googleusercontent.com/IGpgCImIJLPuHb3YkQMi8RfNmq7bXlDPv6MiLf2m7ibHJWts3L5QGjgXvF0f8vHpL1_ruFDkj5mTEPDwumKAEOLq5BUd1DvzGjPn8kQH7CnUzpO6ohk8xW9gbjoVfr8Dj3Dn7iEXp8OMkHDAYaiQ2PaNN_BjLExVcMmqbPkN0gE1S926H7f96Z-jA2w-Xg2mpv0Pztzv26y0uwIPqt_abDA0cdrR53tfar3tpsoA0qCWzfPrDMVDc1-Zmr0U4yKpApsd1jGLMBrewy4j2UBPUWTDqjbBvaKI0S23AJxanidpVZm1k2od17XswdRqVPRRQP7nU9xLwWhQIiDvMFufQwfuVltmV3Z8S_7idT4R-6czaXHcXZgi1OjkNSUZOxfSvMyxDU71fQDR7hCP14nzTUSAk4N9x_kLCIkBGw38C7xw4cTv5914_BCmoog6w9KPms0wSgmRTXl6tBdm-4gcbkvcyYJNr-4aq_FYqDs9Z1zY08_kpAtQCYqiG_SFH_sl_g-cpqq1TJd5D1HT_C3wiEl3xvEn7-bS4JuHCaYqllWn_Azg-g72oNi_N0yPLT6fxgNkfbKewulvzz1g39CH9qkJ7SW5t870=w1113-h914-no",
+ 
+"screenshot1":"https://lh3.googleusercontent.com/0WlUrSwPc5io7lFEzA7CldHle-1l6fR1y6qWBStiWdF-l0YfcnfEsx12am8EiW0nkg=h310-rw",
+ 
+"screenshot2":"https://lh3.googleusercontent.com/XczIDaW-69evhVD1-9lMeVRhFcS1S4120ULT28cacDcDRcqqMIea-MpKFxBNIfo1sA=h900-rw",
+ 
+"screenshot3":"https://lh3.googleusercontent.com/ekDYIOslnRQUdf2iUoEeMaF49ivMPQGu4-FNpRGIbsWDKk0EUqt44PsSwFcbQiCAdw=h900-rw",
+
+"screenshot4":"https://lh3.googleusercontent.com/FvTTx8ze_f-jIfrnnFecqN9vY5R3l8wwdTqD76apFRaoZ6PDu3tzo1QWiPwXiyCmAA=h900-rw",
+
+"screenshot5":"https://lh3.googleusercontent.com/XHlF9HA9UD6YHrehBodhDv67o20AdiW5OypztcPdWgmN96Az2GaSk5W7mQDTMizlMBRd=h900-rw",
+
+"screenshot6":"https://lh3.googleusercontent.com/WoTYlNnHuNkAJW01zQRIaSuzoA2cQ-5knO-o_gb0dYyUZq7Dq537vz5yZsPEO0X0geM=h900-rw",
+ 
+"playstore":"https://play.google.com/store/apps/details?id=com.ciaostudio.ciaoui",
+ 
+"contact":"https://plus.google.com/114630483053942284383/posts",
+
+"contact_background":"https://lh6.googleusercontent.com/-Nque_CTcsac/V01XLkO5igI/AAAAAAAAAeQ/tiADL86noRsdZHyrBraGXGJWokKfRHvCACL0B/w958-h468-no/ciaoicon_theme_banner.png",
+  
+"contact_image":"https://lh3.googleusercontent.com/-eSyX8hmDk54/V01W8X7ui-I/AAAAAAAAAeM/eRSlicUA5nsenTjSaPQbBnn94HBKCacPwCL0B/s512-no/new_logo.png"}},
+
+
+
+{
 "theme_name":"Coalfield",
 
 "theme_author":"Kohlewrrk",
