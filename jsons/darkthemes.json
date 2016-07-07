@@ -543,6 +543,45 @@
 
 
 {
+"theme_name":"GRVY",
+
+"theme_author":"YAdesign",
+
+"theme_summary":"GRVY - the way themes should be - combines attention to smallest details, retro feel with futuristic look paired with highest quality glyphs almost everywhere, with 50+ themed apps.",
+
+"paid": "true",
+
+"themeready": "false",
+
+"uri":{
+
+"card_thumbnail":"https://lh3.googleusercontent.com/Hn6IhCPbLXOg-GuzNcq3AcVOaOLmXQXVxY0LPDZIqxvSvsSrWixWoByWgnKehVZnaxow51JVnTRD7U6zvFxuW0VOkRbqZPGp6ewGaR62DOTTB1To0KXTbS0gArcB3Qlowsx_6wTy-heOaNhs6qdS2jbqYtXpt4FzmIZAJCCBkhKVbu4IGAP1ysyCSIbIXtD_JkS7eT8bog3WqrPnhDoMM-c80ZtmpAdhSJeYiT2Kh8dP0ZxRrQG6nRcZkxGSNB6R6H1YIku7FPRJ3tguqJjEZoa9EPN9ate9-BsG3bJ3srW0iAZz6YGkWvf_pskdYQQxQ5btWTz1TEA9IzqyE6VtmYvbhau83Eu3qt250ZBucgVXKatOOiHvge5ZJAEacA0AV0oKKkOcWvd-Dj7BUyrl6BGulzYwXMKoUFCigI6_etXzClYkCIMGIcJv3audE0b5j9k5xOl_XHJWPr-OkM3vD_YZKy04Blv6S9zKn1Fxdoc31AEI1OnQeHg1xKWdBHun4Utc5ZKIKHArQyKTZfS8ZcfNZD4j2v41kOKl-B3jSiLM6bpQ4Mz0WGVKfpZacrmQ-9BFzgV2r26iisw9VyiszQOoq2BqrrGu=w1024-h500-no",
+
+"collapsing_toolbar_thumbnail":"https://lh3.googleusercontent.com/Hn6IhCPbLXOg-GuzNcq3AcVOaOLmXQXVxY0LPDZIqxvSvsSrWixWoByWgnKehVZnaxow51JVnTRD7U6zvFxuW0VOkRbqZPGp6ewGaR62DOTTB1To0KXTbS0gArcB3Qlowsx_6wTy-heOaNhs6qdS2jbqYtXpt4FzmIZAJCCBkhKVbu4IGAP1ysyCSIbIXtD_JkS7eT8bog3WqrPnhDoMM-c80ZtmpAdhSJeYiT2Kh8dP0ZxRrQG6nRcZkxGSNB6R6H1YIku7FPRJ3tguqJjEZoa9EPN9ate9-BsG3bJ3srW0iAZz6YGkWvf_pskdYQQxQ5btWTz1TEA9IzqyE6VtmYvbhau83Eu3qt250ZBucgVXKatOOiHvge5ZJAEacA0AV0oKKkOcWvd-Dj7BUyrl6BGulzYwXMKoUFCigI6_etXzClYkCIMGIcJv3audE0b5j9k5xOl_XHJWPr-OkM3vD_YZKy04Blv6S9zKn1Fxdoc31AEI1OnQeHg1xKWdBHun4Utc5ZKIKHArQyKTZfS8ZcfNZD4j2v41kOKl-B3jSiLM6bpQ4Mz0WGVKfpZacrmQ-9BFzgV2r26iisw9VyiszQOoq2BqrrGu=w1024-h500-no",
+
+"screenshot1":"https://lh3.googleusercontent.com/C3T6iAmshd0Jk1zTsEZtxT2T0NRYnZFVm6CGtvHDxNcw-a1CTSV8mE4Xp9XwTycqVgc=h900-rw",
+
+"screenshot2":"https://lh3.googleusercontent.com/Nyw7JYsmUmmD02c0g9yP0QTWW-rwY66tjoomd_3O8udqDRBCiFNA-KmpgL68IFYSe9nn=h900-rw",
+
+"screenshot3":"https://lh3.googleusercontent.com/ciClDgOY2G-vQYVJIcAHH7b8Jh6RMqzSNXTMX25SAkaCvl6A4_gVG4qCtH8SECLiFww=h900-rw",
+
+"screenshot4":"https://lh3.googleusercontent.com/Qkl_DaCw9nd3iT6sYi1QTmabbohQqPUVK_UlvRw5vfoYaFwzy8BJq-L0whwWnuM4Caoe=h900-rw",
+
+"screenshot5":"https://lh3.googleusercontent.com/k40uUYVR4aABoRl9vsCll737P3gaGvtH_FW14VrXLtUYldgAQ4pUZS9nIh-sTUm9h5E=h900-rw",
+
+"screenshot6":"https://lh3.googleusercontent.com/ESclh09JNJSf2ZxCPp0FnvL0zBSweIc6r1bI4SsDs92ojbbVyXeVCNc9siH84lUBOhg=h900-rw",
+
+"playstore":"https://play.google.com/store/apps/details?id=yadesign.grvy",
+
+"contact":"https://plus.google.com/u/0/+JacekMalinowski",
+
+"contact_background":"https://lh3.googleusercontent.com/-27gZVIoHFYE/V2z7G8A9jwI/AAAAAAAAvtI/f-wW6jT1QMQs0fqn6O4K9fkzBCfM9tTkwCL0B/w1310-h873-no/the%2Bfall.JPG",
+  
+"contact_image":"https://lh5.googleusercontent.com/-lPJlWZDkX1k/V20AqasQvWI/AAAAAAAAvsk/-zfVeMUS1Io2yQ4QeP_M8SeZym1cmWo_ACL0B/s873-no/donutzzz.JPG"}},
+
+
+
+{
 "theme_name":"KlearKat",
 
 "theme_author":"DJDarkknight",
