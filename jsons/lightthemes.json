@@ -1,5 +1,44 @@
 [
 {
+"theme_name":"BelloUI",
+ 
+"theme_author":"Ciao Studio",
+ 
+"theme_summary":"Theme that offers a unique and attractive interface with eye-catching colors and an elegant style to your device.",
+ 
+"paid": "true",
+ 
+"themeready": "false",
+ 
+"uri":{
+ 
+"card_thumbnail":"https://lh3.googleusercontent.com/WZZn0LFP8qDKWqIqBEiiKzY2fDrbiHydWpejaDD1FoZLML1FkElMVlrKXsmq6R-P7RASluuPuIk5-ajYPAiiTAiWQRZaCKFwT6Dvhp-O76tMkx8KIKGgrjacg_OuhPDZm76u_aEz5k2mbM-g2urGiliCauUXoywyebIGDFJEmHTesOgVgKvtJjT84KV9EgPMIH2gbVJQDwN8TlQUPPvb2z9T-zn6gt1Qsi_XGj4W6V_P6QfxSn309OzdINgbjA0MfGvONSb6529kFqdkL_WUquawPYYWNiJik2nhoao7cYOGukuRsR3j9QMUeBrgKCTfUHqRrn3E_KfikbqBOskPsl1E0czohYisBw9shrZAEUI9uMflRYHLj-9O1GMYHaf8DX9bjZPS8Thjuy6lIDCTxxXEca0-LS49hQzoxFf7OfkYyLkp4rSnzws5o3lo9xvfeImnNuJQHP_f1d-l7WmCPdaf8fFnp2dnk05zY9dPM332O5lIH3azTnT_Dlgxm9XjBawnZzV3Til46QzBDBwkdUrne1BxG-i-_pN22uuSGYCjUDcwMZHbv30XlMaljnWJamLG-Wsvgz4co81NFhDBsbNaRVdPy5F4=w700-h574-no",
+ 
+"collapsing_toolbar_thumbnail":"https://lh3.googleusercontent.com/GSNf-cZr_jClDiCj_lhJoz1yG-SCYC6UctbS1XO0Wjek0NXQ6vHxleJVTQfOJGebVgGu7GPiyQgI2S1Z4ZFIEDeZBYcRuXJzxTKWvEfWD2sZaMhI5H3QuokKXroUPLaDKwcVhePxspO6G7F1GRpDZWCayhTeb9KWUMAx487Snq3K3cu69ZCsR3dmwfJ0WW_v9r6YSKhCiRPOuap7__7mM83kdvgYu_yC-O7F-9nJqZiYr7t3lMlObaXmM5lYcRNWtKf339unESTF4S6vpuS41tYxDcwU0haYLkQFB2FQLpCGJADUxr3jkIbc1jG5tp_43U1C46xrSoHNU7le4Ski26OIacZdaRMzA245p7KH9igQno0YOji3TekloNZ5hguRJj8yQ9GPo3NWFyjnNUBjyf1psRP0oHuYZmWQcZFCzo4mmBzdNWo-Ii3_TuchmnvUL2vbkDrw81V3tMHUD1PB6IA6E77P1K2nPwtijU9CK6hKv_szwmZwMqDNhL6AlBuKnFh30ifnzd4x06SCItiZ-2yGo0FCfdHcX6V6v1uyrBgvCiubYJpwqThB8WFGDC8zqu13_qTe_i83pp4W0rs0qhZl77Jxfx0k=w1115-h916-no",
+ 
+"screenshot1":"https://lh3.googleusercontent.com/1ZZexhdaIoU3_-H8AyfCiJs0ubwEBnNAPXp9MDz2xKzSGgbWkKUdUgAXRTvolDyWOHs=h900-rw",
+ 
+"screenshot2":"https://lh3.googleusercontent.com/rCjDlj4KsPgpAkGoCKtb85OFXHHOTkD8rHjBd27ZSsL8XR4hzK6q-3sICOR87J4woLw=h900-rw",
+ 
+"screenshot3":"https://lh3.googleusercontent.com/41Cn45WU5eQ6CmBZSQ01QRfN-a-alBRsPt2EmbarJ4vDcMisaViHUqsSbyN8_gEaJAE=h900-rw",
+ 
+"screenshot4":"https://lh3.googleusercontent.com/h_acv5-K5isE0b0DRvMSlSBOsu6ncw5LOUcumqbrk_ACE2vTWxXctT68A72zXAO7cOE=h900-rw",
+ 
+"screenshot5":"https://lh3.googleusercontent.com/fAEyQL0-u8I8y7hJ-CvC81dN9dVtJkwXCXxN5eqEJkWSnuHBAhPZgF4VE1no81oaUJg=h900-rw",
+ 
+"screenshot6":"https://lh3.googleusercontent.com/nemYo2Aa-sG0TNeATRwfL3izNw2BhlSNEarJK-vGKV6JYowDSgr8GD3bIzzAr5G7uWg=h900-rw",
+ 
+"playstore":"https://play.google.com/store/apps/details?id=com.ciaostudio.belloui",
+ 
+"contact":"https://plus.google.com/114630483053942284383/posts",
+ 
+"contact_background":"https://lh6.googleusercontent.com/-Nque_CTcsac/V01XLkO5igI/AAAAAAAAAeQ/tiADL86noRsdZHyrBraGXGJWokKfRHvCACL0B/w958-h468-no/ciaoicon_theme_banner.png",
+ 
+"contact_image":"https://lh3.googleusercontent.com/-eSyX8hmDk54/V01W8X7ui-I/AAAAAAAAAeM/eRSlicUA5nsenTjSaPQbBnn94HBKCacPwCL0B/s512-no/new_logo.png"}},
+
+
+
+{
 "theme_name":"CiaoUI",
  
 "theme_author":"Ciao Studio",
