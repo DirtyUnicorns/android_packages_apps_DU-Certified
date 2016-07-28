@@ -737,6 +737,45 @@
 
 
 {
+"theme_name":"OxygenCM",
+
+"theme_author":"GPApps",
+
+"theme_summary":"OxygenOS UI for Dirty Unicorns",
+
+"paid": "true",
+
+"themeready": "false",
+
+"uri":{
+
+"card_thumbnail":"https://lh3.googleusercontent.com/UjuCVplrsGgnhOwUfqQZcPMz9XCmPY7i5PvZXHoRPOcybj-j4JTZ1ADVP27pLkzQG4cYznz8APKzLp5sHZI0shIIwwc_zxffEY4ueQu23qlkI2gqnA-FGtRChLxsPFlFMUH38WM1pgo_6ZaRFWDCqHm8FaPdwKyhiqG3KxMgKtQs2jItX3ndqHH2whZMNGi2zI7nW2VtDawVbj4iVtJ4LXO15ms8SBTIxObr_TxNTt-RcPdXRpthW8_Nhq0vObVSHYLFhThve6hYsIqY_l7Nr5eFUyY4thILTMlAfaiGF9dV8Rs3lcE3-MIRDh-IDk-xGHCgj_ojtj1WX9TtQ9vxptx7jr6BKlYzjfwnj4eGqS07udzxzC6CpGqcLVcXO9u0oKUA1qD0L-REe0IFc4OwY_4-rHFAlU71K7Rh4OeMngfw_c9H9i2R5x2Y3-e0IBehIPbJyCrzJKwdAR1XnPS1NASWvlT3TMedcmvIb2-5WWHL5j7jav8bnf0NzKNZgPDF-8tvtRITDCFZMvIbNNeAY9ivNF04kmbwna9zo3N2tI71_20_NjwHdo3WFI8zY-JnON8Cdm7OdWozzKU2HA6qTOGheMlWM-1Y=w1024-h500-no",
+
+"collapsing_toolbar_thumbnail":"https://lh3.googleusercontent.com/NhQjcE_r0e0KHoXuSXJtJFlME7eVljjL_UWMUKYL3ZxxOq5kTYVmRClk_uY1b3Oa7pnj8RtC687tD1cM9Q1uTJy-j0aEqh3PSBwJc7GZJxuk784WkUKKB6byYCQxqHmztpo4SvK9w8c_Cq3gcTpBRCYlbv92VSZz1X4WQNAvQn0pXPPLoaiWwLB7k-vCYsXWZdpCNWilGU1St1tzSXIETBI3yGPOSwPOR14j21pTjhacgxW11EHfQCadg6pnXU5dV9E5wQ2rCQXg1SXIqWm6bwCeMMZammPLMYHuTBXtPiG4Hf8k7a0R0AHBbaAQYpZfgKST6PSbCkE3yi1bwec_6f3ERgGPHx9FisaQnZCMkM2TDArgAykA-BON0cb3OnE4_cBDxh_y2Vdtdd7XgcivgyDmtGf685cQRQ-L5xJoDXWDbiVc8ow_f5yGyy4eBehMTeF4pv_42s7dUIJOFz5qe5zHxHVnIRYTkKf6Qc4_c9a4U4TZoy5dMUz25zwC6TljrdVKQRNqLc1Y8bZfrJmAV61nJ2ClOFeKi6C9c_X2eo_WsD8JxpythpQEn3_AEIgiiRExqR3cX2nuFQ9tiKIwU15srUG7TSy7=w718-h350-no",
+
+"screenshot1":"https://lh3.googleusercontent.com/OK1nxKrBD6312IIzQkDAKyzpaKQOhJRc4Bq7l7moYbbYNl4ZiE2cEurJt1mNI0mT9jA=h900-rw",
+
+"screenshot2":"https://lh3.googleusercontent.com/szr4ZkAb_hve4V30bwrROF2mXKEGYb5jvjFZqAJ7ubvysqPYBFhAbtREci8GQjTLVQ=h900-rw",
+
+"screenshot3":"https://lh3.googleusercontent.com/lPer26LsSXYLVTHpoljo3F00XpKVbh6uJye2iuJQ4IrH0sskJio7i4NJkOOH6_lKUzw=h900-rw",
+
+"screenshot4":"https://lh3.googleusercontent.com/YqnDzLeeJFHf828UvRocHbwnnxU3kRsAIYq9EDoLV9EeQROwyPDl1NKdR3KDlOmuils=h900-rw",
+
+"screenshot5":"https://lh3.googleusercontent.com/PqqXgHcrgZi7kdtfUem0NXAmpEibFjJHVUfRhAluVC-4k-D21vMeNiV6BhBPMIEMWe0=h900-rw",
+
+"screenshot6":"https://lh3.googleusercontent.com/x2ZAHrbW_nhsauFjvn6qZ88fL3DsF3nSKz08vEUtAOFH647anXnMx-qgPT3YvuUQjtM=h900-rw",
+
+"playstore":"https://play.google.com/store/apps/details?id=com.pippo96.oxygenred",
+
+"contact":"https://plus.google.com/communities/114007344750312288803",
+
+"contact_background":"https://lh3.googleusercontent.com/-6oFhAINnbto/AAAAAAAAAAI/AAAAAAAAABo/R72hge0xH3k/w360-h203-p-rw/photo.jpg",
+  
+"contact_image":"https://lh3.googleusercontent.com/-5XENZT_JktY/AAAAAAAAAAI/AAAAAAAAE1c/wDLf91Kc-mo/s60-p-rw-no/photo.jpg"}},
+
+
+
+{
 "theme_name":"PitchBlack™(DarkRed)",
 
 "theme_author":"Altan KRK (westcrip)",
