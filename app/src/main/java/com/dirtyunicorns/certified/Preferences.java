@@ -6,11 +6,6 @@ import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.preference.PreferenceManager;
 import android.support.v4.content.ContextCompat;
-import android.widget.ProgressBar;
-
-import java.util.ArrayList;
-
-import za.co.riggaroo.materialhelptutorial.TutorialItem;
 
 public class Preferences extends Activity {
 
@@ -18,8 +13,6 @@ public class Preferences extends Activity {
     public static Context context;
 
     public static final String FIRST_RUN = "first_run";
-
-    public ProgressBar pbar;
 
     public static final String Theme = "Theme";
     public static final String NavBarTheme = "NavBarTheme";
@@ -73,28 +66,6 @@ public class Preferences extends Activity {
         int b = Color.blue(color);
 
         return Color.argb(a, Math.max((int) (r * factor), 0), Math.max((int) (g * factor), 0), Math.max((int) (b * factor), 0));
-    }
-
-    public ArrayList<TutorialItem> getTutorialItems() {
-        TutorialItem tutorialItem1 = new TutorialItem(R.string.first_slide_title, R.string.first_slide_description,
-                R.color.slide_1_background, R.drawable.blank, R.drawable.slide_1_drawable);
-
-        TutorialItem tutorialItem2 = new TutorialItem(R.string.second_slide_title, R.string.second_slide_description,
-                R.color.slide_2_background,  R.drawable.blank,  R.drawable.slide_2_drawable);
-
-        TutorialItem tutorialItem3 = new TutorialItem(R.string.third_slide_title, R.string.third_slide_description,
-                R.color.slide_3_background,  R.drawable.blank,  R.drawable.slide_3_drawable);
-
-        TutorialItem tutorialItem4 = new TutorialItem(R.string.last_slide_title, R.string.last_slide_description,
-                R.color.slide_4_background,  R.drawable.blank, R.drawable.slide_4_drawable);
-
-        ArrayList<TutorialItem> tutorialItems = new ArrayList<>();
-        tutorialItems.add(tutorialItem1);
-        tutorialItems.add(tutorialItem2);
-        tutorialItems.add(tutorialItem3);
-        tutorialItems.add(tutorialItem4);
-
-        return tutorialItems;
     }
 
     public static String getVersionName(Context context) {

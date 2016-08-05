@@ -1,6 +1,7 @@
 package com.dirtyunicorns.certified.roundimage;
 
 import android.support.annotation.IntDef;
+
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 

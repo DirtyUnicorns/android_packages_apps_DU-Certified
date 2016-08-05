@@ -36,6 +36,7 @@ import android.support.annotation.ColorInt;
 import android.support.annotation.NonNull;
 import android.util.Log;
 import android.widget.ImageView.ScaleType;
+
 import java.util.HashSet;
 import java.util.Set;
 
@@ -63,7 +64,7 @@ public class RoundedDrawable extends Drawable {
 
     // [ topLeft, topRight, bottomLeft, bottomRight ]
     private float mCornerRadius = 0f;
-    private final boolean[] mCornersRounded = new boolean[] { true, true, true, true };
+    private final boolean[] mCornersRounded = new boolean[]{true, true, true, true};
 
     private boolean mOval = false;
     private float mBorderWidth = 0;
@@ -487,10 +488,10 @@ public class RoundedDrawable extends Drawable {
     /**
      * Sets the corner radii of all the corners.
      *
-     * @param topLeft top left corner radius.
-     * @param topRight top right corner radius
+     * @param topLeft     top left corner radius.
+     * @param topRight    top right corner radius
      * @param bottomRight bototm right corner radius.
-     * @param bottomLeft bottom left corner radius.
+     * @param bottomLeft  bottom left corner radius.
      * @return the {@link RoundedDrawable} for chaining.
      */
     public RoundedDrawable setCornerRadius(float topLeft, float topRight, float bottomRight,
@@ -613,14 +614,18 @@ public class RoundedDrawable extends Drawable {
 
     private static boolean any(boolean[] booleans) {
         for (boolean b : booleans) {
-            if (b) { return true; }
+            if (b) {
+                return true;
+            }
         }
         return false;
     }
 
     private static boolean all(boolean[] booleans) {
         for (boolean b : booleans) {
-            if (b) { return false; }
+            if (b) {
+                return false;
+            }
         }
         return true;
     }

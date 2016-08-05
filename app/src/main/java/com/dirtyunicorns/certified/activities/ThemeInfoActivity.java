@@ -1,16 +1,15 @@
-package com.dirtyunicorns.certified;
+package com.dirtyunicorns.certified.activities;
 
-import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.PorterDuff;
 import android.graphics.drawable.Drawable;
 import android.net.Uri;
+import android.os.Bundle;
 import android.support.design.widget.CollapsingToolbarLayout;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.Toolbar;
 import android.view.animation.OvershootInterpolator;
@@ -22,34 +21,37 @@ import android.widget.HorizontalScrollView;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.dirtyunicorns.certified.activities.Fullscreen;
+import com.dirtyunicorns.certified.R;
+import com.dirtyunicorns.certified.data.Theme;
 import com.squareup.picasso.Picasso;
 
 import at.blogc.android.views.ExpandableTextView;
 
-import static com.dirtyunicorns.certified.R.*;
+import static com.dirtyunicorns.certified.R.color;
+import static com.dirtyunicorns.certified.R.drawable;
+import static com.dirtyunicorns.certified.R.id;
+import static com.dirtyunicorns.certified.R.string;
+import static com.dirtyunicorns.certified.R.style;
 import static org.apache.commons.lang3.StringUtils.substringAfter;
 
-public class ThemeInfo extends AppCompatActivity {
+public class ThemeInfoActivity extends AppCompatActivity {
 
-    private Activity activity;
+    private Theme theme;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(layout.theme_info);
+        setContentView(R.layout.theme_info);
         setSupportActionBar((Toolbar) findViewById(id.toolbar));
-        if(getSupportActionBar() != null) {
+        if (getSupportActionBar() != null) {
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         }
 
-        final Context context;
-        context = this;
-        activity = this;
+        theme = (Theme) getIntent().getSerializableExtra("theme");
 
         CollapsingToolbarLayout collapsingToolbarLayout = (CollapsingToolbarLayout) findViewById(id.collapsing_toolbar);
 
-        HorizontalScrollView sView = (HorizontalScrollView)findViewById(id.hsv);
+        HorizontalScrollView sView = (HorizontalScrollView) findViewById(id.hsv);
         sView.setVerticalScrollBarEnabled(false);
         sView.setHorizontalScrollBarEnabled(false);
 
@@ -71,58 +73,60 @@ public class ThemeInfo extends AppCompatActivity {
         TextView themeready = (TextView) findViewById(id.themeready);
         TextView themeauthor = (TextView) findViewById(id.themeauthor);
 
+        final com.dirtyunicorns.certified.data.Uri uri = theme.getUri();
+
         s1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Fullscreen.launch(activity, (ImageView) view, "s1");
+                FullscreenActivity.launch(ThemeInfoActivity.this, (ImageView) view, "s1");
             }
         });
 
         s2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Fullscreen.launch(activity, (ImageView) view, "s2");
+                FullscreenActivity.launch(ThemeInfoActivity.this, (ImageView) view, "s2");
             }
         });
 
         s3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Fullscreen.launch(activity, (ImageView) view, "s3");
+                FullscreenActivity.launch(ThemeInfoActivity.this, (ImageView) view, "s3");
             }
         });
 
         s4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Fullscreen.launch(activity, (ImageView) view, "s4");
+                FullscreenActivity.launch(ThemeInfoActivity.this, (ImageView) view, "s4");
             }
         });
 
         s5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Fullscreen.launch(activity, (ImageView) view, "s5");
+                FullscreenActivity.launch(ThemeInfoActivity.this, (ImageView) view, "s5");
             }
         });
 
         s6.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Fullscreen.launch(activity, (ImageView) view, "s6");
+                FullscreenActivity.launch(ThemeInfoActivity.this, (ImageView) view, "s6");
             }
         });
 
         final Button playstorebutton = (Button) findViewById(id.playstore_button);
 
-        if (isPackageInstalled(context, toPkg())) {
+        if (isPackageInstalled(this, toPkg())) {
             playstorebutton.setText(R.string.installed_button);
             playstorebutton.setOnClickListener(new View.OnClickListener() {
                 public void onClick(View v) {
                     Intent intent = new Intent(Intent.ACTION_MAIN);
                     intent.setClassName("org.cyanogenmod.theme.chooser", "org.cyanogenmod.theme.chooser.ChooserActivity");
                     intent.putExtra("pkgName", toPkg());
-                    context.startActivity(intent);
+                    ThemeInfoActivity.this.startActivity(intent);
                 }
             });
         } else {
@@ -130,7 +134,7 @@ public class ThemeInfo extends AppCompatActivity {
             playstorebutton.setOnClickListener(new View.OnClickListener() {
                 public void onClick(View v) {
                     Intent browserIntent =
-                            new Intent(Intent.ACTION_VIEW, Uri.parse(getIntent().getStringExtra("playstoreUri")));
+                            new Intent(Intent.ACTION_VIEW, Uri.parse(uri.getPlaystore()));
                     startActivity(browserIntent);
                 }
             });
@@ -140,47 +144,31 @@ public class ThemeInfo extends AppCompatActivity {
         contactbutton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 Intent browserIntent =
-                        new Intent(Intent.ACTION_VIEW, Uri.parse(getIntent().getStringExtra("contactUri")));
+                        new Intent(Intent.ACTION_VIEW, Uri.parse(uri.getContact()));
                 startActivity(browserIntent);
             }
         });
 
-        Intent intent = getIntent();
-        Picasso.with(getApplicationContext()).load(intent.getStringExtra("collapsing_toolbar_thumbnail")).into(iv);
+        Picasso.with(getApplicationContext()).load(uri.getCollapsingToolbarThumbnail()).into(iv);
+        Picasso.with(getApplicationContext()).load(uri.getScreenshot1()).into(s1);
+        Picasso.with(getApplicationContext()).load(uri.getScreenshot2()).into(s2);
+        Picasso.with(getApplicationContext()).load(uri.getScreenshot3()).into(s3);
+        Picasso.with(getApplicationContext()).load(uri.getScreenshot4()).into(s4);
+        Picasso.with(getApplicationContext()).load(uri.getScreenshot5()).into(s5);
+        Picasso.with(getApplicationContext()).load(uri.getScreenshot6()).into(s6);
+        Picasso.with(getApplicationContext()).load(uri.getContactBackground()).into(cb);
+        Picasso.with(getApplicationContext()).load(uri.getContactImage()).into(ci);
 
-        Intent screenshot1 = getIntent();
-        Picasso.with(getApplicationContext()).load(screenshot1.getStringExtra("screenshot1Uri")).into(s1);
-
-        Intent screenshot2 = getIntent();
-        Picasso.with(getApplicationContext()).load(screenshot2.getStringExtra("screenshot2Uri")).into(s2);
-
-        Intent screenshot3 = getIntent();
-        Picasso.with(getApplicationContext()).load(screenshot3.getStringExtra("screenshot3Uri")).into(s3);
-
-        Intent screenshot4 = getIntent();
-        Picasso.with(getApplicationContext()).load(screenshot4.getStringExtra("screenshot4Uri")).into(s4);
-
-        Intent screenshot5 = getIntent();
-        Picasso.with(getApplicationContext()).load(screenshot5.getStringExtra("screenshot5Uri")).into(s5);
-
-        Intent screenshot6 = getIntent();
-        Picasso.with(getApplicationContext()).load(screenshot6.getStringExtra("screenshot6Uri")).into(s6);
-
-        Intent contactbackground = getIntent();
-        Picasso.with(getApplicationContext()).load(contactbackground.getStringExtra("contactBackgroundUri")).into(cb);
-
-        Intent contactimage = getIntent();
-        Picasso.with(getApplicationContext()).load(contactimage.getStringExtra("contactImageUri")).into(ci);
-
-        paid.setText(intent.getStringExtra("paid"));
-        theme_long_summary.setText(intent.getStringExtra("theme_long_summary"));
-        arcusindicator.setText(intent.getStringExtra("arcus"));
-        themeready.setText(intent.getStringExtra("themeready"));
-        themeauthor.setText(intent.getStringExtra("theme_author"));
+        paid.setText(theme.getPaid());
+        themeready.setText(theme.getThemeready());
+        themeauthor.setText(theme.getThemeAuthor());
+        theme_long_summary.setText(theme.getThemeLongSummary());
+        arcusindicator.setText(theme.getArcus());
 
         if (paid.getText().toString().equals("true")) paid.setText(string.paid_theme_true);
         if (paid.getText().toString().equals("false")) paid.setText(string.paid_theme_false);
-        if (themeready.getText().toString().equals("true")) themeready.setText(string.themeready_gapps);
+        if (themeready.getText().toString().equals("true"))
+            themeready.setText(string.themeready_gapps);
         if (themeready.getText().toString().equals("false")) themeready.setText("");
         if (themeready.getText().toString().equals("")) themeready.setText(string.themeready);
 
@@ -192,14 +180,14 @@ public class ThemeInfo extends AppCompatActivity {
         }
 
         assert collapsingToolbarLayout != null;
-        collapsingToolbarLayout.setTitle(intent.getStringExtra("theme_name"));
+        collapsingToolbarLayout.setTitle(theme.getThemeName());
 
         collapsingToolbarLayout.setExpandedTitleTextAppearance(style.expanded_toolbar_text);
         collapsingToolbarLayout.setCollapsedTitleTextAppearance(style.collapsed_toolbar_text);
 
-        final Drawable upArrow = ContextCompat.getDrawable(context, (drawable.abc_ic_ab_back_material));
+        final Drawable upArrow = ContextCompat.getDrawable(this, (drawable.abc_ic_ab_back_material));
         assert upArrow != null;
-        upArrow.setColorFilter(ContextCompat.getColor(context, color.arrow_color), PorterDuff.Mode.SRC_ATOP);
+        upArrow.setColorFilter(ContextCompat.getColor(this, color.arrow_color), PorterDuff.Mode.SRC_ATOP);
         getSupportActionBar().setHomeAsUpIndicator(upArrow);
 
         com.dirtyunicorns.certified.Preferences.themeMe(this);
@@ -285,7 +273,7 @@ public class ThemeInfo extends AppCompatActivity {
     }
 
     public String toPkg() {
-        String playStoreLink = getIntent().getStringExtra("playstoreUri");
+        String playStoreLink = theme.getUri().getPlaystore();
         return substringAfter(playStoreLink, "details?id=");
     }
 }

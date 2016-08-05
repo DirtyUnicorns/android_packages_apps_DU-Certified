@@ -17,7 +17,7 @@
 package com.dirtyunicorns.certified;
 
 import android.content.Context;
-import android.preference.Preference;
+import android.support.v7.preference.Preference;
 import android.util.AttributeSet;
 
 import org.apache.commons.io.FileUtils;
@@ -27,22 +27,22 @@ import java.io.IOException;
 
 public class Cache extends Preference {
 
-    public Cache (Context context, AttributeSet attrs, int defStyleAttr, int defStyleRes) {
+    public Cache(Context context, AttributeSet attrs, int defStyleAttr, int defStyleRes) {
         super(context, attrs, defStyleAttr, defStyleRes);
         checkSize();
     }
 
-    public Cache (Context context, AttributeSet attrs, int defStyleAttr) {
+    public Cache(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
         checkSize();
     }
 
-    public Cache (Context context, AttributeSet attrs) {
+    public Cache(Context context, AttributeSet attrs) {
         super(context, attrs);
         checkSize();
     }
 
-    public Cache (Context context) {
+    public Cache(Context context) {
         super(context);
         checkSize();
     }

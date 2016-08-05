@@ -13,8 +13,9 @@
         android:theme="@style/AppTheme">
 
         <activity
-            android:name=".activities.LauncherActivity"
-            android:label="@string/app_name" >
+            android:name=".LauncherActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
@@ -22,46 +23,22 @@
         </activity>
 
         <activity
-            android:name=".ThemeInfo"
+            android:name=".activities.ThemeInfoActivity"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
         </activity>
         <activity
-            android:name=".activities.LightThemes"
-            android:label="@string/app_name"
+            android:name=".activities.MainActivity"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
         </activity>
         <activity
-            android:name=".activities.DarkThemes"
+            android:name=".activities.FullscreenActivity"
             android:theme="@style/AppTheme.NoActionBar">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-            </intent-filter>
-        </activity>
-        <activity
-            android:name=".activities.Fullscreen"
-            android:theme="@style/AppTheme.NoActionBar">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-            </intent-filter>
-        </activity>
-        <activity
-            android:name=".Libraries"
-            android:label="@string/libraries"
-            android:theme="@style/AppTheme.NoActionBar">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-            </intent-filter>
-        </activity>
-        <activity
-            android:name=".Settings"
-            android:label="@string/settings"
-            android:theme="@style/Settings">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>

@@ -8,20 +8,20 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.dirtyunicorns.certified.data.Theme;
 import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
 public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
 
-    private List<Item> thisItems;
+    private List<Theme> themes;
     Context context;
-    Item item;
+    Theme theme;
 
-    public Adapter(List<Item> items) {
-        thisItems = items;
+    public Adapter(List<Theme> themes) {
+        this.themes = themes;
     }
-
 
     @Override
     public Adapter.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
@@ -35,24 +35,24 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
 
-        item = thisItems.get(position);
+        theme = themes.get(position);
 
         ImageView iv = holder.uri;
-        Picasso.with(context).load(item.uri.getCard_thumbnail()).into(iv);
+        Picasso.with(context).load(theme.getUri().getCardThumbnail()).into(iv);
 
         TextView theme_name = holder.theme_name;
-        theme_name.setText(item.theme_name);
+        theme_name.setText(theme.getThemeName());
 
         TextView theme_author = holder.theme_author;
-        theme_author.setText(item.theme_author);
+        theme_author.setText(theme.getThemeName());
 
         TextView theme_summary = holder.theme_summary;
-        theme_summary.setText(item.theme_summary);
+        theme_summary.setText(theme.getThemeSummary());
     }
 
     @Override
     public int getItemCount() {
-        return thisItems.size();
+        return themes.size();
     }
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
