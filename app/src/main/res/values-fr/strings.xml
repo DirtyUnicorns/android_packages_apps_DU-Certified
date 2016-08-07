@@ -12,6 +12,11 @@
     <string name="installed_button">Installed</string>
     <string name="contact_button">Concepteur</string>
     <string name="hide_app_icon">Hide app</string>
+    <string name="readmore">READ MORE</string>
+    <string name="close">CLOSE</string>
+    <string name="freethemes_switch">Free themes</string>
+    <string name="freethemes_switch_summary">Only show free themes available</string>
+    <string name="no_themes_available">No free light themes available</string>
 
     <!-- Dialog strings -->
     <string name="no_conn_content">Veuillez vous assurer d\'avoir une connexion Internet active</string>

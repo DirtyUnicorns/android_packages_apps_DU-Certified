@@ -13,6 +13,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.Toolbar;
+import android.view.animation.OvershootInterpolator;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -23,6 +24,8 @@ import android.widget.TextView;
 
 import com.dirtyunicorns.certified.activities.Fullscreen;
 import com.squareup.picasso.Picasso;
+
+import at.blogc.android.views.ExpandableTextView;
 
 import static com.dirtyunicorns.certified.R.*;
 import static org.apache.commons.lang3.StringUtils.substringAfter;
@@ -51,6 +54,7 @@ public class ThemeInfo extends AppCompatActivity {
         sView.setHorizontalScrollBarEnabled(false);
 
         ImageView iv = (ImageView) findViewById(id.image);
+        ImageView arcus = (ImageView) findViewById(id.arcus_indicator);
         ImageView s1 = (ImageView) findViewById(id.screenshot1);
         ImageView s2 = (ImageView) findViewById(id.screenshot2);
         ImageView s3 = (ImageView) findViewById(id.screenshot3);
@@ -62,6 +66,8 @@ public class ThemeInfo extends AppCompatActivity {
         ImageView ci = (ImageView) findViewById(id.contactimage);
 
         TextView paid = (TextView) findViewById(id.paid);
+        TextView arcusindicator = (TextView) findViewById(id.arcus_text);
+        TextView theme_long_summary = (TextView) findViewById(id.theme_long_summary);
         TextView themeready = (TextView) findViewById(id.themeready);
         TextView themeauthor = (TextView) findViewById(id.themeauthor);
 
@@ -167,6 +173,8 @@ public class ThemeInfo extends AppCompatActivity {
         Picasso.with(getApplicationContext()).load(contactimage.getStringExtra("contactImageUri")).into(ci);
 
         paid.setText(intent.getStringExtra("paid"));
+        theme_long_summary.setText(intent.getStringExtra("theme_long_summary"));
+        arcusindicator.setText(intent.getStringExtra("arcus"));
         themeready.setText(intent.getStringExtra("themeready"));
         themeauthor.setText(intent.getStringExtra("theme_author"));
 
@@ -175,6 +183,13 @@ public class ThemeInfo extends AppCompatActivity {
         if (themeready.getText().toString().equals("true")) themeready.setText(string.themeready_gapps);
         if (themeready.getText().toString().equals("false")) themeready.setText("");
         if (themeready.getText().toString().equals("")) themeready.setText(string.themeready);
+
+        if (arcusindicator.getText().toString().equals("true")) {
+            arcusindicator.setText("");
+            arcus.setImageDrawable(getResources().getDrawable(drawable.arcus));
+        } else {
+            arcusindicator.setText("");
+        }
 
         assert collapsingToolbarLayout != null;
         collapsingToolbarLayout.setTitle(intent.getStringExtra("theme_name"));
@@ -188,6 +203,47 @@ public class ThemeInfo extends AppCompatActivity {
         getSupportActionBar().setHomeAsUpIndicator(upArrow);
 
         com.dirtyunicorns.certified.Preferences.themeMe(this);
+
+        final ExpandableTextView expandableTextView = (ExpandableTextView) this.findViewById(R.id.theme_long_summary);
+        final Button buttonToggle = (Button) this.findViewById(R.id.theme_long_summary_button);
+
+        expandableTextView.setAnimationDuration(0L);
+        expandableTextView.setInterpolator(new OvershootInterpolator());
+        expandableTextView.setExpandInterpolator(new OvershootInterpolator());
+        expandableTextView.setCollapseInterpolator(new OvershootInterpolator());
+
+        buttonToggle.setOnClickListener(new View.OnClickListener() {
+            @SuppressWarnings("ConstantConditions")
+            @Override
+            public void onClick(final View v) {
+                expandableTextView.toggle();
+                buttonToggle.setText(expandableTextView.isExpanded() ? R.string.readmore : R.string.close);
+            }
+        });
+
+        buttonToggle.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(final View v)
+            {
+                if (expandableTextView.isExpanded()) {
+                    expandableTextView.collapse();
+                    buttonToggle.setText(string.readmore);
+                } else {
+                    expandableTextView.expand();
+                    buttonToggle.setText(R.string.close);
+                }
+            }
+        });
+
+        expandableTextView.setOnExpandListener(new ExpandableTextView.OnExpandListener() {
+            @Override
+            public void onExpand(final ExpandableTextView view) {
+            }
+
+            @Override
+            public void onCollapse(final ExpandableTextView view) {
+            }
+        });
     }
 
     @Override

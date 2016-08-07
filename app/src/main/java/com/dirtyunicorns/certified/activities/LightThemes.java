@@ -214,7 +214,9 @@ public class LightThemes extends AppCompatActivity implements OnItemClickListene
         intent.putExtra("contactBackgroundUri", item.uri.getContactBackground());
         intent.putExtra("contactImageUri", item.uri.getContactImage());
         intent.putExtra("paid", item.paid);
+        intent.putExtra("arcus", item.arcus);
         intent.putExtra("themeready", item.themeready);
+        intent.putExtra("theme_long_summary", item.theme_long_summary);
         startActivity(intent);
     }
 
@@ -239,32 +241,37 @@ public class LightThemes extends AppCompatActivity implements OnItemClickListene
                     .readTimeout(30, TimeUnit.SECONDS)
                     .build();
             boolean isConnected = isConnected(LightThemes.this);
-            String URL = "https://raw.githubusercontent.com/DirtyUnicorns/android_packages_apps_DU-Certified/README/jsons/lightthemes.json";
+            String LightThemes = "https://raw.githubusercontent.com/Mazda--/android_packages_apps_DU-Certified/README/jsons/lightthemes.json";
 
             if (isConnected) {
-                okhttp3.Request request = new okhttp3.Request.Builder()
-                        .url(URL)
-                        .build();
+                if (PreferenceManager.getDefaultSharedPreferences(context)
+                        .getBoolean(getString(R.string.freethemes_switch), false)) {
+                    showNoThemesDialog();
+                } else {
+                    okhttp3.Request request = new okhttp3.Request.Builder()
+                            .url(LightThemes)
+                            .build();
 
-                Response response = null;
-                try {
-                    response = client.newCall(request).execute();
+                    Response response = null;
+                    try {
+                        response = client.newCall(request).execute();
 
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-
-                try {
-                    if (response != null) {
-                        return response.body().string();
+                    } catch (IOException e) {
+                        e.printStackTrace();
                     }
-                } catch (IOException e) {
-                    e.printStackTrace();
+
+                    try {
+                        if (response != null) {
+                            return response.body().string();
+                        }
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
                 }
             } else {
                 showNotConnectedDialog();
             }
-                return URL;
+            return LightThemes;
         }
 
         @Override
@@ -348,7 +355,9 @@ public class LightThemes extends AppCompatActivity implements OnItemClickListene
                                 jsonObject.getString("theme_author"),
                                 jsonObject.getString("theme_summary"),
                                 jsonObject.getString("paid"),
-                                jsonObject.getString("themeready"));
+                                jsonObject.getString("arcus"),
+                                jsonObject.getString("themeready"),
+                                jsonObject.getString("theme_long_summary"));
 
                 item.uri.setCard_thumbnail(jsonObject.getJSONObject("uri").getString("card_thumbnail"));
                 item.uri.setCollapsing_toolbar_thumbnail(jsonObject.getJSONObject("uri").getString("collapsing_toolbar_thumbnail"));
@@ -433,6 +442,15 @@ public class LightThemes extends AppCompatActivity implements OnItemClickListene
         Preferences.pbar.setVisibility(View.GONE);
         new SnackBar.Builder(this)
                 .withMessageId(R.string.no_conn_content)
+                .withActionMessageId(R.string.ok)
+                .withStyle(SnackBar.Style.ALERT)
+                .withDuration(SnackBar.MED_SNACK)
+                .show();
+    }
+
+    public void showNoThemesDialog() {
+        new SnackBar.Builder(this)
+                .withMessageId(R.string.no_themes_available)
                 .withActionMessageId(R.string.ok)
                 .withStyle(SnackBar.Style.ALERT)
                 .withDuration(SnackBar.MED_SNACK)

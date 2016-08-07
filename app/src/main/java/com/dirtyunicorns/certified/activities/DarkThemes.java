@@ -9,6 +9,7 @@ import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.support.annotation.NonNull;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.app.AppCompatActivity;
@@ -195,7 +196,9 @@ public class DarkThemes extends AppCompatActivity implements ClickUtils.OnItemCl
         intent.putExtra("contactBackgroundUri", item.uri.getContactBackground());
         intent.putExtra("contactImageUri", item.uri.getContactImage());
         intent.putExtra("paid", item.paid);
+        intent.putExtra("arcus", item.arcus);
         intent.putExtra("themeready", item.themeready);
+        intent.putExtra("theme_long_summary", item.theme_long_summary);
         startActivity(intent);
     }
 
@@ -219,32 +222,56 @@ public class DarkThemes extends AppCompatActivity implements ClickUtils.OnItemCl
                     .readTimeout(30, TimeUnit.SECONDS)
                     .build();
             boolean isConnected = isConnected(DarkThemes.this);
-            String URL = "https://raw.githubusercontent.com/DirtyUnicorns/android_packages_apps_DU-Certified/README/jsons/darkthemes.json";
+            String DarkThemes = "https://raw.githubusercontent.com/Mazda--/android_packages_apps_DU-Certified/README/jsons/darkthemes.json";
+            String FreeDarkThemes = "https://raw.githubusercontent.com/Mazda--/android_packages_apps_DU-Certified/README/jsons/free_dark_themes";
 
             if (isConnected) {
-                okhttp3.Request request = new okhttp3.Request.Builder()
-                        .url(URL)
-                        .build();
+                if (PreferenceManager.getDefaultSharedPreferences(getApplicationContext())
+                        .getBoolean(getString(R.string.freethemes_switch), false)) {
+                    okhttp3.Request request = new okhttp3.Request.Builder()
+                            .url(FreeDarkThemes)
+                            .build();
 
-                Response response = null;
-                try {
-                    response = client.newCall(request).execute();
+                    Response response = null;
+                    try {
+                        response = client.newCall(request).execute();
 
-                } catch (IOException e) {
-                    e.printStackTrace();
-                }
-
-                try {
-                    if (response != null) {
-                        return response.body().string();
+                    } catch (IOException e) {
+                        e.printStackTrace();
                     }
-                } catch (IOException e) {
-                    e.printStackTrace();
+
+                    try {
+                        if (response != null) {
+                            return response.body().string();
+                        }
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+                } else {
+                    okhttp3.Request request = new okhttp3.Request.Builder()
+                            .url(DarkThemes)
+                            .build();
+
+                    Response response = null;
+                    try {
+                        response = client.newCall(request).execute();
+
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
+
+                    try {
+                        if (response != null) {
+                            return response.body().string();
+                        }
+                    } catch (IOException e) {
+                        e.printStackTrace();
+                    }
                 }
             } else {
                 showNotConnectedDialog();
             }
-            return URL;
+            return DarkThemes;
         }
 
         @Override
@@ -285,7 +312,9 @@ public class DarkThemes extends AppCompatActivity implements ClickUtils.OnItemCl
                         jsonObject.getString("theme_author"),
                         jsonObject.getString("theme_summary"),
                         jsonObject.getString("paid"),
-                        jsonObject.getString("themeready"));
+                        jsonObject.getString("arcus"),
+                        jsonObject.getString("themeready"),
+                        jsonObject.getString("theme_long_summary"));
 
                 item.uri.setCard_thumbnail(jsonObject.getJSONObject("uri").getString("card_thumbnail"));
                 item.uri.setCollapsing_toolbar_thumbnail(jsonObject.getJSONObject("uri").getString("collapsing_toolbar_thumbnail"));

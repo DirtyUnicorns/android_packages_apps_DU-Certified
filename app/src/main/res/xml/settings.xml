@@ -10,6 +10,12 @@
         android:title="@string/build_info"
         android:selectable="false" />
 
+    <CheckBoxPreference
+        android:key="@string/freethemes_switch"
+        android:title="@string/freethemes_switch"
+        android:summary="@string/freethemes_switch_summary"
+        android:defaultValue="false" />
+
     <PreferenceCategory
         android:title="@string/theme_options">
 

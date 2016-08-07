@@ -8,8 +8,8 @@ android {
         applicationId "com.dirtyunicorns.certified"
         minSdkVersion 23
         targetSdkVersion 23
-        versionCode 22
-        versionName "2.2"
+        versionCode 23
+        versionName "2.3"
         resConfigs "en", "fr"
     }
     repositories {
@@ -59,6 +59,7 @@ dependencies {
     compile 'org.apache.commons:commons-lang3:3.4'
     compile 'com.commit451:PhotoView:1.2.4'
     compile 'com.balysv:material-ripple:1.0.2'
+    compile 'at.blogc:expandabletextview:1.0.3'
 }
 
 apply plugin: 'com.google.gms.google-services'
