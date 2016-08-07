@@ -64,10 +64,10 @@ THEMED APPS
 • Twitter;
 • Youtube;
 • Whatsapp.",
-
-"arcus":"false",
  
 "paid": "true",
+
+"arcus": "false",
  
 "themeready": "false",
  
@@ -114,7 +114,6 @@ FEATURES
 • Applicable on CyanogenMod 12/12.1/13 and on all ROMs with Theme Engine;
 • Full support for CyanogenMod and Dirty Unicorns;
 • Approved by Dirty Unicorns developers ( DU Certified );
-• Arcus support with 4 variants ( Default, Ocean, Love, Midnight );
 • Android N notification panel style;
 • Official bootanimation;
 • Official ringtone, notification and alarm;
@@ -168,10 +167,10 @@ THEMED APPS
 • Twitter;
 • Youtube;
 • Whatsapp.",
-
-"arcus":"false",
  
 "paid": "true",
+
+"arcus": "false",
  
 "themeready": "false",
  
@@ -267,9 +266,9 @@ Follow us on G+ and get news about updates and development!
 Become an insider, join the G+ Community today!
 → https://plus.google.com/communities/111295036831359105836",
 
-"arcus":"true",
-
 "paid": "true",
+
+"arcus": "true",
 
 "themeready": "false",
 
@@ -373,9 +372,9 @@ Follow us on G+ and get news about updates and development!
 Become an insider, join the G+ Community today!
 → https://plus.google.com/communities/111295036831359105836",
 
-"arcus":"true",
-
 "paid": "true",
+
+"arcus": "true",
 
 "themeready": "false",
 
