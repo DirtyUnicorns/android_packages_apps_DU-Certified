@@ -1,11 +1,88 @@
-[{
+[
+{
+"theme_name":"Biohazard",
+
+"theme_author":"pierx",
+
+"theme_summary":"Biohazard is an elegant dark theme with minimal red touch",
+
+"theme_long_summary":"Biohazard is an elegant dark theme with minimal red touch.
+This theme support Layers (RRO), Substratum (OMS) & Substratum Legacy (RRO) and Cyanogen ThemeEngine (CMTE) in one package.
+If you don't know the terms above then this one is not for you, please read and research first before proceed to installing.
+
+Themed apps currently are:
+Android Framework, Audio FX, Browser, Calculator, Camera, Catlog, CellBroadcast, Contacts, DeskClock, Dialer, DocumentsUI, DiskInfo, Development, Eleven, Email, ES Explorer, Gallery, Gmail, Google Camera, Google Contacts, Google DeskClock, Google Dialer, Google Drive, Google Hangout, Google Keep, Google Keyboard, Google Messenger, Google Photos, Google PlayMusic, Google PlayStore, Google Plus, Google Settings, Google Translate, Inbox, JuiceSSH, Kernel Adiutor, Keyboard, Launcher3, Messaging, Package Installer, PackageViewer, Softkey, Settings, Subtratum, SuperSU, SystemUI, Telecom and more.
+
+Please use the Google+ community here https://goo.gl/BJHxg4 for bug report, issue or suggestion.",
+
+"paid": "false",
+
+"arcus": "false",
+
+"themeready": "false",
+
+"uri":{
+
+"card_thumbnail":"https://lh3.googleusercontent.com/x-hkl9y44L3PJyKMp87CqZmnqEQfFjy1S9dxJCCGpU41xhjVf9HVZvSlQeU0h8Zys_hzh3Lo9Lpt0pY8agViDbP7u-vyzWIT9vWXNglLFJQ3F2TlPnP37X8oYZgu51p2WVMh_ArjZEUOAWh70jRNpt7Oa5mSR60b7uuRy1qrXaChCE-8Ca3rYzPRzFyf4WkAqQh65Rs-zesobBDEch0O3RjiXfxAZYN5g247LYLLe6oKyAZHePjVdto9YufqSRMCFV0uiSEM4mwnc8oHvTj_u2-GNPyBn9eiRbvexDuENPwNgphVEAMsQaf1DalrSAL9hp_n4wFsXxKIf0h9ixyqrB_g-iduEUZx-WDRqnWsWSi3sFGKm3HwUvcwJfvgP8aos68_WSqxuN4NbStkzjOD9hOCe3AV_EOoX1onU39NJ692iWgZlMpUStud8MPACV2yTeqJu5C6Hs1JtsFzxcIHVoU39IrJPULmCS-csu4BQxhSxZm1SJ4txcd2bvOcqNDqn_FgndzKjWV6hQLWoXTFtjmrENRmUbmK-zv_E4LIR5_5_DAIHd6AvxG_zFLx8rWgzhEayO3FOmCh1ggr-JTYouC5FPBk0P-Q=w612-h403-no",
+
+"collapsing_toolbar_thumbnail":"https://lh3.googleusercontent.com/x-hkl9y44L3PJyKMp87CqZmnqEQfFjy1S9dxJCCGpU41xhjVf9HVZvSlQeU0h8Zys_hzh3Lo9Lpt0pY8agViDbP7u-vyzWIT9vWXNglLFJQ3F2TlPnP37X8oYZgu51p2WVMh_ArjZEUOAWh70jRNpt7Oa5mSR60b7uuRy1qrXaChCE-8Ca3rYzPRzFyf4WkAqQh65Rs-zesobBDEch0O3RjiXfxAZYN5g247LYLLe6oKyAZHePjVdto9YufqSRMCFV0uiSEM4mwnc8oHvTj_u2-GNPyBn9eiRbvexDuENPwNgphVEAMsQaf1DalrSAL9hp_n4wFsXxKIf0h9ixyqrB_g-iduEUZx-WDRqnWsWSi3sFGKm3HwUvcwJfvgP8aos68_WSqxuN4NbStkzjOD9hOCe3AV_EOoX1onU39NJ692iWgZlMpUStud8MPACV2yTeqJu5C6Hs1JtsFzxcIHVoU39IrJPULmCS-csu4BQxhSxZm1SJ4txcd2bvOcqNDqn_FgndzKjWV6hQLWoXTFtjmrENRmUbmK-zv_E4LIR5_5_DAIHd6AvxG_zFLx8rWgzhEayO3FOmCh1ggr-JTYouC5FPBk0P-Q=w612-h403-no",
+
+"screenshot1":"https://lh3.googleusercontent.com/jpDb7r2s_v5ZIJhOLUQa8n1K4aAC4Ar1-sGlfQ9NYFxUPj2TYPWpTL0XLoEzmHlW9A=h900-rw",
+
+"screenshot2":"https://lh3.googleusercontent.com/EV4cbNZyMtJ9W0_wIIUJUPRv456nkCAP__d4IqZSGAInNbazf3EpJje3i_cuCheidClK=h900-rw",
+
+"screenshot3":"https://lh3.googleusercontent.com/qNZ3A782UH9KZdkjuPa-B_KyfmDEoZcdqIbQRx8CPw5lRyBTF36AaPEMWzqR8Nul-Q=h900-rw",
+
+"screenshot4":"https://lh3.googleusercontent.com/xtG-3YCTkI9v0EccuD9gMlWn2pOzURXFldtN5D-Qk2D0fTTPPUvT2zl66ULRTVMksA=h900-rw",
+
+"screenshot5":"https://lh3.googleusercontent.com/m-8k48W0IFmJ2rQBLI5hUgUvtELkn2rdqSIwayaukpWdg7I4YP8logLUPIL1ggsJhAc=h900-rw",
+
+"screenshot6":"https://lh3.googleusercontent.com/Hv_vNl5cJEOyqAOb7Eh7zUkjHve0J0cVL9uHeHzWwhC2w6W5SqtcL5L24c9bJiuAjVKR=h900-rw",
+
+"playstore":"https://play.google.com/store/apps/details?id=com.pierx.biohazard",
+
+"contact":"https://plus.google.com/u/0/communities/115125731758765813523",
+
+"contact_background":"https://lh3.googleusercontent.com/kuG6vMl61UDvrRo-nxN9WMOAHtf_LISUDWBUCWD5FX1KvfeDTqgEr7WiiS4ivgT0kxwM4usaI5fVq2pQE0xbHM7jLA6lwKe7FNNdDuEHFmTKr6HnUIjAx0XuzmiKnnhz_xBk4D4dfnUg9185Qmgi5A9ZmD27QglG8hvszVf5dRJY5GneCJlNKZif3rgg4G-4QBq66hbKWO5jW6r27q3D2u-bjlbZaTGzzUZ3IoAq_Xb40Y8ZwIm-u1vkwhta2YYJ5e8HckD0317rH5JYROlcuYLsJzDh2H4pkvAG-_W5rWVkKn69J24i6AEMJ-N6oKC6k1BfCj8BprgSVWLlWBmCYk5WNTIhYDLrQ_uj3_NGrYfUgGML7-I8Lo9eybQYi-lahm349yonIpXOA47T2s7j8aNd2vSDZNGl8GmtSSASAtNA-L7um2nsuk5w7bpBmmXbFDigVHbyG0tFdv3Veq-1ONTuX_gV44ykfecOiHBMsMyw0iqDX0BoZFan-MPyqTaOs8de-fBbOd75cVtfrZ-h7QtmzD1KqhHPeTEcmztZxYmWLkknmSSk7jnMPkaeCqM10Mi8J1LRGV385JbtXgv7vRwp7vv5YjyS=w489-h326-no",
+  
+"contact_image":"https://lh3.googleusercontent.com/ycstzLy3osHi82tkSp8uGMTgsGJmvycTV0H2Nl6EUbMVF9j7u_cAF4nycHO2UBBOKXx9yIAvhzMykmDI1f1xg2oGPoKM7sMqLAiFqHlNLAEVfGwtSsRwQIHqrJL0L8BoVfBXGzD1BdW87wDiDkrPMDxfiuLCL3dnlK0QagBDbMhCcjpgvX_LKO90nUfBDoGrLnTIytpHPLxB7rt3OM2Ee1L2kWgXs0c_o0zPV9CZHSwdjzm9yPRJYMXXNwcMS5rqhJ_LhGx-CgwP2mWa2cwHOzhaDY46v2tEHsqkhHReOL7xUGZ7L37--EBYUvzM6hUJz_2_QndoduwDapJpnRh6A5iSv6jtCqcOXrRpmjRI8iH5BSLDg91wNaGFdSBLPI_qnIQ_L9APAG_J9ovpmGOKmTLj1PdskViic5pJJ3zikjm5t-HTK-TGJnIbLKr0qbVFKFKWLG_1VIHaqJ_UzrkMghYmtu8lXjEkw-Mk8NHwgUTtOYWshLeocsCCFdIVM5_TdVdMvvFO5CoR4Oe4S6RJ5iP2D2glZ721EBCpN2gL15l5iwVcV9O1QS9tHa9ftXzpKYKdpd2Z9fLh9bh-Q6czBk5Dp64S4arT=s192-no"}},
+
+
+
+{
 "theme_name":"DEEP DARKNESS",
 
 "theme_author":"moelle",
 
 "theme_summary":"Be on the dark side of Android with this beautiful Lollipop material dark theme. Starting as a little modification, mainly created for the custom rom BlissPop, this theme has grown up to a stand-alone CM12 theme, usable for every kind of device running CyanogenMod 12.",
 
+"theme_long_summary":"### [tut] how to fix systemUI FC's
+TO EVERYONE WHO GOT SYSTEM UI - FC - Here you ll know how to fix it in under 2 minutes without losing any personal data!!!
+
+
+https://youtu.be/WOz68ti0z5I
+
+Be on the dark side of Android with this beautiful Lollipop material dark theme.
+
+Starting as a little modification, mainly created for the custom rom BlissPop, this theme has grown up to a stand-alone CM12 theme, usable for every kind of device running CyanogenMod 12.
+
+This theme is the overhauled version of my well-known cm12 theme DEEP DARKNESS // - it comes with compatibility to the newest custom-rom commits and features and let the original style of DEEP DARKNESS // shine in a new polished way! - To be able to stay on the old style of DEEP DARKNESS // I decided to create this makeover as a stand-alone variant instead of updating the original theme.
+
+This theme got severall different color-schemes included. You need to download Arcus to be able to build these variants.
+
+♦ Download Arcus: https://goo.gl/ehq05B
+
+IF INSTALL FAILS, please check this:
+https://youtu.be/FQAbXXMFAU4
+
+
+CyanogenMod 12/13 theme engine is required to use this theme.
+
+Metadata ID for Arcus: 105739351821425192942",
+
 "paid": "false",
+
+"arcus": "true",
 
 "themeready": "true",
 
@@ -17,15 +94,15 @@
 
 "screenshot1":"https://lh3.googleusercontent.com/s19kSWfTpCk-Fig2qwj7SVA1H1PwQpJf80KS3yn6tsyuY1i9Cq9pL79xYHTn5ILZhvZt=h900-rw",
 
-"screenshot2":"https://lh3.googleusercontent.com/FEW6QT3T5FaarJfkijkzq0XPY3ZbsFJoRs_il3jY6_6dhIqm3Pr4ra2IVP-rbTDwwIU=h900-rw",
+"screenshot2":"https://lh3.googleusercontent.com/zFkjNCkZUyLGYTl9gVm5XDdBfk7wJranBeNhRmE0DCCOKAjG-0mQ9gPZUGpJ4OtLeYw=h900-rw",
 
-"screenshot3":"https://lh3.googleusercontent.com/iyi_WQHkeKRL0raO3CGXlhttO1ppOukqfftWWaFad0VzmKt6r0QThn-logyZijt7lQ=h900-rw",
+"screenshot3":"https://lh3.googleusercontent.com/oU6v3Vl8gCD3QWKgUwDxEft8zIgRHhYaRIdJEPkE2NX8sYzT_RF1k3loD2yFVaBWIw=h900-rw",
 
-"screenshot4":"https://lh3.googleusercontent.com/Wgl-6a7Cfl216qJ3M10kPnZK2wPXQT-64ZrW_mh7IS8sjFDdlYytGa_QhMBT9yoSsfg=h900-rw",
+"screenshot4":"https://lh3.googleusercontent.com/XiZRoLt1nu4wWnY-BEccUdjgtNoNqJNqBk7ReNKUNE8FLGr-AwQmlsiPXVGMcytNtw=h900-rw",
 
-"screenshot5":"https://lh3.googleusercontent.com/Xc6KBPnni0l_5uM5gK3HLzurVT1OGx-3-hGy4dNyT-v1iQqrpZCd3e7ETBF2nDAwUnya=h900-rw",
+"screenshot5":"https://lh3.googleusercontent.com/eitg8BrH-7Z2Or_uictFPlUX7UmWKYXGSkgv8Ii0Iw6aDNeQlN4rBFUKGFHDrJ7HhyM=h900-rw",
 
-"screenshot6":"https://lh3.googleusercontent.com/99ZOb-6ldASAzznOjwrUbgFbJIc5UUlVs4WpuRbhf-TbLxhBssVvMibJZUyMqW9iVgx_=h900-rw",
+"screenshot6":"https://lh3.googleusercontent.com/6AAKREfdbr2zkd8THqmsuqPtTeJjuUGR33UkK45tMpSrDtSlBsSAcsMJaRWvGZfSbw=h900-rw",
 
 "playstore":"https://play.google.com/store/apps/details?id=com.blissroms.moelle.ddoverhauled",
 
@@ -37,6 +114,229 @@
 
 
 
+{"theme_name":"Domination",
+
+"theme_author":"daveyannihilation",
+
+"theme_summary":"DOMINATION is a brilliant dark theme with black backgrounds and darker than stock Material colours for action bar, status bar and accents. The way that Google should have made Material Design #WhiteUIMustDie!",
+
+"theme_long_summary":"DOMINATION is a brilliant dark theme with black backgrounds and darker than stock Material colours for action bar, status bar and accents. The way that Google should have made Material Design #whiteuimustdie !
+ATTENTION: THIS THEME REQUIRES THEME READY GOOGLE APPS!!!
+
+You must be also be running a Marshmallow (Android 6.0 +) ROM that has support for CMTE for this app to work.
+
+THIS THEME IS NOW OPEN SOURCED! https://github.com/daveyannihilation/DominationCMTE
+
+Most items in the apps listed below should be themed on devices ranging from hdpi - xxxhdpi however some items may not be, depending on the ROM you're running. Please take a screen shot of any items that aren't themed and chat with me on Hangouts at davidwilson1683@gmail.com or join the Google Plus community here: https://plus.google.com/u/0/communities/114545910765709545138
+
+INSTALLATION INSTRUCTIONS:
+
+1 - Download & install the app
+2 - Open Themes app (or single press the Themes tile on certain ROMs)
+3 - Click on Domination
+4 - If your ROM doesn't have the Themes tile, then in the Themes app select Style, Status bar and Navigation bar
+5 - Click the Apply button down below them
+6 - Make sure you do a full reboot and enjoy your new dark ui when it reboots back into Android :)
+
+WHAT'S CURRENTLY THEMED
+
+Browser
+Calculator
+CellBroadcast
+Chrome
+Chrome Beta
+Chrome Dev
+Chromium
+cLock
+Contacts
+DeskClock
+Dialer
+DocumentsUI
+Drive
+DU About
+DU Certified
+DU Tweaks
+DU Updater
+Email
+Framework - See note below for other options
+Gallery
+Gmail*
+GoogleApp*
+GoogleCalculator
+GoogleClock
+GoogleContacts*
+GoogleDialer*
+GoogleKeyboard
+GooglePackageInstaller
+GooglePlus*
+Hangouts*
+Inbox (recommend flashing TBO version for better theming)
+JuiceSSH
+Keep
+LatinIME
+Launcher3
+MediaProvider
+Messaging
+Messenger
+Mms**
+NovaLauncher
+PackageInstaller
+Photos*
+PlayMusic
+PlayStore
+Settings - See note below for other options
+SuperSU
+SystemUI
+Telecom
+TeleService
+Themes
+YouTube*
+
+
+*Please note - There are a number of apps which are not compatible with themes due to hard coded text and background colours. There is a thread on xda-developers which has a number of different flashable zips made by #TeamBlackOut that allow some of those apps to be compatible with themes. The thread can be found here: http://forum.xda-developers.com/android/apps-games/apps-themeable-hangouts-layers-cmte-t3113192
+
+**Please note - AOSP source-built Mms is not completely theme ready unless some items in the code are changed. I have made a flashable zip which can be found here: https://www.androidfilehost.com/?fid=24052804347853343
+I have also made a number of commits which can be found here: https://github.com/RobbieL811/packages_apps_Mms/commits/lp5.0-caf
+There are 5 commits in total, the first of which is dated the 17th of February 2015 and titled Mms themeing fix. To have Mms fully themed, kindly ask your friendly ROM developer to add those commits into their source to ensure full Mms themeability.
+
+Other Options: While CMTE doesn't natively allows for different options to be selected when installing a theme, there is an awesome app named Arcus which can be found here: https://play.google.com/store/apps/details?id=pixkart.arcus&hl=en
+
+This app allows for different versions of the theme to be installed, and I will list them below:
+
+Accent Blue
+Accent BlueGrey
+Accent Green
+Accent LightBlue
+Accent Lime
+Accent Orange
+Accent Red
+Accent Teal
+Accent White
+Accent Yellow
+Background AllBlack (this will only work with the standard Accent)
+Background DarkGrey (this will only work with the standard Accent)
+Settings NoCards (this will only work with the standard Accent)
+
+I have had a huge amount of help in making this app, and I want to thank everyone for everything they've done for me. You know who you are and you know how much I appreciate it. Enjoy and happy theming!",
+
+"paid": "false",
+
+"arcus": "true",
+
+"themeready": "true",
+
+"uri":{
+
+"card_thumbnail":"https://lh3.googleusercontent.com/h8TxECrYApHbByiW3QH2Cjv8qXcjePhQ0iF5IymOQTZAlz8_Ml7onCfOfybh0UT0oGzaM0SpddsdqZk7w9n7PTk5_3s221kBDWBjyELM7rvsjyfGgjK6MAo0SnJhzog2Ybstx35gioycHqt_nnCzQ4cNO00PRua-jRPOd08SBO-aB7_oa3t831YfGFihI_6-tixADcHbV0mKJLNq5Oc1RIjwayftK3Ilq6fK-sD0Su-EQ3DdBMGYjHwvSJUX90w3MrAfVEAHrRCiJYPqzJ3o8U7RSbC-myf-YCnFUlqSB66SQZEO48xdSYWkQMHLf8PzhUvrjUD67CiAame3Sqa66ipEeizGIce3EkD50vB5BU7DRAMmG21Y7HpOBk5Lo7jwL-j2rAIz7Ta8bh7uyEPpNLuFNmuTp3oSPdSrzmo7F22ARsi7dyiltZMyfPpiRETj1nwOT2Ia6AMm55q-3FnM07xF1a83dt6KHvuBmhmgWR93BXLukqzUCxLMdjDx-9y3rZYqGLqAx9t8cu1ai3NHTVpgqF8M2Ji5bY_PgV752vOrdhTb95sdlwTjcFmzGHqhKfBiiNGNeMqsD6OrHPhj6x1nitqIlLTG=w1024-h500-no",
+
+"collapsing_toolbar_thumbnail":"https://lh3.googleusercontent.com/ykBiPhW_AbkjCpzUz5_jZy7gFiQAeETbA6xrRcjE36qLummkZILW3ybEp-DWywN-77McNkI6cNAoGfgA1ndBvfLMim-cpZiMfat7TGa6fCC2KgoGgTYEDtyKGNnwkJQw4oUcxcXiyQ8hJr_-1iMZgyG5SEwJoWDk3Oox5jjqBLKnF_qraiIBnb9YF84yLuMOjESWeovqklvplruyIAjc2h7PBYKaduVXC_rCuN4wwR-_f7Ebv7cc_s-629LZOooRKbD7eLIng-9TyL_Z_fwY7FiR7hPhmqOmYEEl26PB5bQNGuMS-0-5Grg6kAf29emheaq6fd_CtlZF7L9-pHaU6W3dRA9uiB7D8kDQNVu-dMjfM8UyXqIGNC1gBysPbgoq58aWsvUXihYE0I6wR18uzCeefO80hkBVyYTbop-vgiZWrrf2MkxaqZsipd94QhA4v2OJclcGRagxzs2e1ETe_Y6lS0oUfW28XwOI4_WxUJh8ux95cAwgNCRLrD6DZ7pB6ZIkXU1VtVKisTRRDErdZuYK5dsX8eeWMyYHjcqtzvc_VnNODsgFcXudbP4tfcWcMf95ggd8wcRoKkaGnbEn-Jnzp55gV30_=w1143-h914-no",
+
+"screenshot1":"https://lh3.googleusercontent.com/k1IWcRcBuXAdBoKlNgGZvA5RsjsPa7qoMYpimRTknVlIxZE9yGMv3KbbCogeD8qAk2jW=h900-rw",
+
+"screenshot2":"https://lh3.googleusercontent.com/Ur5d5QPsizFgPRx8gVNwpMSme91grK1zLaAu6Xt9P7wpUoiy0x0mg-prqnpbNq5ztQ=h900-rw",
+
+"screenshot3":"https://lh3.googleusercontent.com/Ldw5Bo6GGsAlX10Q0oxC4fDfzdw_T2UMLcz3pjaiBgybfIkV9K0YsXIe0mkQQUS2wcE=h900-rw",
+
+"screenshot4":"https://lh3.googleusercontent.com/8iHF_3_kZrglCiFn7MKUr-3hGkPv4lQCEvlr2t9ybF4MA61zP_mrIvGxpfwh9pw4GQ=h900-rw",
+
+"screenshot5":"https://lh3.googleusercontent.com/dY1bwWcvnkpmH1n7b_rDNmbVVe3cTrPGuuWAZXffOXURIze53EkZCvADpmpkNba1hok=h900-rw",
+
+"screenshot6":"https://lh3.googleusercontent.com/MC8YoaXmLK3HaYZH4_BV7HCz3hgFK25nz0KUccEIzV5SWntfj_racnE976yV9GLFyBk=h900-rw",
+
+"playstore":"https://play.google.com/store/apps/details?id=com.annihilation.domcmte",
+
+"contact":"https://plus.google.com/u/0/+DavidWilsonAnnihilation",
+
+"contact_background":"https://lh4.googleusercontent.com/-iJa7VaB3Qe0/VgF4ygywHbI/AAAAAAAAe4U/JLB0lUWjeUg_QsoDJJh3fo7f1dWaOEP5wCL0B/w1000-h450-no/DOMINATION%2Bjust%2Bsign%2B5.png",
+  
+"contact_image":"https://lh3.googleusercontent.com/-OaWhFo4jWyg/VgF2tiX3CcI/AAAAAAAAe3k/2rr8F6riOpMibVS0pUInWJU2ooN_JIC-wCL0B/s392-no/Domination%2BLogo.png"}},
+
+
+
+{"theme_name":"Euphoria Dark",
+
+"theme_author":"blazze11",
+
+"theme_summary":"Started as a dark mod for Euphoria-OS. Now one of the most popular free themes on the Play Store.",
+
+"theme_long_summary":"Free version
+A custom rom with the CM theme engine is required to use this theme!
+Themed System:
+• Notifications (Dark)
+• Quick settings (Dark)
+• Devicedefault styles (Dark)
+• Framework & SystemUI (Dark)
+
+Themed Apps:
+• AOSP Keyboard (Dark & light)
+• AudioFX (Dark)
+• Browser (Light)
+• Calculator (Dark)
+• Contacts (Dark)
+• CMFileManager (Dark)
+• CMUpdater (Dark)
+• Dialer/Incall (Dark)
+• Deskclock (Dark)
+• Documents (Dark)
+• Eleven (Light)
+• Euphoria OTACenter (Dark)
+• Gallery (Dark)
+• Google Keyboard (Dark & light)
+• Google Now + Launcher (Dark)
+• Google + (Light)
+• Hangouts (Light)
+• Launcher3 (Dark)
+• Settings (Dark)
+• Theme Chooser (Dark)
+• Trebuchet (Dark)
+• SMS/MMS (Dark)
+• Whatsapp (Light)
+• reddit is fun (Dark)
+
+More:
+• New Wallpapers
+• New Bootanimation
+• New Font
+
+If you find any bugs, please send me an email with an detailed report about your issue at: westphal.alex94@gmail.com
+Don´t give a bad review because of bugs. Report them and I will try to fix them.
+
+Community
+https://plus.google.com/communities/109212659618965180851",
+
+"paid": "false",
+
+"arcus": "false",
+
+"themeready": "false",
+
+"uri":{
+
+"card_thumbnail":"https://lh3.googleusercontent.com/0RCg8hEQpgJ4rBvOGpmnTdJ74Ugox5JUTySUwMXeeIJMtN7LQXNkytCm4aeXjAuNLGArjgxX24O20km8Tt09vfGSwNdP-_Ak0VfQJQAhIOcJ9TkA2pZizqhsKMGyhCYcOlzzi95xJamidZwvE1mFnWMHDdZIgrO1WnopgmEd7AE4mFa30yGwXT-HRjLy5Ssk27ef9EtdjI6zRPcgpofgBO3yqz3QW86-BPeqO9LkmkB0Pstq2wKOBoJxvI5cOyyJTJ-uE785dNMPWUJRyrMLujfG7lAfSgq-5_ef7KUwXOqBTYjRMimHPjhzRE2gWEm0MeRWd6Ql8DV3aOlcKlVbIgcvmItFHLtGuOuvdDgWcbpGq_m63XdC0v6b7zdQMQ89RSHU3LIVt2Bc9xgbI3OCBoU58JkYEm-fPrqkSYSgXr4JkGHlxKV9KJW0dvsQ92tjAXzB2tiOZKJXRQH0ZWBNwXuEmUqIJU0DX5gyWg_5L0sM74uCXPgHzUye-fqaqB0-4SV2CDfRL9zW6KQKC9ayEbVUXtVnUxAa77Cq5QcrY942z2RqGHJlczCGpJOK6XWTLjtNo0cNIU5o2asH4G2d7g_KmRsdLsmW=w621-h303-no",
+
+"collapsing_toolbar_thumbnail":"https://lh3.googleusercontent.com/0RCg8hEQpgJ4rBvOGpmnTdJ74Ugox5JUTySUwMXeeIJMtN7LQXNkytCm4aeXjAuNLGArjgxX24O20km8Tt09vfGSwNdP-_Ak0VfQJQAhIOcJ9TkA2pZizqhsKMGyhCYcOlzzi95xJamidZwvE1mFnWMHDdZIgrO1WnopgmEd7AE4mFa30yGwXT-HRjLy5Ssk27ef9EtdjI6zRPcgpofgBO3yqz3QW86-BPeqO9LkmkB0Pstq2wKOBoJxvI5cOyyJTJ-uE785dNMPWUJRyrMLujfG7lAfSgq-5_ef7KUwXOqBTYjRMimHPjhzRE2gWEm0MeRWd6Ql8DV3aOlcKlVbIgcvmItFHLtGuOuvdDgWcbpGq_m63XdC0v6b7zdQMQ89RSHU3LIVt2Bc9xgbI3OCBoU58JkYEm-fPrqkSYSgXr4JkGHlxKV9KJW0dvsQ92tjAXzB2tiOZKJXRQH0ZWBNwXuEmUqIJU0DX5gyWg_5L0sM74uCXPgHzUye-fqaqB0-4SV2CDfRL9zW6KQKC9ayEbVUXtVnUxAa77Cq5QcrY942z2RqGHJlczCGpJOK6XWTLjtNo0cNIU5o2asH4G2d7g_KmRsdLsmW=w621-h303-no",
+
+"screenshot1":"https://lh3.googleusercontent.com/l4x7Lu2x2gVn8nkogJPHERWP11VUyLn5dXCOfcaza2AaewNdd9B4Mf7Se8MacGdB3xD6=h900-rw",
+
+"screenshot2":"https://lh3.googleusercontent.com/fCClMYQuBgWQa96cye4GxIorSMOg_q4mLRaZcAIyq0pLhmsB-7MNQdhRJGjZNU2eQFc=h900-rw",
+
+"screenshot3":"https://lh3.googleusercontent.com/wpNeGdY5bAlSdygZaeUg1SbPSdJDLDIul2SXTS4Q5gFJ7A8hgJCzmOX_nEgcSYzzDnQ=h900-rw",
+
+"screenshot4":"https://lh3.googleusercontent.com/-8wpYuF9Pkn7-aNhdko0oVV4Ily7el-OeO6usQqKGmb1vbTjvqNe2zdGejzpQ_yHMio=h900-rw",
+
+"screenshot5":"https://lh3.googleusercontent.com/hX1TZTbKoOCm6mfEoyVq-AG_cgttRoSl5ylrb-evjYyLBDb3l8BgsX9EVrRyBXp7x9o=h900-rw",
+
+"screenshot6":"https://lh3.googleusercontent.com/DgJpkfvRtOvJ4izZSWdcGCdcwzMtHA7cHXrY_McDW6h6--D9TnOp6U1VJ84YiKTOjhAh=h900-rw",
+
+"playstore":"https://play.google.com/store/apps/details?id=com.blazze11.euphoria.dark",
+
+"contact":"https://plus.google.com/+AlexanderWestphalblazze11",
+
+"contact_background":"https://lh3.googleusercontent.com/onCzIRTsZEUdSX7Nt0_5lJ_bYeg9GA_DLVJE8A5s9VeriMNeA-mWzI_mvnFR6vU5NyFWuCkl=s929-fcrop64=1,00370000ffc7ffff",
+  
+"contact_image":"https://lh3.googleusercontent.com/-tWjjfGX1MUY/AAAAAAAAAAI/AAAAAAAAAF0/z2DmEt90Fwg/s120-c/photo.jpg"}},
+
+
 
 {
 "theme_name":"PitchBlack™(DarkRed)",
@@ -45,7 +345,70 @@
 
 "theme_summary":"A beautiful theme with combinations of Black and Red",
 
+"theme_long_summary":"PitchBlack│DarkRed Theme
+A beautiful theme with combinations of Black and Red
+
+Only for CM12 - 13 Theme Engine
+
+NOTE: Reboot device after install the theme
+
+Pls be fair on your reviews .Thanks .. Cheers
+
+What's Themed
+
+• Ringtone
+• Bootanimation
+• Notification sound
+• Fonts
+• Framework 
+• Navigation bar
+• Settings
+• System Uİ
+• Dialer
+• Google plus
+• Theme chooser
+• Browser
+• Mms
+• Massenger
+• Package installer
+• Play store
+• Documents
+• File manager
+• Audio fx
+• Cyanogen music app
+• Contacts
+• Hangouts
+• Clock
+• Gallery
+• cLock
+• Trebuchet launcher
+• Broadcast reciever
+• Server telecom
+• Calculator
+• And more...
+
+Screen Resolutions
+
+• small - mdpi
+• normal - hdpi
+• large - xhdpi
+• xlarge - xxhdpi
+
+Contact
+
+• Google+: https://plus.google.com/communities/109352646351468373340
+• Twitter: https://twitter.com/westcrip
+• Facebook: https://www.facebook.com/resurrectionremixrom
+
+• Check out other themes : https://play.google.com/store/apps/developer?id=Altan+KRK+%28westcrip%29
+
+Host
+
+Resurrection Remix Development",
+
 "paid": "false",
+
+"arcus": "false",
 
 "themeready": "true",
 
@@ -82,10 +445,29 @@
 
 "theme_author":"Train88",
 
-"theme_summary":"This is a spacey green and purple accented theme with many apps inverted so the green, purple, and glowing accents
-really pop",
+"theme_summary":"This is a spacey green and purple accented theme with many apps inverted so the green, purple, and glowing accents really pop",
+
+"theme_long_summary":"****PLEASE NOTE****
+****THIS IS A THEME FOR MARSHMALLOW 6.X, SOME THINGS MAY NOT BE THEMED ON OLDER DEVICES****
+****YOU MUST BE RUNNING A CUSTOM ROM THAT
+INCLUDES THE THEME CHOOSER****
+****THIS IS NOT A LAUNCHER THEME****
+Welcome To ThaJoker Supernova Reborn (again)!!
+
+This is a spacey green and purple accented theme with many
+system apps inverted so the green, purple, and glowing accents
+really pop
+
+If you would like a complete listing of everything that is included, please check my xda thread:
+http://forum.xda-developers.com/android/themes/icons-themed-apps-eclipse-themes-t2840390
+
+Hope you enjoy Supernova, please take the time to rate and review!
+
+Also, thank Kevin3328 (for the oringal work, and allowing me to update it), DJDarkknight96, DaveyAnnihilation, R3Ds, JayRod, DrumDestroyer Themes (for the new nav keys), Jesus Partida (PartimusPrime) (for the bootanimation), Paul Clark (wallpapers), and Rinky Mcbally (store banner) for all the help reviving this theme!!!",
 
 "paid": "false",
+
+"arcus": "false",
 
 "themeready": "true",
 
@@ -113,41 +495,5 @@ really pop",
 
 "contact_background":"https://lh6.googleusercontent.com/-yVveXJU3FuE/ViFqCVGOv2I/AAAAAAAAuq0/zGUPBfKI5lEKpneDb9TMGZhQpMDcfbUbQCL0B/w510-h275-no/e8cd381c-c7a1-4a86-89dc-799ff4c30a26",
   
-"contact_image":"https://lh5.googleusercontent.com/-snE0pzbXA-Q/VuN2puiNXsI/AAAAAAAA4ZQ/1Y1sUwllCq8tFoJsyN5b1qBvHkcngh19QCL0B/w879-h878-no/Train%2Blogo4.jpg"}},
-
-{"theme_name":"Domination",
-
-"theme_author":"daveyannihilation",
-
-"theme_summary":"DOMINATION is a brilliant dark theme with black backgrounds and darker than stock Material colours for action bar, status bar and accents. The way that Google should have made Material Design #WhiteUIMustDie!",
-
-"paid": "false",
-
-"themeready": "true",
-
-"uri":{
-
-"card_thumbnail":"https://lh3.googleusercontent.com/h8TxECrYApHbByiW3QH2Cjv8qXcjePhQ0iF5IymOQTZAlz8_Ml7onCfOfybh0UT0oGzaM0SpddsdqZk7w9n7PTk5_3s221kBDWBjyELM7rvsjyfGgjK6MAo0SnJhzog2Ybstx35gioycHqt_nnCzQ4cNO00PRua-jRPOd08SBO-aB7_oa3t831YfGFihI_6-tixADcHbV0mKJLNq5Oc1RIjwayftK3Ilq6fK-sD0Su-EQ3DdBMGYjHwvSJUX90w3MrAfVEAHrRCiJYPqzJ3o8U7RSbC-myf-YCnFUlqSB66SQZEO48xdSYWkQMHLf8PzhUvrjUD67CiAame3Sqa66ipEeizGIce3EkD50vB5BU7DRAMmG21Y7HpOBk5Lo7jwL-j2rAIz7Ta8bh7uyEPpNLuFNmuTp3oSPdSrzmo7F22ARsi7dyiltZMyfPpiRETj1nwOT2Ia6AMm55q-3FnM07xF1a83dt6KHvuBmhmgWR93BXLukqzUCxLMdjDx-9y3rZYqGLqAx9t8cu1ai3NHTVpgqF8M2Ji5bY_PgV752vOrdhTb95sdlwTjcFmzGHqhKfBiiNGNeMqsD6OrHPhj6x1nitqIlLTG=w1024-h500-no",
-
-"collapsing_toolbar_thumbnail":"https://lh3.googleusercontent.com/ykBiPhW_AbkjCpzUz5_jZy7gFiQAeETbA6xrRcjE36qLummkZILW3ybEp-DWywN-77McNkI6cNAoGfgA1ndBvfLMim-cpZiMfat7TGa6fCC2KgoGgTYEDtyKGNnwkJQw4oUcxcXiyQ8hJr_-1iMZgyG5SEwJoWDk3Oox5jjqBLKnF_qraiIBnb9YF84yLuMOjESWeovqklvplruyIAjc2h7PBYKaduVXC_rCuN4wwR-_f7Ebv7cc_s-629LZOooRKbD7eLIng-9TyL_Z_fwY7FiR7hPhmqOmYEEl26PB5bQNGuMS-0-5Grg6kAf29emheaq6fd_CtlZF7L9-pHaU6W3dRA9uiB7D8kDQNVu-dMjfM8UyXqIGNC1gBysPbgoq58aWsvUXihYE0I6wR18uzCeefO80hkBVyYTbop-vgiZWrrf2MkxaqZsipd94QhA4v2OJclcGRagxzs2e1ETe_Y6lS0oUfW28XwOI4_WxUJh8ux95cAwgNCRLrD6DZ7pB6ZIkXU1VtVKisTRRDErdZuYK5dsX8eeWMyYHjcqtzvc_VnNODsgFcXudbP4tfcWcMf95ggd8wcRoKkaGnbEn-Jnzp55gV30_=w1143-h914-no",
-
-"screenshot1":"https://lh3.googleusercontent.com/k1IWcRcBuXAdBoKlNgGZvA5RsjsPa7qoMYpimRTknVlIxZE9yGMv3KbbCogeD8qAk2jW=h900-rw",
-
-"screenshot2":"https://lh3.googleusercontent.com/Ur5d5QPsizFgPRx8gVNwpMSme91grK1zLaAu6Xt9P7wpUoiy0x0mg-prqnpbNq5ztQ=h900-rw",
-
-"screenshot3":"https://lh3.googleusercontent.com/Ldw5Bo6GGsAlX10Q0oxC4fDfzdw_T2UMLcz3pjaiBgybfIkV9K0YsXIe0mkQQUS2wcE=h900-rw",
-
-"screenshot4":"https://lh3.googleusercontent.com/8iHF_3_kZrglCiFn7MKUr-3hGkPv4lQCEvlr2t9ybF4MA61zP_mrIvGxpfwh9pw4GQ=h900-rw",
-
-"screenshot5":"https://lh3.googleusercontent.com/dY1bwWcvnkpmH1n7b_rDNmbVVe3cTrPGuuWAZXffOXURIze53EkZCvADpmpkNba1hok=h900-rw",
-
-"screenshot6":"https://lh3.googleusercontent.com/MC8YoaXmLK3HaYZH4_BV7HCz3hgFK25nz0KUccEIzV5SWntfj_racnE976yV9GLFyBk=h900-rw",
-
-"playstore":"https://play.google.com/store/apps/details?id=com.annihilation.domcmte",
-
-"contact":"https://plus.google.com/u/0/+DavidWilsonAnnihilation",
-
-"contact_background":"https://lh4.googleusercontent.com/-iJa7VaB3Qe0/VgF4ygywHbI/AAAAAAAAe4U/JLB0lUWjeUg_QsoDJJh3fo7f1dWaOEP5wCL0B/w1000-h450-no/DOMINATION%2Bjust%2Bsign%2B5.png",
-  
-"contact_image":"https://lh3.googleusercontent.com/-OaWhFo4jWyg/VgF2tiX3CcI/AAAAAAAAe3k/2rr8F6riOpMibVS0pUInWJU2ooN_JIC-wCL0B/s392-no/Domination%2BLogo.png"}}
+"contact_image":"https://lh5.googleusercontent.com/-snE0pzbXA-Q/VuN2puiNXsI/AAAAAAAA4ZQ/1Y1sUwllCq8tFoJsyN5b1qBvHkcngh19QCL0B/w879-h878-no/Train%2Blogo4.jpg"}}
 ]
