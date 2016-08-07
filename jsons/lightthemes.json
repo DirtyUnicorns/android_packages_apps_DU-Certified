@@ -5,6 +5,67 @@
 "theme_author":"Ciao Studio",
  
 "theme_summary":"Theme that offers a unique and attractive interface with eye-catching colors and an elegant style to your device.",
+
+"theme_long_summary":"Theme that offers a unique and attractive interface with eye-catching colors and an elegant style to your device.
+
+FEATURES
+• An interface never seen before on Android;
+• 2 great wallpapers, one for home and the other for lockscreen;
+• Applicable on CyanogenMod 12/12.1/13 and on all ROMs with Theme Engine;
+• Full support for CyanogenMod and Dirty Unicorns;
+• Approved by Dirty Unicorns developers ( DU Certified );
+• Android N notification panel style;
+• Official bootanimation;
+• Official ringtone, notification and alarm;
+• Frequent updates;
+• Developed by the creator of Ehndroix ROM.
+
+THEMED APPS
+• AudioFX;
+• Browser;
+• Calculator;
+• Calendar;
+• Contacts;
+• Cyanogenmod Updater;
+• DeskClock;
+• Dialer;
+• Dirty Unicorns Info;
+• Dirty Unicorns Updater;
+• Eleven;
+• Email;
+• Facebook;
+• File Manager;
+• Gallery;
+• Gmail;
+• Google App;
+• Google Calculator;
+• Google Clock;
+• Google Contacts;
+• Google Dialer;
+• Google Keep;
+• Google Keyboard;
+• Google Plus;
+• Hangouts;
+• Instagram;
+• Keyboard;
+• Kik;
+• Messages;
+• Nova Launcher;
+• Play Music;
+• Play Store;
+• Settings;
+• Snap Camera;
+• Sound Recorder;
+• SuperSU;
+• SystemUI;
+• Theme Engine;
+• Titanium Backup;
+• Trebuchet;
+• Twitter;
+• Youtube;
+• Whatsapp.",
+
+"arcus":"false",
  
 "paid": "true",
  
@@ -44,6 +105,71 @@
 "theme_author":"Ciao Studio",
  
 "theme_summary":"Theme that follows Material Design's guidelines, featuring exclusive circular icons and colors very attractive.",
+
+"theme_long_summary":"Theme that follows Material Design guidelines, featuring exclusive circular icons and colors very attractive.
+
+FEATURES
+• More than 210 exclusive icons;
+• 2 great wallpapers, one for home and the other for lockscreen;
+• Applicable on CyanogenMod 12/12.1/13 and on all ROMs with Theme Engine;
+• Full support for CyanogenMod and Dirty Unicorns;
+• Approved by Dirty Unicorns developers ( DU Certified );
+• Arcus support with 4 variants ( Default, Ocean, Love, Midnight );
+• Android N notification panel style;
+• Official bootanimation;
+• Official ringtone, notification and alarm;
+• Weekly updates;
+• Developed by the creator of Ehndroix ROM.
+
+THEMED APPS
+• AudioFX;
+• Browser;
+• Calculator;
+• Calendar;
+• Camera;
+• Contacts;
+• CyanogenMod Updater;
+• DeskClock;
+• Dialer;
+• Dirty Unicorns Info;
+• Dirty Unicorns Updater;
+• Eleven;
+• Email;
+• Facebook;
+• File Manager;
+• Gallery;
+• Gmail;
+• Google App;
+• Google Calculator;
+• Google Camera;
+• Google Clock;
+• Google Contacts;
+• Google Dialer;
+• Google Keep;
+• Google Keyboard;
+• Google Messenger;
+• Google Plus;
+• Hangouts;
+• Instagram;
+• Kernel Adiutor;
+• Keyboard;
+• Kik;
+• Messages;
+• Nova Launcher;
+• Play Music;
+• Play Store;
+• Settings;
+• Sound Recorder;
+• SuperSU;
+• SystemUI;
+• Theme Engine;
+• Titanium Backup;
+• Trebuchet;
+• Twitter;
+• Youtube;
+• Whatsapp.",
+
+"arcus":"false",
  
 "paid": "true",
  
@@ -84,6 +210,65 @@
 
 "theme_summary":"This theme is not inspired by a design guideline, ROM, company or anything else alike. This is what you want your phone to be - this is unique. Dark variant also included thanks to Arcus support.",
 
+"theme_long_summary":"This theme is not inspired by a design guideline, ROM, company or anything else alike. This is what you want your phone to be - this is unique. Dark variant also included thanks to Arcus support.
+Download the free Arcus app to choose a theme variant!
+→ https://goo.gl/b1o0G0
+
+You need a ROM with the latest CM theme engine in order to install and use this theme! ROM support for DU (DU Certified), CM12, CM12.1, CM13, CyanogenOS, AICP, RR, AOSiP, Bliss Pop, Carbon, Euphoria and more. Please report missing Icons so they can be added to the theme.
+
+Theme includes:
+◦ 90+ themed apps
+◦ Dark style and light style (Arcus)
+◦ Multiple color variants (Arcus)
+◦ Bootanimation
+◦ Vector statusbar icons
+◦ Themed battery icons (latest CM13)
+◦ Fully themed quicksettings
+◦ Animated switches, checkboxes and buttons
+◦ Volume panel
+◦ Notification icons
+◦ Custom font
+◦ Custom notification sounds
+◦ Wallpapers
+
+Themed apps:
+◦ Screener
+◦ Google+
+◦ Hangouts
+◦ Play Music
+◦ Google Now
+◦ Dialer
+◦ Instagram
+◦ Settings
+◦ Camera
+◦ Keyboard (AOSP & Google)
+... and more! (90+)
+
+Arcus variant colors:
+◦ Dark style
+◦ Dirty Unicorn colors
+◦ Radius colors
+◦ Yellow
+◦ Red
+◦ Green 
+◦ Blue
+... and more!
+
+Please review and share this theme if you like it! 
+Thanks for the support! :)
+
+_ _ _
+You can send an email to kohlewrrk@gmail.com
+for bug reports, issues and suggestions.
+
+Follow us on G+ and get news about updates and development!
+→ https://plus.google.com/118223643255196250108/posts
+
+Become an insider, join the G+ Community today!
+→ https://plus.google.com/communities/111295036831359105836",
+
+"arcus":"true",
+
 "paid": "true",
 
 "themeready": "false",
@@ -122,6 +307,73 @@
 "theme_author":"Kohlewrrk",
 
 "theme_summary":"Minimal, flat theme offering a light user interface with green vivid colors. System glyphs made with love and carefully crafted, pixel perfect and modern. With the same content as Outray, just in light.",
+
+"theme_long_summary":"Minimal, flat theme offering a light user interface with green vivid colors.
+System glyphs made with love and carefully crafted, pixel perfect and modern.
+With the same content as Outray, just in light.
+Dark Version 
+→ https://goo.gl/3OQOwd﻿﻿
+
+Download the free Arcus app to choose a theme variant!
+→ https://goo.gl/b1o0G0
+
+You need a ROM with the latest CM theme engine in order to install and use this theme! ROM support for DU (DU Certified), CM12, CM12.1, CM13, CyanogenOS, AICP, RR, AOSiP, Bliss Pop, Carbon, Euphoria and more. Please report missing Icons so they can be added to the theme.
+
+Theme includes:
+◦ 90+ themed apps
+◦ Multiple color variants (Arcus)
+◦ Bootanimation
+◦ Vector statusbar icons
+◦ Themed battery icons (latest CM13)
+◦ Fully themed quicksettings
+◦ Animated switches, checkboxes and buttons
+◦ Volume panel
+◦ Notification icons
+◦ Custom screen animations
+◦ Custom font
+◦ Custom notification sounds
+◦ Wallpapers
+
+Themed apps:
+◦ Screener
+◦ Google+
+◦ Hangouts
+◦ Play Music
+◦ Google Now
+◦ Dialer
+◦ Instagram
+◦ Settings
+◦ Camera
+◦ Keyboard (AOSP & Google)
+... and more! (90+)
+
+Arcus variant colors:
+◦ Material colors
+◦ Coalfield colors
+◦ Radius colors
+◦ Red 
+◦ Blue
+◦ Purple
+◦ Teal
+... and more!
+
+Please review and share this theme if you like it! 
+Thanks for the support! :)
+
+Wallpapers taken by Janic Lautenschläger, thanks goes to him for letting me use his amazing pics :)
+https://plus.google.com/u/0/104426743064665500626
+
+_ _ _
+You can send an email to kohlewrrk@gmail.com
+for bug reports, issues and suggestions.
+
+Follow us on G+ and get news about updates and development!
+→ https://plus.google.com/118223643255196250108/posts
+
+Become an insider, join the G+ Community today!
+→ https://plus.google.com/communities/111295036831359105836",
+
+"arcus":"true",
 
 "paid": "true",
 
