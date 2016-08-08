@@ -44,7 +44,7 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
         theme_name.setText(theme.getThemeName());
 
         TextView theme_author = holder.theme_author;
-        theme_author.setText(theme.getThemeName());
+        theme_author.setText(theme.getThemeAuthor());
 
         TextView theme_summary = holder.theme_summary;
         theme_summary.setText(theme.getThemeSummary());
