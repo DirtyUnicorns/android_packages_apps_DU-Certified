@@ -6,7 +6,15 @@
 
 "theme_summary":"ONE OF THE MOST AWESOME THEMES YOU WILL EVER SEE IN YOUR LIFE",
 
+"theme_long_summary":"LONG LONG LONG LONG LONG LONG LONG LONG LONG LONG LONG LONG LONG LONG LONG LONG LONG LONG LONG LONG
+LONG LONG LONG LONG LONG LONG LONG LONG LONG LONG LONG LONG LONG LONG LONG LONG LONG LONG LONG LONG LONG LONG LONG LONG
+LONG LONG LONG LONG LONG LONG LONG LONG LONG LONG LONG LONG LONG LONG LONG LONG LONG LONG LONG LONG LONG LONG LONG LONG
+ LONG LONG LONG LONG LONG LONG LONG LONG LONG LONG LONG LONG LONG LONG LONG LONG LONG LONG LONG LONG LONG LONG LONG LONG
+  LONG LONG LONG LONG LONG LONG LONG LONG LONG LONG LONG LONG LONG LONG LONG LONG LONG LONG LONG LONG THEME SUMMARY",
+
 "paid": "true",
+
+"arcus": "true",
 
 "themeready": "false",
 
@@ -47,7 +55,11 @@ theme_author - What shows up in the playstore, not your real name. Let's try to 
 
 theme_summary - Give us a summary of your theme. A short summary, what you put in the playstore minus all the instructions and buzz words
 
+theme_long_summary - Your full theme summary that you have listed in the playstore or where ever you have it listed.
+
 paid - If your theme is paid, leave it as true. If is not, set it to false
+
+arcus - Whether or not your theme has support for arcus. true or false
 
 themeready - Does your theme perform better with a user flashes theme ready gapps? If so, change false to true and if not, leave it as it is.
 
