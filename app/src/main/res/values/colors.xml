@@ -12,6 +12,7 @@
     <color name="white">#ffffffff</color>
     <color name="fullscreen_background_color">#000000</color>
     <color name="semitransparent_white">#80ffffff</color>
+    <color name="semitransparent_black">#60000000</color>
 
     <!-- UI refresh colors -->
     <color name="red">#FFC93437</color>

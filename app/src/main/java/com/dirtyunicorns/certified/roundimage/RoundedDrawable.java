@@ -62,7 +62,6 @@ public class RoundedDrawable extends Drawable {
     private Shader.TileMode mTileModeY = Shader.TileMode.CLAMP;
     private boolean mRebuildShader = true;
 
-    // [ topLeft, topRight, bottomLeft, bottomRight ]
     private float mCornerRadius = 0f;
     private final boolean[] mCornersRounded = new boolean[]{true, true, true, true};
 
@@ -100,13 +99,11 @@ public class RoundedDrawable extends Drawable {
     public static Drawable fromDrawable(Drawable drawable) {
         if (drawable != null) {
             if (drawable instanceof RoundedDrawable) {
-                // just return if it's already a RoundedDrawable
                 return drawable;
             } else if (drawable instanceof LayerDrawable) {
                 LayerDrawable ld = (LayerDrawable) drawable;
                 int num = ld.getNumberOfLayers();
 
-                // loop through layers to and change to RoundedDrawables if possible
                 for (int i = 0; i < num; i++) {
                     Drawable d = ld.getDrawable(i);
                     ld.setDrawableByLayerId(ld.getId(i), fromDrawable(d));
@@ -114,7 +111,6 @@ public class RoundedDrawable extends Drawable {
                 return ld;
             }
 
-            // try to get a bitmap from the drawable and
             Bitmap bm = drawableToBitmap(drawable);
             if (bm != null) {
                 return new RoundedDrawable(bm);
@@ -310,12 +306,11 @@ public class RoundedDrawable extends Drawable {
 
     private void redrawBitmapForSquareCorners(Canvas canvas) {
         if (all(mCornersRounded)) {
-            // no square corners
             return;
         }
 
         if (mCornerRadius == 0) {
-            return; // no round corners
+            return;
         }
 
         float left = mDrawableRect.left;
@@ -347,12 +342,11 @@ public class RoundedDrawable extends Drawable {
 
     private void redrawBorderForSquareCorners(Canvas canvas) {
         if (all(mCornersRounded)) {
-            // no square corners
             return;
         }
 
         if (mCornerRadius == 0) {
-            return; // no round corners
+            return;
         }
 
         float left = mDrawableRect.left;

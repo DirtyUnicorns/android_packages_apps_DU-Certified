@@ -16,7 +16,7 @@ public class ItemDownloader {
             synchronized (ItemDownloader.class) {
                 if (themesApi == null) {
                     themesApi = new Retrofit.Builder()
-                            .baseUrl("https://raw.githubusercontent.com/DirtyUnicorns/android_packages_apps_DU-Certified/README/jsons/")
+                            .baseUrl("https://raw.githubusercontent.com/DirtyUnicorns/android_packages_apps_DU-Certified/n7x/jsons/")
                             .addConverterFactory(GsonConverterFactory.create())
                             .build()
                             .create(ThemesApi.class);
@@ -30,16 +30,22 @@ public class ItemDownloader {
 
     public interface ThemesApi {
 
-        @GET("lightthemes.json")
+        @GET("light.json")
         Call<List<Theme>> getLightThemes();
 
-        @GET("darkthemes.json")
+        @GET("dark.json")
         Call<List<Theme>> getDarkThemes();
 
-        @GET("free_light_themes")
+        @GET("multicolor.json")
+        Call<List<Theme>> getMultiColorThemes();
+
+        @GET("FREE_ONLY_light.json")
         Call<List<Theme>> getFreeLightThemes();
 
-        @GET("free_dark_themes")
+        @GET("FREE_ONLY_dark.json")
         Call<List<Theme>> getFreeDarkThemes();
+
+        @GET("FREE_ONLY_multicolor.json")
+        Call<List<Theme>> getFreeMultiColorThemes();
     }
 }

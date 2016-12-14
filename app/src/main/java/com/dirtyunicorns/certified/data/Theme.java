@@ -16,7 +16,6 @@ public class Theme implements Serializable {
     private String themeLongSummary;
     private String paid;
     private String themeready;
-    private String arcus;
     private Uri uri;
 
     public String getThemeName() {
@@ -65,14 +64,6 @@ public class Theme implements Serializable {
 
     public void setThemeready(String themeready) {
         this.themeready = themeready;
-    }
-
-    public String getArcus() {
-        return arcus;
-    }
-
-    public void setArcus(String arcus) {
-        this.arcus = arcus;
     }
 
     public Uri getUri() {

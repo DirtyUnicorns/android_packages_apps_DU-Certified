@@ -2,12 +2,12 @@
 
     <string name="app_name">DU Certified</string>
     <string name="submit_recipes">Get Certified</string>
-    <string name="light_themes">Light themes</string>
-    <string name="dark_themes">Dark themes</string>
+    <string name="light_themes">Light</string>
+    <string name="dark_themes">Dark</string>
+    <string name="multicolor_themes">Multi-color</string>
     <string name="about_app">About the app</string>
-    <string name="libraries">Libraries</string>
+    <string name="licenses">Licenses</string>
     <string name="settings">Settings</string>
-    <string name="contact_alex">Contact Alex</string>
     <string name="playstore_button">Play Store</string>
     <string name="installed_button">Installed</string>
     <string name="contact_button">Designer</string>
@@ -15,8 +15,8 @@
     <string name="readmore">READ MORE</string>
     <string name="close">CLOSE</string>
     <string name="freethemes_switch">Free themes</string>
-    <string name="freethemes_switch_summary">Only show free themes available</string>
-    <string name="no_themes_available">No free light themes available</string>
+    <string name="freethemes_switch_summary">Only show free themes</string>
+    <string name="no_themes_available">No free themes available under this listing</string>
 
     <!-- Dialog strings -->
     <string name="no_conn_content">Please make sure you have an active internet connection.</string>
@@ -29,24 +29,15 @@
     <string name="not_checked">NOT checked</string>
     <string name="checked">checked</string>
     <string name="skipMessage">skipMessage</string>
-    <string name="choose_email_app">Choose Email App..</string>
-    <string name="no_email_app_found_title">No Email App Found</string>
-    <string name="no_email_app_found_message">A viable email app was not found on your device. Please install one and resend your request.</string>
-    <string name="download_gmail">Download Gmail</string>
-    <string name="email_about_du_certified">Email about DU Certified</string>
-    <string name="gmail_link" translatable="false"><![CDATA[https://play.google.com/store/apps/details?id=com.google.android.gm&hl=en]]></string>
 
     <!-- Settings strings -->
-    <string name="build_info">Build information</string>
+    <string name="build_info">App version</string>
     <string name="clear_cache_title">Clear Cache</string>
     <string name="clear_cache_summary">Cache Size - %s</string>
-    <string name="theme_options">Theme options</string>
+    <string name="app_options">App options</string>
     <string name="pref_navbar_tint_title">Navigation bar tint</string>
     <string name="enable_navbar_tint_summary">Enable navigation bar tint</string>
     <string name="disable_navbar_tint_summary">Disable navigation bar tint</string>
-    <string name="pref_statusbar_tint_title">Status bar shadow</string>
-    <string name="enable_statusbar_tint_summary">Enable status bar shadow</string>
-    <string name="disable_statusbar_tint_summary">Disable status bar shadow</string>
 
     <!-- App intro strings -->
     <string name="first_slide_title">Welcome to DU Certified</string>
@@ -67,8 +58,9 @@
     <string name="paid_theme_false">Free</string>
     <string name="themeready_gapps">Theme Ready Gapps</string>
     <string name="themeready">Theme</string>
-    <string name="theme_share_first_part">Hey check out this awesome theme I found using the #DUCertified app, called</string>
-    <string name="theme_share_second_part">If you go ahead and install, don\'t forget to leave a review!</string>
+    <string name="theme_share_first_part">*Hey check out this awesome theme I found using the #DUCertified app*\n\nThe theme is called</string>
+    <string name="theme_share_second_part">_If you go ahead and install it then please don\'t forget to leave a review!_</string>
+    <string name="theme_share_third_part">Here\'s the playstore link if you want to check it out</string>
     <string name="theme_share_stay_dirty">#StayDirty</string>
 
 </resources>

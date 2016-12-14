@@ -56,7 +56,6 @@ public class ThemeInfoActivity extends AppCompatActivity {
         sView.setHorizontalScrollBarEnabled(false);
 
         ImageView iv = (ImageView) findViewById(id.image);
-        ImageView arcus = (ImageView) findViewById(id.arcus_indicator);
         ImageView s1 = (ImageView) findViewById(id.screenshot1);
         ImageView s2 = (ImageView) findViewById(id.screenshot2);
         ImageView s3 = (ImageView) findViewById(id.screenshot3);
@@ -68,7 +67,6 @@ public class ThemeInfoActivity extends AppCompatActivity {
         ImageView ci = (ImageView) findViewById(id.contactimage);
 
         TextView paid = (TextView) findViewById(id.paid);
-        TextView arcusindicator = (TextView) findViewById(id.arcus_text);
         TextView theme_long_summary = (TextView) findViewById(id.theme_long_summary);
         TextView themeready = (TextView) findViewById(id.themeready);
         TextView themeauthor = (TextView) findViewById(id.themeauthor);
@@ -163,7 +161,6 @@ public class ThemeInfoActivity extends AppCompatActivity {
         themeready.setText(theme.getThemeready());
         themeauthor.setText(theme.getThemeAuthor());
         theme_long_summary.setText(theme.getThemeLongSummary());
-        arcusindicator.setText(theme.getArcus());
 
         if (paid.getText().toString().equals("true")) paid.setText(string.paid_theme_true);
         if (paid.getText().toString().equals("false")) paid.setText(string.paid_theme_false);
@@ -171,13 +168,6 @@ public class ThemeInfoActivity extends AppCompatActivity {
             themeready.setText(string.themeready_gapps);
         if (themeready.getText().toString().equals("false")) themeready.setText("");
         if (themeready.getText().toString().equals("")) themeready.setText(string.themeready);
-
-        if (arcusindicator.getText().toString().equals("true")) {
-            arcusindicator.setText("");
-            arcus.setImageDrawable(getResources().getDrawable(drawable.arcus));
-        } else {
-            arcusindicator.setText("");
-        }
 
         assert collapsingToolbarLayout != null;
         collapsingToolbarLayout.setTitle(theme.getThemeName());
@@ -248,12 +238,11 @@ public class ThemeInfoActivity extends AppCompatActivity {
                 onBackPressed();
                 return true;
             case id.share:
-                Intent intent = getIntent();
                 Intent sendIntent = new Intent();
                 sendIntent.setAction(Intent.ACTION_SEND);
                 sendIntent.putExtra(Intent.EXTRA_TEXT,
                         getString(string.theme_share_first_part) + " "
-                                + intent.getStringExtra("theme_name") + "!" + "\n\n" + intent.getStringExtra("playstoreUri") + "\n\n" + getString(string.theme_share_second_part) + "\n\n" + getString(string.theme_share_stay_dirty));
+                                + theme.getThemeName() + "!" + " " + getString(string.theme_share_third_part) + "\n\n" + theme.getUri().getPlaystore() + "\n\n" + getString(string.theme_share_second_part) + "\n\n" + getString(string.theme_share_stay_dirty));
                 sendIntent.setType("text/plain");
                 startActivity(sendIntent);
                 return true;

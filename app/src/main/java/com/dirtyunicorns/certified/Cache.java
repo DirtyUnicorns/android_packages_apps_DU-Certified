@@ -76,5 +76,4 @@ public class Cache extends Preference {
     public void onClick() {
         clearCache();
     }
-
 }

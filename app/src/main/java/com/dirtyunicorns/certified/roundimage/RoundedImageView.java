@@ -39,7 +39,6 @@ import com.dirtyunicorns.certified.R;
 @SuppressWarnings("UnusedDeclaration")
 public class RoundedImageView extends ImageView {
 
-    // Constants for tile mode attributes
     private static final int TILE_MODE_UNDEFINED = -2;
     private static final int TILE_MODE_CLAMP = 0;
     private static final int TILE_MODE_REPEAT = 1;
@@ -95,7 +94,6 @@ public class RoundedImageView extends ImageView {
         if (index >= 0) {
             setScaleType(SCALE_TYPES[index]);
         } else {
-            // default scaletype to FIT_CENTER
             setScaleType(ScaleType.FIT_CENTER);
         }
 
@@ -263,7 +261,6 @@ public class RoundedImageView extends ImageView {
                 d = rsrc.getDrawable(mResource);
             } catch (Exception e) {
                 Log.w(TAG, "Unable to find resource: " + mResource, e);
-                // Don't try again.
                 mResource = 0;
             }
         }
@@ -300,16 +297,11 @@ public class RoundedImageView extends ImageView {
     }
 
     private void applyColorMod() {
-        // Only mutate and apply when modifications have occurred. This should
-        // not reset the mColorMod flag, since these filters need to be
-        // re-applied if the Drawable is changed.
         if (mDrawable != null && mColorMod) {
             mDrawable = mDrawable.mutate();
             if (mHasColorFilter) {
                 mDrawable.setColorFilter(mColorFilter);
             }
-            //mDrawable.setXfermode(mXfermode);
-            //mDrawable.setAlpha(mAlpha * mViewAlphaScale >> 8);
         }
     }
 
@@ -337,7 +329,6 @@ public class RoundedImageView extends ImageView {
 
             applyColorMod();
         } else if (drawable instanceof LayerDrawable) {
-            // loop through layers to and set drawable attrs
             LayerDrawable ld = ((LayerDrawable) drawable);
             for (int i = 0, layers = ld.getNumberOfLayers(); i < layers; i++) {
                 updateAttrs(ld.getDrawable(i));

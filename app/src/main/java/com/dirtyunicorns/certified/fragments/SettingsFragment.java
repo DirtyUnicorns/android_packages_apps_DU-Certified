@@ -25,7 +25,6 @@ public class SettingsFragment extends PreferenceFragmentCompat {
                 com.dirtyunicorns.certified.Preferences.themeMe(getActivity());
             }
         };
-
     }
 
     @Override

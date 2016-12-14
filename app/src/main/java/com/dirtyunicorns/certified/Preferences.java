@@ -16,7 +16,6 @@ public class Preferences extends Activity {
 
     public static final String Theme = "Theme";
     public static final String NavBarTheme = "NavBarTheme";
-    public static final String StatusBarTint = "StatusBarTint";
     public static final String NavigationTint = "NavigationTint";
 
     public int Theme() {
@@ -29,10 +28,6 @@ public class Preferences extends Activity {
 
     public Boolean getNavigationTint() {
         return sharedPreferences.getBoolean(NavigationTint, false);
-    }
-
-    public boolean StatusBarTint() {
-        return sharedPreferences.getBoolean(StatusBarTint, true);
     }
 
     public Preferences(Context context) {
@@ -52,11 +47,7 @@ public class Preferences extends Activity {
             activity.getWindow().setNavigationBarColor(ContextCompat.getColor(context, (R.color.navigation_drawer_color)));
         }
 
-        if (preferences.StatusBarTint()) {
-            activity.getWindow().setStatusBarColor(tint(preferences.Theme(), 0.8));
-        } else {
-            activity.getWindow().setStatusBarColor(preferences.Theme());
-        }
+        activity.getWindow().setStatusBarColor(tint(preferences.Theme(), 0.8));
     }
 
     public static int tint(int color, double factor) {
@@ -75,7 +66,6 @@ public class Preferences extends Activity {
         } catch (Exception e) {
             e.printStackTrace();
         }
-
         return res;
     }
 }

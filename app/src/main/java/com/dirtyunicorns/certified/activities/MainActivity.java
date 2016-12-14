@@ -26,6 +26,7 @@ import com.dirtyunicorns.certified.Preferences;
 import com.dirtyunicorns.certified.R;
 import com.dirtyunicorns.certified.fragments.DarkThemesFragment;
 import com.dirtyunicorns.certified.fragments.LightThemesFragment;
+import com.dirtyunicorns.certified.fragments.MultiColorThemesFragment;
 import com.dirtyunicorns.certified.fragments.SettingsFragment;
 import com.github.javiersantos.bottomdialogs.BottomDialog;
 import com.mikepenz.aboutlibraries.Libs;
@@ -34,6 +35,7 @@ import com.mikepenz.materialdrawer.Drawer;
 import com.mikepenz.materialdrawer.DrawerBuilder;
 import com.mikepenz.materialdrawer.model.DividerDrawerItem;
 import com.mikepenz.materialdrawer.model.PrimaryDrawerItem;
+import com.mikepenz.materialdrawer.model.SecondaryDrawerItem;
 import com.mikepenz.materialdrawer.model.SectionDrawerItem;
 import com.mikepenz.materialdrawer.model.interfaces.IDrawerItem;
 
@@ -134,42 +136,39 @@ public class MainActivity extends AppCompatActivity {
                 .withToolbar(toolbar)
                 .withSelectedItemByPosition(1)
                 .withHeader(R.layout.header)
-                .withStatusBarColor(preferences.StatusBarTint() ? tint(preferences.Theme(), 0.8) : preferences.Theme())
+                .withStatusBarColor(tint(preferences.Theme(), 0.8))
                 .addDrawerItems(
-                        new PrimaryDrawerItem().withName(getString(R.string.light_themes)).withIcon(R.drawable.light_themes).withIdentifier(1).withSelectable(true),
-                        new PrimaryDrawerItem().withName(getString(R.string.dark_themes)).withIcon(R.drawable.dark_themes).withIdentifier(2).withSelectable(true),
+                        new PrimaryDrawerItem().withName(getString(R.string.light_themes)).withIcon(R.drawable.light).withIdentifier(1).withSelectable(true),
+                        new PrimaryDrawerItem().withName(getString(R.string.dark_themes)).withIcon(R.drawable.dark).withIdentifier(2).withSelectable(true),
+                        new PrimaryDrawerItem().withName(getString(R.string.multicolor_themes)).withDescription("Themes with more than just 1 color option").withIcon(R.drawable.multicolor).withIdentifier(3).withSelectable(true).withDescriptionTextColor(getResources().getColor(R.color.semitransparent_black)),
                         new DividerDrawerItem(),
                         new SectionDrawerItem().withName(getString(R.string.about_app)).withDivider(false),
-                        new PrimaryDrawerItem().withName(getString(R.string.libraries)).withIcon(R.drawable.libraries).withIdentifier(3).withSelectable(true),
-                        new PrimaryDrawerItem().withName(getString(R.string.settings)).withIcon(R.drawable.settings).withIdentifier(4).withSelectable(true),
-                        new DividerDrawerItem(),
-                        new PrimaryDrawerItem().withName(getString(R.string.contact_alex)).withIdentifier(5).withSelectable(false)
+                        new SecondaryDrawerItem().withName(getString(R.string.licenses)).withIcon(R.drawable.licenses).withIdentifier(4).withSelectable(true),
+                        new SecondaryDrawerItem().withName(getString(R.string.settings)).withIcon(R.drawable.settings).withIdentifier(5)
                 )
-                .withOnDrawerItemClickListener(new Drawer.OnDrawerItemClickListener() {
-                    public boolean onItemClick(View view, int position, IDrawerItem drawerItem) {
+                                .withOnDrawerItemClickListener(new Drawer.OnDrawerItemClickListener() {
+                                    public boolean onItemClick(View view, int position, IDrawerItem drawerItem) {
 
-                        if (drawerItem != null) {
-                            if (drawerItem.getIdentifier() == 1) {
-                                changeFragment(new LightThemesFragment());
-                            } else if (drawerItem.getIdentifier() == 2) {
-                                changeFragment(new DarkThemesFragment());
-                            } else if (drawerItem.getIdentifier() == 3) {
-                                changeFragment(new LibsBuilder()
-                                        .withActivityTitle(getResources().getString(R.string.libraries))
-                                        .withActivityStyle(Libs.ActivityStyle.LIGHT)
-                                        .withAboutIconShown(true)
-                                        .supportFragment());
-                            } else if (drawerItem.getIdentifier() == 4) {
-                                changeFragment(new SettingsFragment());
-                            } else if (drawerItem.getIdentifier() == 5) {
-                                ContactMe();
-                                return true;
-                            }
-                        }
-                        return false;
-                    }
-                }).withSavedInstance(savedInstanceState)
-                .withShowDrawerOnFirstLaunch(false)
+                                        if (drawerItem != null) {
+                                            if (drawerItem.getIdentifier() == 1) {
+                                                changeFragment(new LightThemesFragment());
+                                            } else if (drawerItem.getIdentifier() == 2) {
+                                                changeFragment(new DarkThemesFragment());
+                                            } else if (drawerItem.getIdentifier() == 3) {
+                                                changeFragment(new MultiColorThemesFragment());
+                                            } else if (drawerItem.getIdentifier() == 4) {
+                                                changeFragment(new LibsBuilder()
+                                                        .withActivityTitle(getResources().getString(R.string.licenses))
+                                                        .withActivityStyle(Libs.ActivityStyle.LIGHT)
+                                                        .supportFragment());
+                                            } else if (drawerItem.getIdentifier() == 5) {
+                                                changeFragment(new SettingsFragment());
+                                            }
+                                        }
+                                        return false;
+                                    }
+                                }).withSavedInstance(savedInstanceState)
+                                .withShowDrawerOnFirstLaunch(false)
                 .build();
 
         if (result != null) {
@@ -185,40 +184,6 @@ public class MainActivity extends AppCompatActivity {
 
     private void changeFragment(Fragment fragment) {
         getSupportFragmentManager().beginTransaction().replace(R.id.fragmentHolder, fragment).commit();
-    }
-
-    private void ContactMe() {
-        String[] TO = {"mazdarider23@gmail.com"};
-        Intent emailIntent = new Intent(Intent.ACTION_SEND);
-        emailIntent.setData(android.net.Uri.parse("mailto:"));
-        emailIntent.setType("text/plain");
-        emailIntent.putExtra(Intent.EXTRA_EMAIL, TO);
-        emailIntent.putExtra(Intent.EXTRA_SUBJECT, getString(R.string.email_about_du_certified));
-
-        try {
-            startActivity(Intent.createChooser(emailIntent, getString(R.string.choose_email_app)));
-        } catch (android.content.ActivityNotFoundException ex) {
-            new BottomDialog.Builder(this)
-                    .setTitle(getString(R.string.no_email_app_found_title))
-                    .setContent(getString(R.string.no_email_app_found_message))
-                    .setPositiveText(getString(R.string.download_gmail))
-                    .setNegativeText(getString(R.string.ok))
-                    .setCancelable(false)
-                    .onPositive(new BottomDialog.ButtonCallback() {
-                        @Override
-                        public void onClick(@NonNull BottomDialog dialog) {
-                            Intent i = new Intent(Intent.ACTION_VIEW);
-                            i.setData(android.net.Uri.parse(getResources().getString(R.string.gmail_link)));
-                            startActivity(i);
-                        }
-                    })
-                    .onNegative(new BottomDialog.ButtonCallback() {
-                        @Override
-                        public void onClick(@NonNull BottomDialog dialog) {
-                            dialog.dismiss();
-                        }
-                    }).show();
-        }
     }
 
     @Override

@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v4.widget.SwipeRefreshLayout;
+import android.support.v7.preference.PreferenceManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
@@ -54,7 +55,6 @@ public abstract class AbstractThemeFragment extends Fragment implements ClickUti
         mSwipeRefreshLayout = (SwipeRefreshLayout) rootView.findViewById(R.id.refresh);
 
         SwipeRefresh();
-
         downloadThemes();
 
         return rootView;
@@ -66,8 +66,6 @@ public abstract class AbstractThemeFragment extends Fragment implements ClickUti
 
         list.clear();
         adapter.notifyDataSetChanged();
-
-        //We're showing it during initial download
         showRefresh();
 
         getThemeCall().enqueue(new Callback<java.util.List<Theme>>() {
@@ -81,12 +79,16 @@ public abstract class AbstractThemeFragment extends Fragment implements ClickUti
                     adapter.notifyDataSetChanged();
                     hideRefresh();
                 }
-
             }
 
             @Override
             public void onFailure(Call<List<Theme>> call, Throwable t) {
-                showNotConnectedDialog();
+                if (PreferenceManager.getDefaultSharedPreferences(getContext())
+                        .getBoolean(getString(R.string.freethemes_switch), false)) {
+                    showNoFreeThemesDialog();
+                } else {
+                    showNotConnectedDialog();
+                }
                 hideRefresh();
             }
         });
@@ -142,6 +144,15 @@ public abstract class AbstractThemeFragment extends Fragment implements ClickUti
     public void showNotConnectedDialog() {
         new SnackBar.Builder(getActivity())
                 .withMessageId(R.string.no_conn_content)
+                .withActionMessageId(R.string.ok)
+                .withStyle(SnackBar.Style.ALERT)
+                .withDuration(SnackBar.MED_SNACK)
+                .show();
+    }
+
+    public void showNoFreeThemesDialog() {
+        new SnackBar.Builder(getActivity())
+                .withMessageId(R.string.no_themes_available)
                 .withActionMessageId(R.string.ok)
                 .withStyle(SnackBar.Style.ALERT)
                 .withDuration(SnackBar.MED_SNACK)
