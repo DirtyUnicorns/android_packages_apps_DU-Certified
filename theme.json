@@ -1,78 +1,41 @@
 [
 
-{"theme_name":"AWESOME THEME NAME",
+{"theme_name":"",
 
-"theme_author":"JOHN DOE",
+"theme_author":"",
 
-"theme_summary":"ONE OF THE MOST AWESOME THEMES YOU WILL EVER SEE IN YOUR LIFE",
+"theme_summary":"",
 
-"theme_long_summary":"LONG LONG LONG LONG LONG LONG LONG LONG LONG LONG LONG LONG LONG LONG LONG LONG LONG LONG LONG LONG
-LONG LONG LONG LONG LONG LONG LONG LONG LONG LONG LONG LONG LONG LONG LONG LONG LONG LONG LONG LONG LONG LONG LONG LONG
-LONG LONG LONG LONG LONG LONG LONG LONG LONG LONG LONG LONG LONG LONG LONG LONG LONG LONG LONG LONG LONG LONG LONG LONG
- LONG LONG LONG LONG LONG LONG LONG LONG LONG LONG LONG LONG LONG LONG LONG LONG LONG LONG LONG LONG LONG LONG LONG LONG
-  LONG LONG LONG LONG LONG LONG LONG LONG LONG LONG LONG LONG LONG LONG LONG LONG LONG LONG LONG LONG THEME SUMMARY",
+"theme_long_summary":"",
 
 "paid": "true",
-
-"arcus": "true",
 
 "themeready": "false",
 
 "uri":{
 
-"card_thumbnail":"PLAY STORE-LIKE FEATURE IMAGE",
+"card_thumbnail":"",
 
-"collapsing_toolbar_thumbnail":"PLAYSTORE-LIKE FEATURE IMAGE",
+"collapsing_toolbar_thumbnail":"",
 
-"screenshot1":"DIRECT PLAYSTORE IMAGE LINK",
+"screenshot1":"",
 
-"screenshot2":"DIRECT PLAYSTORE IMAGE LINK",
+"screenshot2":"",
 
-"screenshot3":"DIRECT PLAYSTORE IMAGE LINK",
+"screenshot3":"",
 
-"screenshot4":"DIRECT PLAYSTORE IMAGE LINK",
+"screenshot4":"",
 
-"screenshot5":"DIRECT PLAYSTORE IMAGE LINK",
+"screenshot5":"",
 
-"screenshot6":"DIRECT PLAYSTORE IMAGE LINK",
+"screenshot6":"",
 
-"playstore":"PLAY STORE LINK",
+"playstore":"",
 
-"contact":"GOOGLE PLUS PROFILE",
+"contact":"",
 
-"contact_background":"GOOGLE PLUS PROFILE BACKGROUND",
+"contact_background":"",
   
-"contact_image":"GOOLGE PLUS PROFILE AVATAR"}}
+"contact_image":""}}
 
 ]
-
-
-
-
-theme_name -  The name of your theme without the CM13/DU10 [BEST THEME EVER] before or after it. Simple, name like BlakKat or Sprite
-
-theme_author - What shows up in the playstore, not your real name. Let's try to keep this legit
-
-theme_summary - Give us a summary of your theme. A short summary, what you put in the playstore minus all the instructions and buzz words
-
-theme_long_summary - Your full theme summary that you have listed in the playstore or where ever you have it listed.
-
-paid - If your theme is paid, leave it as true. If is not, set it to false
-
-arcus - Whether or not your theme has support for arcus. true or false
-
-themeready - Does your theme perform better with a user flashes theme ready gapps? If so, change false to true and if not, leave it as it is.
-
-card_thumbnail - This image is the image you see on the card on display. This needs to be like a playstore like feature banner.
-
-collapsing_toolbar_thumbnail - This image is the image you see when you click on the card in the collapsing toolbar. This needs to be also like a playstore like feature banner. It should be different but not required.
-
-screenshot 1, 2, 3, 4, 5 and 6 - Please provide the direct links to the playstore. Just right click on the plystore screenshots and provide the links.
-
-playstore - This is simple, the url to the playstore for your theme. Don't use short url's, give us the long url please
-
-contact - This can either be your G+ profile where people can follow you for updates or the G+ community where you're handling questions.
-
-contact_background - This should be your Google plus profile background, direct link
-  
-contact_image - This should be your Google plus profile avatar, direct link
