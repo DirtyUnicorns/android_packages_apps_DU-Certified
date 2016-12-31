@@ -6,6 +6,7 @@
     <string name="dark_themes">Dark</string>
     <string name="multicolor_themes">Multi-color</string>
     <string name="about_app">About the app</string>
+    <string name="faq">FAQs</string>
     <string name="licenses">Licenses</string>
     <string name="settings">Settings</string>
     <string name="playstore_button">Play Store</string>
@@ -17,6 +18,20 @@
     <string name="freethemes_switch">Free themes</string>
     <string name="freethemes_switch_summary">Only show free themes</string>
     <string name="no_themes_available">No free themes available under this listing</string>
+
+    <!-- Faq's -->
+    <string name="question_one">How do I get my theme certified?</string>
+    <string name="answer_one">- <b>Make sure your theme does not produce any FCs.</b>\n\n- <b>Make sure all text is visible.\n</b>No dark text on dark backgrounds or white text on white backgrounds.\n\n- <b>Make sure all quick settings tiles are themed.</b>\nThis area is very important and must be themed along with the brightness slider and qs editor.\n\n- <b>SmartBar and Fling need to be fully themed.</b>\nIf your theme is basic than you can leave Smartbar alone.\nIf you do decide to theme the navbar and have the basic \'back/home/recents\' themed then you must theme the rest. Theming only the 3 and not the rest looks tacky. Go big or go home!\n\n- <b>Make sure Settings and \'Dirty Tweaks\' is fully themed.</b>\nIf you\'re tinting icons then make sure is tinted. If you\'re including your own drawables than make sure all drawables match your theme.\n\n- <b>Complete the form below and link to it in our G+ community.</b></string>
+    <string name="question_two">Where do I find the framework and apks that I need to theme?</string>
+    <string name="answer_two">No need to hunt down apks or waste hours decompiling them. We\'ve made it really easy for you to theme DU. All you need to do is download our \'Themes Resources\' zip and in it you have everything you need. Yup, is that easy!</string>
+    <string name="question_three">What happens if my theme is not kept updated?</string>
+    <string name="answer_three">We will remove any and all themes that are not kept updated. This includes not updating the plugin for your theme and/or not staying up to date with theme resources.</string>
+    <string name="google_button">Google+</string>
+    <string name="form_button">Form</string>
+    <string name="resources_button">Resources</string>
+    <string name="google_plus_link">https://plus.google.com/u/0/communities/102612965787642392335</string>
+    <string name="form_link">https://goo.gl/forms/8mq1edYSsjE1PIL22</string>
+    <string name="resources_link">https://github.com/DirtyUnicorns/DU-Scripts/archive/n.zip</string>
 
     <!-- Dialog strings -->
     <string name="no_conn_content">Please make sure you have an active internet connection.</string>
@@ -44,12 +59,10 @@
     <string name="first_slide_description">A collection of hand picked themes that guarantee a good user experience</string>
     <string name="second_slide_title">So why this app?</string>
     <string name="second_slide_description">Some themes are janky and instead of complaining or chasing themers to get things done, we\'ve decided to celebrate what we have!</string>
-    <string name="third_slide_title">How do I get my theme certified?</string>
-    <string name="third_slide_description">Contact us via our G+ community, get your theme evaluated and then submit the necessary json data for your theme.</string>
+    <string name="third_slide_title">Do you got questions about getting certified?</string>
+    <string name="third_slide_description">Check our built in FAQ and get started!</string>
     <string name="last_slide_title">That\'s it!</string>
     <string name="last_slide_description">Enjoy the app, make sure to check for themes often and always <b>#StayDirty</b></string>
-
-    <!-- App intro strings -->
     <string name="tutorial_done">DONE</string>
     <string name="tutorial_skip">SKIP</string>
 

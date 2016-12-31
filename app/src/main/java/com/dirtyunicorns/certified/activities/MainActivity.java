@@ -25,6 +25,7 @@ import com.dirtyunicorns.certified.LauncherActivity;
 import com.dirtyunicorns.certified.Preferences;
 import com.dirtyunicorns.certified.R;
 import com.dirtyunicorns.certified.fragments.DarkThemesFragment;
+import com.dirtyunicorns.certified.fragments.FaqFragment;
 import com.dirtyunicorns.certified.fragments.LightThemesFragment;
 import com.dirtyunicorns.certified.fragments.MultiColorThemesFragment;
 import com.dirtyunicorns.certified.fragments.SettingsFragment;
@@ -143,8 +144,9 @@ public class MainActivity extends AppCompatActivity {
                         new PrimaryDrawerItem().withName(getString(R.string.multicolor_themes)).withDescription("Themes with more than just 1 color option").withIcon(R.drawable.multicolor).withIdentifier(3).withSelectable(true).withDescriptionTextColor(getResources().getColor(R.color.semitransparent_black)),
                         new DividerDrawerItem(),
                         new SectionDrawerItem().withName(getString(R.string.about_app)).withDivider(false),
-                        new SecondaryDrawerItem().withName(getString(R.string.licenses)).withIcon(R.drawable.licenses).withIdentifier(4).withSelectable(true),
-                        new SecondaryDrawerItem().withName(getString(R.string.settings)).withIcon(R.drawable.settings).withIdentifier(5)
+                        new SecondaryDrawerItem().withName(getString(R.string.faq)).withIcon(R.drawable.faq).withIdentifier(4).withSelectable(true),
+                        new SecondaryDrawerItem().withName(getString(R.string.licenses)).withIcon(R.drawable.licenses).withIdentifier(5).withSelectable(true),
+                        new SecondaryDrawerItem().withName(getString(R.string.settings)).withIcon(R.drawable.settings).withIdentifier(6)
                 )
                                 .withOnDrawerItemClickListener(new Drawer.OnDrawerItemClickListener() {
                                     public boolean onItemClick(View view, int position, IDrawerItem drawerItem) {
@@ -157,11 +159,13 @@ public class MainActivity extends AppCompatActivity {
                                             } else if (drawerItem.getIdentifier() == 3) {
                                                 changeFragment(new MultiColorThemesFragment());
                                             } else if (drawerItem.getIdentifier() == 4) {
+                                                changeFragment(new FaqFragment());
+                                            } else if (drawerItem.getIdentifier() == 5) {
                                                 changeFragment(new LibsBuilder()
                                                         .withActivityTitle(getResources().getString(R.string.licenses))
                                                         .withActivityStyle(Libs.ActivityStyle.LIGHT)
                                                         .supportFragment());
-                                            } else if (drawerItem.getIdentifier() == 5) {
+                                            } else if (drawerItem.getIdentifier() == 6) {
                                                 changeFragment(new SettingsFragment());
                                             }
                                         }
