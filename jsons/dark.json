@@ -1,5 +1,101 @@
 [
 
+{"theme_name":"Compound",
+
+"theme_author":"Daniel Schott",
+
+"theme_summary":"Choose between many different accent colors and backgound colors",
+
+"theme_long_summary":"100% self-made icons
+
+I strongly advise you to only use this theme on OMS Roms.You must also have the Substratum app installed (https://play.google.com/store/apps/details?id=projekt.substratum)
+
+Do NOT use on Stock/Legacy Roms and especially not on Stock 7.1.1. or CM 14.1!!! 
+
+If you use ProjectFi: DON'T apply status bar icons overlay!
+
+You can currently choose between 14 accent colors and 4 background colors (number will grow)
+
+Install Instructions:
+
+1. Download & install the app
+2. Open Substratum app 
+3. When Substratum opens give it full root permissions and also check to allow system modifications
+4. Click on Compound and wait for it to create the resource caches then click on Compound again
+5. Inside Compund check the switch Select to toggle all overlays or just select the overlays you want to install
+6. Click the round button at the bottom and select Build & Enable
+
+Themed apps:
+
+- systemui
+- navigation bar
+- framework
+- settings
+- android browser
+- calculator
+- contacts
+- dialer
+- documentsui
+- email
+- gallery
+- AOSP keyboard
+- Android messaging
+- Google Play Store
+- Google Inbox
+- Google Messenger
+- Google Plus
+- Google Translate
+- Google Contacts
+- Google Mail
+- Google Keyboard
+- Google Keep
+- Google Hangouts
+- Youtube
+- Instagram
+- Greenify
+- Pipette
+- Matlog
+- Saavn Music
+- Tumblr
+- Twitter
+- Whatsapp
+- SuperSU
+
+If you have any issues or requests don't hesitate to contact me via email!
+
+Thanks to the themer's chat on Telegram for a lot of helpful input!!!",
+
+"paid": "true",
+
+"themeready": "false",
+
+"uri":{
+
+"card_thumbnail":"https://lh3.googleusercontent.com/aH3CHLnSjotBWoxdt85TrmaYWVH-y60hG9tRFQrr31E63HvFELnb5G3qVYijIxmqiOE=h900",
+
+"collapsing_toolbar_thumbnail":"https://lh3.googleusercontent.com/aH3CHLnSjotBWoxdt85TrmaYWVH-y60hG9tRFQrr31E63HvFELnb5G3qVYijIxmqiOE=h900",
+
+"screenshot1":"https://lh3.googleusercontent.com/DXWp71gyvwl5_PbkE3IkQoiRb8KI28gmQ-TiinItFlaSrd3fGPbIRkzfCeLk5ksxaA=h900",
+
+"screenshot2":"https://lh3.googleusercontent.com/yZ7NDf1WYuWLHkxJJOx-aBF-U5A3a5f2n-91kEXJLP6wUEZTMAW2WyQS8RJwVXb1gQ=h900",
+
+"screenshot3":"https://lh3.googleusercontent.com/abQFYasRNTIbfusDn44BfdVOXkfXmleRMsZcY_odlW0I5rkQu0p3W0_j6bTf-btl9A=h900",
+
+"screenshot4":"https://lh3.googleusercontent.com/AegEH_vMd3I5IlLvkXovzOKM7qLx947xtEiqGY5H5Jb_B9dhUdErW_pBOriPsSeFkGE=h900",
+
+"screenshot5":"https://lh3.googleusercontent.com/rcZdgpZyBv9Gp2s-lGItC8IBH9vcQ_65P0Nmp9U6oxEzkyVQgDQMbIMgVnXn3_EKiSE=h900",
+
+"screenshot6":"https://lh3.googleusercontent.com/Wqz1Zu0O9dv_Ob8r4Ig4BYGPR4G55UIfjMgrC67FhEnbo1QX9OpRFc3X8Zl0nhUP7u0=h900",
+
+"playstore":"https://play.google.com/store/apps/details?id=com.subs.compound",
+
+"contact":"https://plus.google.com/u/0/100639474939398785827",
+
+"contact_background":"https://lh3.googleusercontent.com/-akDMMsYlQLw/Vd2ziEurOaI/AAAAAAAABlQ/hOf-IXL7jH4zijyBdSLliUKtxiCbKTQcACJkC/w728-h1600-fcrop64=1,0000a022fffffffe/215ba44d-6678-4f28-a47f-419dcac325dd",
+  
+"contact_image":"lh3.googleusercontent.com/-u19jOK9tGi4/AAAAAAAAAAI/AAAAAAAAAAA/AKB_U8s7tV4U_b--1sfBRYDOQ3qGURkBvw/s192-c-mo/photo.jpg"}},
+
+
 {"theme_name":"Domination",
 
 "theme_author":"daveyannihilation",
