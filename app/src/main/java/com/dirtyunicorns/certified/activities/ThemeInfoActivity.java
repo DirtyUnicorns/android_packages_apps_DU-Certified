@@ -122,7 +122,7 @@ public class ThemeInfoActivity extends AppCompatActivity {
             playstorebutton.setOnClickListener(new View.OnClickListener() {
                 public void onClick(View v) {
                     Intent intent = new Intent(Intent.ACTION_MAIN);
-                    intent.setClassName("org.cyanogenmod.theme.chooser", "org.cyanogenmod.theme.chooser.ChooserActivity");
+                    intent.setClassName("projekt.substratum", "projekt.substratum.LaunchActivity");
                     intent.putExtra("pkgName", toPkg());
                     ThemeInfoActivity.this.startActivity(intent);
                 }
